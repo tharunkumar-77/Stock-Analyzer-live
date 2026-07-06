@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Stock Analyzer</title>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+        <span class="navbar-brand">📈 Stock Analyzer</span>
+        <span class="text-secondary small">Your Finance Friend</span>
+    </div>
+</nav>
+
+<div class="container pb-5">
+
+    <!-- Search -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <p class="section-title">Search Investment</p>
+            <div class="row g-2 align-items-end">
+                <div class="col-md-8" style="position:relative">
+                    <label class="form-label">Stock / ETF / Fund / Index</label>
+                    <input type="text" class="form-control" id="search-input"
+                        placeholder="e.g. Reliance, TCS, Nifty 50" autocomplete="off">
+                    <div id="suggestions-box" class="suggest-box"></div>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary w-100" id="search-btn" onclick="doSearch()">Search</button>
+                </div>
+            </div>
+            <div id="search-loader" class="text-muted small mt-2" style="display:none">⏳ Fetching data...</div>
+        </div>
+    </div>
+
+    <!-- Investment Information -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <p class="section-title">Investment Information</p>
+            <div id="info-content">
+                <p class="text-muted mb-0">Search a stock, ETF, fund or index to see details.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Sentiment -->
+    <div class="card mb-4" id="sentiment-card" style="display:none">
+        <div class="card-body">
+            <p class="section-title">News Sentiment</p>
+            <div id="sentiment-content"></div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <p class="section-title">About This Investment</p>
+            <div id="about-content">
+                <p class="text-muted mb-0">No description available.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Historical Performance -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <p class="section-title">Historical Performance</p>
+            <div id="performance-content">
+                <p class="text-muted mb-0">Performance will appear after searching a stock.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Investment Calculator -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <p class="section-title">Investment Calculator</p>
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <h6 class="fw-semibold mb-3">Calculate Past Returns</h6>
+                    <div class="mb-3">
+                        <label class="form-label">Investment Amount (₹)</label>
+                        <input type="number" class="form-control" id="hist-amount" min="0" placeholder="10000">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Start Date</label>
+                        <input type="date" class="form-control" id="hist-start">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">End Date</label>
+                        <input type="date" class="form-control" id="hist-end">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="monthly-check">
+                        <label class="form-check-label" for="monthly-check">Invest monthly (SIP)</label>
+                    </div>
+                    <button class="btn btn-primary w-100" onclick="doHistorical()">Calculate Return</button>
+                    <div id="hist-loader" class="text-muted small mt-2" style="display:none">⏳ Calculating...</div>
+                    <div id="hist-result" class="mt-2"></div>
+                </div>
+
+                <div class="col-md-6">
+                    <h6 class="fw-semibold mb-3">Calculate Future Returns</h6>
+                    <div class="mb-3">
+                        <label class="form-label">Investment Amount (₹)</label>
+                        <input type="number" class="form-control" id="future-amount" placeholder="10000">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Time Horizon</label>
+                        <select class="form-select" id="future-horizon">
+                            <option value="7">1 Week</option>
+                            <option value="14">2 Weeks</option>
+                            <option value="30" selected>1 Month</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="365">1 Year</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-outline-primary w-100" onclick="doFuture()">Predict Future Value</button>
+                    <div id="future-loader" class="text-muted small mt-2" style="display:none">⏳ Projecting...</div>
+                    <div id="future-result" class="mt-2"></div>
+                    <p class="text-muted mt-3 mb-0 disclaimer-text">
+                        Projections use historical 5-year annualized growth adjusted by current news sentiment. Not financial advice.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Compare -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <p class="section-title">Compare Two Investments</p>
+            <div class="row g-2 align-items-end">
+                <div class="col-md-5" style="position:relative">
+                    <label class="form-label">Investment 1</label>
+                    <input type="text" class="form-control" id="compare-s1"
+                        placeholder="e.g. Reliance" autocomplete="off">
+                    <div id="suggest-box-s1" class="suggest-box"></div>
+                </div>
+                <div class="col-md-5" style="position:relative">
+                    <label class="form-label">Investment 2</label>
+                    <input type="text" class="form-control" id="compare-s2"
+                        placeholder="e.g. TCS" autocomplete="off">
+                    <div id="suggest-box-s2" class="suggest-box"></div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary w-100" onclick="doCompare()">Compare</button>
+                </div>
+            </div>
+            <div id="compare-loader" class="text-muted small mt-2" style="display:none">⏳ Comparing...</div>
+            <div id="compare-result" class="mt-3"></div>
+        </div>
+    </div>
+
+</div>
+
+<script type="application/json" id="suggestions-data">{{ suggestions | tojson }}</script>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// Globals
+// ─────────────────────────────────────────────────────────────────────────────
+let currentSymbol = "";
+
+const allSuggestions = JSON.parse(
+    document.getElementById("suggestions-data").textContent || "[]"
+);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Helpers
+// ─────────────────────────────────────────────────────────────────────────────
+function esc(str) {
+    const d = document.createElement("div");
+    d.textContent = String(str ?? "");
+    return d.innerHTML;
+}
+
+function showLoader(id) { document.getElementById(id).style.display = "block"; }
+function hideLoader(id) { document.getElementById(id).style.display = "none"; }
+
+function returnClass(val) {
+    return val >= 0 ? "return-positive" : "return-negative";
+}
+
+async function post(url, body) {
+    try {
+        const res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body)
+        });
+        if (!res.ok) throw new Error("Server error: " + res.status);
+        return res.json();
+    } catch (err) {
+        return { error: err.message };
+    }
+}
+
+function resetCalculator() {
+    document.getElementById("hist-amount").value       = "";
+    document.getElementById("hist-start").value        = "";
+    document.getElementById("hist-end").value          = "";
+    document.getElementById("monthly-check").checked   = false;
+    document.getElementById("hist-result").innerHTML   = "";
+    document.getElementById("future-amount").value     = "";
+    document.getElementById("future-horizon").value    = "30";
+    document.getElementById("future-result").innerHTML = "";
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Autocomplete — shared for all inputs
+// ─────────────────────────────────────────────────────────────────────────────
+function setupAutocomplete(inputId, boxId, onSelect) {
+    const input = document.getElementById(inputId);
+    const box   = document.getElementById(boxId);
+
+    input.addEventListener("input", function () {
+        const val = this.value.trim().toLowerCase();
+        box.innerHTML = "";
+        if (!val) { box.style.display = "none"; return; }
+
+        const matches = allSuggestions
+            .filter(s => s.toLowerCase().includes(val))
+            .slice(0, 8);
+
+        if (!matches.length) { box.style.display = "none"; return; }
+
+        matches.forEach(function(name) {
+            const div = document.createElement("div");
+            div.textContent = name;
+            div.className = "suggest-item";
+            div.addEventListener("mouseenter", function() { this.style.background = "#f8f9fa"; });
+            div.addEventListener("mouseleave", function() { this.style.background = "white"; });
+            div.addEventListener("mousedown", function(e) {
+                e.preventDefault();
+                input.value = name;
+                box.style.display = "none";
+                if (onSelect) onSelect(name);
+            });
+            box.appendChild(div);
+        });
+        box.style.display = "block";
+    });
+
+    input.addEventListener("blur", function() {
+        setTimeout(function() { box.style.display = "none"; }, 150);
+    });
+
+    input.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") box.style.display = "none";
+    });
+}
+
+// Wire up search input
+setupAutocomplete("search-input", "suggestions-box", function() { doSearch(); });
+
+document.getElementById("search-input").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") doSearch();
+});
+
+// Wire up compare inputs (no auto-trigger — user clicks Compare)
+setupAutocomplete("compare-s1", "suggest-box-s1", null);
+setupAutocomplete("compare-s2", "suggest-box-s2", null);
+
+// Close all dropdowns on outside click
+document.addEventListener("click", function(e) {
+    ["suggestions-box", "suggest-box-s1", "suggest-box-s2"].forEach(function(id) {
+        const box   = document.getElementById(id);
+        const input = box.previousElementSibling;
+        if (e.target !== input && !box.contains(e.target)) {
+            box.style.display = "none";
+        }
+    });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Search
+// ─────────────────────────────────────────────────────────────────────────────
+async function doSearch() {
+    const stock = document.getElementById("search-input").value.trim();
+    if (!stock) return;
+
+    resetCalculator();
+    showLoader("search-loader");
+    document.getElementById("search-btn").disabled = true;
+
+    try {
+        const data = await post("/api/search", { stock });
+
+        if (data.error) {
+            document.getElementById("info-content").innerHTML =
+                '<div class="alert alert-danger mb-0">' + esc(data.error) + '</div>';
+            return;
+        }
+
+        currentSymbol = data.symbol;
+
+        const price = typeof data.price === "number"
+            ? "₹" + data.price.toLocaleString("en-IN")
+            : esc(data.price);
+
+        let expHtml = "";
+        if (["ETF","MUTUALFUND"].includes(data.asset_type) && data.expense_ratio !== "Not Available") {
+            expHtml = '<div class="col-6 col-md-3">' +
+                '<p class="card-title mb-1">Expense Ratio</p>' +
+                '<p class="stat-value fs-6">' + esc(data.expense_ratio) + '%</p>' +
+                '</div>';
+        }
+
+        document.getElementById("info-content").innerHTML =
+            '<div class="row g-3">' +
+                '<div class="col-6 col-md-3"><p class="card-title mb-1">Name</p><p class="stat-value fs-6">' + esc(data.name) + '</p></div>' +
+                '<div class="col-6 col-md-3"><p class="card-title mb-1">Ticker</p><p class="stat-value">' + esc(data.symbol) + '</p></div>' +
+                '<div class="col-6 col-md-3"><p class="card-title mb-1">Current Price</p><p class="stat-value">' + price + '</p></div>' +
+                '<div class="col-6 col-md-3"><p class="card-title mb-1">Asset Type</p><p class="stat-value fs-6">' + esc(data.asset_type) + '</p></div>' +
+                expHtml +
+            '</div>';
+
+        if (data.sentiment_label) {
+            const icon = data.sentiment_label === "Positive" ? "▲" : data.sentiment_label === "Negative" ? "▼" : "—";
+            const cls  = data.sentiment_label === "Positive" ? "return-positive" : data.sentiment_label === "Negative" ? "return-negative" : "text-secondary";
+            document.getElementById("sentiment-content").innerHTML =
+                '<div class="d-flex align-items-center gap-3">' +
+                    '<span class="fs-4 ' + cls + '">' + icon + ' ' + esc(data.sentiment_label) + '</span>' +
+                    '<span class="text-muted small">Score: ' + esc(data.sentiment_score) + ' &nbsp;|&nbsp; Based on recent news headlines</span>' +
+                '</div>' +
+                '<p class="text-muted mb-0 mt-2 disclaimer-text">Sentiment is derived from recent news headlines using a financial NLP model. It reflects current news tone, not a prediction of price movement.</p>';
+            document.getElementById("sentiment-card").style.display = "block";
+        } else {
+            document.getElementById("sentiment-card").style.display = "none";
+        }
+
+        document.getElementById("about-content").innerHTML =
+            '<p class="text-muted mb-0 explanation-text">' + esc(data.explanation || "No description available.") + '</p>';
+
+        const periods = [
+            { label: "1 Year Return", val: data.return_1y, chart: data.chart_1y },
+            { label: "3 Year Return", val: data.return_3y, chart: data.chart_3y },
+            { label: "5 Year Return", val: data.return_5y, chart: data.chart_5y },
+        ];
+        let perfHtml = '<div class="row g-4">';
+        periods.forEach(function(p) {
+            perfHtml += '<div class="col-md-4">' +
+                '<p class="card-title mb-1">' + esc(p.label) + '</p>' +
+                '<p class="' + returnClass(p.val) + ' fs-5">' + esc(p.val) + '%</p>' +
+                (p.chart ? '<img class="chart" src="data:image/png;base64,' + p.chart + '" alt="' + esc(p.label) + '">' : '') +
+                '</div>';
+        });
+        perfHtml += '</div>';
+        document.getElementById("performance-content").innerHTML = perfHtml;
+
+    } finally {
+        hideLoader("search-loader");
+        document.getElementById("search-btn").disabled = false;
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Historical Calculator
+// ─────────────────────────────────────────────────────────────────────────────
+async function doHistorical() {
+    if (!currentSymbol) { alert("Search a stock first."); return; }
+    const amount    = parseFloat(document.getElementById("hist-amount").value);
+    const startDate = document.getElementById("hist-start").value;
+    const endDate   = document.getElementById("hist-end").value;
+    const monthly   = document.getElementById("monthly-check").checked;
+    if (!amount || !startDate || !endDate) { alert("Please fill amount, start date, and end date."); return; }
+
+    showLoader("hist-loader");
+    try {
+        const data = await post("/api/historical", {
+            stock: currentSymbol, amount, start_date: startDate, end_date: endDate, monthly
+        });
+
+        if (data.error) {
+            document.getElementById("hist-result").innerHTML =
+                '<div class="alert alert-danger">' + esc(data.error) + '</div>';
+            return;
+        }
+
+        const plClass = data.returns >= 0 ? "return-positive" : "return-negative";
+        let html = '<div class="result-box">' +
+            '<div class="row text-center">' +
+                '<div class="col-6"><p class="card-title mb-1">Buy Price</p><p class="fw-bold mb-0">₹' + esc(data.buy_price) + '</p></div>' +
+                '<div class="col-6"><p class="card-title mb-1">Sell Price</p><p class="fw-bold mb-0">₹' + esc(data.sell_price) + '</p></div>' +
+            '</div>';
+        if (monthly) {
+            html += '<hr class="my-2"><p class="text-center mb-0 fw-semibold">Total Invested: <span class="text-secondary">₹' + esc(data.total_invested) + '</span></p>';
+        }
+        html += '<hr class="my-2"><p class="text-center mb-0 fw-semibold">Profit / Loss: <span class="' + plClass + '">₹' + esc(data.returns) + '</span></p></div>';
+        if (data.growth_chart) {
+            html += '<img class="chart mt-3" src="data:image/png;base64,' + data.growth_chart + '" alt="Growth Chart">';
+        }
+        document.getElementById("hist-result").innerHTML = html;
+
+    } finally {
+        hideLoader("hist-loader");
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Future Projection
+// ─────────────────────────────────────────────────────────────────────────────
+async function doFuture() {
+    if (!currentSymbol) { alert("Search a stock first."); return; }
+    const amount  = parseFloat(document.getElementById("future-amount").value);
+    const horizon = parseInt(document.getElementById("future-horizon").value);
+    if (!amount) { alert("Please enter an investment amount."); return; }
+
+    showLoader("future-loader");
+    try {
+        const data = await post("/api/future", { stock: currentSymbol, amount, horizon });
+
+        if (data.error) {
+            document.getElementById("future-result").innerHTML =
+                '<div class="alert alert-danger">' + esc(data.error) + '</div>';
+            return;
+        }
+
+        const sentHtml = data.sentiment_label
+            ? '— Sentiment: <span class="' + (data.sentiment_label === "Positive" ? "return-positive" : data.sentiment_label === "Negative" ? "return-negative" : "text-secondary") + '">' + esc(data.sentiment_label) + '</span>'
+            : "";
+
+        document.getElementById("future-result").innerHTML =
+            '<div class="result-box">' +
+                '<p class="card-title mb-2">₹' + esc(amount) + ' over ' + esc(data.horizon_label) + ' ' + sentHtml + '</p>' +
+                '<div class="row text-center">' +
+                    '<div class="col-4"><p class="card-title mb-1">Low</p><p class="return-negative fw-bold mb-0">₹' + esc(data.low) + '</p></div>' +
+                    '<div class="col-4"><p class="card-title mb-1">Expected</p><p class="fw-bold fs-5 mb-0">₹' + esc(data.projected) + '</p></div>' +
+                    '<div class="col-4"><p class="card-title mb-1">High</p><p class="return-positive fw-bold mb-0">₹' + esc(data.high) + '</p></div>' +
+                '</div>' +
+            '</div>';
+
+    } finally {
+        hideLoader("future-loader");
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Compare
+// ─────────────────────────────────────────────────────────────────────────────
+async function doCompare() {
+    const s1 = document.getElementById("compare-s1").value.trim();
+    const s2 = document.getElementById("compare-s2").value.trim();
+    if (!s1 || !s2) { alert("Enter both investments."); return; }
+
+    showLoader("compare-loader");
+    try {
+        const data = await post("/api/compare", { stock1: s1, stock2: s2 });
+
+        if (data.error) {
+            document.getElementById("compare-result").innerHTML =
+                '<div class="alert alert-danger">' + esc(data.error) + '</div>';
+            return;
+        }
+
+        const winnerHtml = data.winner === "Tie"
+            ? "It's a tie — equal 1-year returns"
+            : '<span class="return-positive">' + esc(data.winner) + '</span> performed better by ' + esc(data.diff) + '%';
+
+        const chartHtml = data.comparison_chart
+            ? '<img class="chart mb-4" src="data:image/png;base64,' + data.comparison_chart + '" alt="Comparison Chart">'
+            : "";
+
+        function stockCard(d) {
+            const p = typeof d.price === "number" ? "₹" + d.price.toLocaleString("en-IN") : esc(d.price);
+            return '<div class="card"><div class="card-body">' +
+                '<p class="section-title">' + esc(d.name) + '</p>' +
+                '<p><strong>Ticker:</strong> ' + esc(d.symbol) + '</p>' +
+                '<p><strong>Price:</strong> ' + p + '</p>' +
+                '<p><strong>Asset Type:</strong> ' + esc(d.asset_type) + '</p>' +
+                '<p class="' + returnClass(d.return_1y) + '">1Y: ' + esc(d.return_1y) + '%</p>' +
+                '<p class="' + returnClass(d.return_3y) + '">3Y: ' + esc(d.return_3y) + '%</p>' +
+                '<p class="' + returnClass(d.return_5y) + '">5Y: ' + esc(d.return_5y) + '%</p>' +
+                '</div></div>';
+        }
+
+        document.getElementById("compare-result").innerHTML =
+            '<div class="card mb-3"><div class="card-body text-center">' +
+                '<p class="section-title">Result</p><h5>' + winnerHtml + '</h5>' +
+            '</div></div>' +
+            chartHtml +
+            '<div class="row g-4">' +
+                '<div class="col-md-6">' + stockCard(data.details1) + '</div>' +
+                '<div class="col-md-6">' + stockCard(data.details2) + '</div>' +
+            '</div>';
+
+    } finally {
+        hideLoader("compare-loader");
+    }
+}
+</script>
+
+</body>
+</html>
