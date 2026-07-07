@@ -8,6 +8,7 @@ import io
 import base64
 import time
 import os
+import random
 import requests
 from concurrent.futures import ThreadPoolExecutor
 
@@ -18,6 +19,45 @@ CSV_PATH = os.path.join(BASE_DIR, "stocks.csv")
 
 HF_API_KEY = os.getenv("HF_API_KEY", "")
 HF_API_URL = "https://api-inference.huggingface.co/models/ProsusAI/finbert"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Shared HTTP session for yfinance
+# Using a real browser User-Agent significantly reduces the odds of Yahoo
+# Finance soft-blocking requests coming from a shared/free-tier hosting IP.
+# ─────────────────────────────────────────────────────────────────────────────
+_session = requests.Session()
+_session.headers.update({
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    )
+})
+
+
+def make_ticker(symbol):
+    """Create a yfinance Ticker using our shared, browser-like session."""
+    return yf.Ticker(symbol, session=_session)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Very small in-memory cache to avoid hammering Yahoo Finance with repeat
+# requests for the same symbol (helps a LOT with free-tier rate limits).
+# ─────────────────────────────────────────────────────────────────────────────
+_cache = {}
+INFO_CACHE_TTL = 15 * 60       # 15 minutes — info/price rarely needs to be fresher
+HISTORY_CACHE_TTL = 10 * 60    # 10 minutes
+
+
+def cache_get(key):
+    entry = _cache.get(key)
+    if entry and (time.time() - entry[0]) < entry[2]:
+        return entry[1]
+    return None
+
+
+def cache_set(key, value, ttl):
+    _cache[key] = (time.time(), value, ttl)
+
 
 # Load CSV once at startup instead of on every request
 try:
@@ -57,11 +97,19 @@ def resolve_ticker(stock):
     return None
 
 
+def lookup_csv_name(ticker_symbol):
+    """Best-effort fallback name lookup from stocks.csv when Yahoo info fails."""
+    match = _stocks_df[_stocks_df["ticker"].str.lower() == str(ticker_symbol).lower()]
+    if not match.empty:
+        return match.iloc[0]["name"]
+    return None
+
+
 def get_sentiment(symbol):
     try:
         if not HF_API_KEY:
             return None, None
-        ticker = yf.Ticker(symbol)
+        ticker = make_ticker(symbol)
         news = ticker.news or []
         headlines = [
             (item.get("content", {}).get("title") or item.get("title", ""))
@@ -110,7 +158,7 @@ def get_sentiment(symbol):
 
 
 def calculate_return(history):
-    if history.empty or len(history) < 2:
+    if history is None or history.empty or len(history) < 2:
         return 0.0
     first = history["Close"].iloc[0]
     if first == 0:
@@ -134,41 +182,51 @@ def calculate_projection(amount, return_5y, sentiment_score, horizon_days):
 
 def _encode_figure(fig):
     buf = io.BytesIO()
-    fig.savefig(buf, format="png")
-    plt.close(fig)
-    buf.seek(0)
-    return base64.b64encode(buf.read()).decode("utf-8")
-
-
-def _normalize_index(history):
-    if history.index.tz is not None:
-        history.index = history.index.tz_convert(None)
-    return history
-
-
-def _fetch_with_retry(fn, retries=3, delay=2):
-    for i in range(retries):
-        try:
-            result = fn()
-            if result is not None and (not hasattr(result, 'empty') or not result.empty):
-                return result
-        except Exception:
-            pass
-        if i < retries - 1:
-            time.sleep(delay)
-    return fn()
-
-
-def _encode_figure(fig):
-    buf = io.BytesIO()
     fig.savefig(buf, format="png", dpi=100, bbox_inches="tight")
     plt.close(fig)
     buf.seek(0)
     return base64.b64encode(buf.read()).decode("utf-8")
 
 
+def _normalize_index(history):
+    if history is None or history.empty:
+        return history
+    if history.index.tz is not None:
+        history.index = history.index.tz_convert(None)
+    return history
+
+
+def _fetch_with_retry(fn, retries=4, base_delay=1.5):
+    """
+    Retry helper with exponential backoff + jitter.
+    Never lets an exception escape on the final attempt — returns None instead,
+    so callers can degrade gracefully rather than crashing with a raw traceback.
+    """
+    last_result = None
+    for i in range(retries):
+        try:
+            result = fn()
+            if result is not None and (not hasattr(result, 'empty') or not result.empty):
+                return result
+            last_result = result
+        except Exception:
+            last_result = None
+        if i < retries - 1:
+            sleep_time = base_delay * (2 ** i) + random.uniform(0, 0.5)
+            time.sleep(sleep_time)
+    return last_result
+
+
+def safe_get_info(ticker):
+    """Fetch ticker.info defensively. Always returns a dict (never None)."""
+    result = _fetch_with_retry(lambda: ticker.info, retries=4, base_delay=1.5)
+    if not isinstance(result, dict):
+        return {}
+    return result
+
+
 def make_chart(history, color):
-    if history.empty:
+    if history is None or history.empty:
         return None
     fig, ax = plt.subplots(figsize=(7, 2.8), dpi=100)
     ax.plot(history.index, history["Close"], color=color, linewidth=1.5)
@@ -184,7 +242,7 @@ def make_chart(history, color):
 
 
 def generate_growth_chart(history, amount):
-    if history.empty:
+    if history is None or history.empty:
         return None
     first_price = history["Close"].iloc[0]
     if first_price == 0:
@@ -210,7 +268,7 @@ def generate_growth_chart(history, amount):
 
 
 def generate_growth_chart_monthly(monthly_history, amount):
-    if monthly_history.empty:
+    if monthly_history is None or monthly_history.empty:
         return None
     total_units, running_invested = 0, 0
     portfolio_values, total_invested_values = [], []
@@ -243,7 +301,7 @@ def generate_growth_chart_monthly(monthly_history, amount):
 
 
 def generate_comparison_chart(h1, h2, label1, label2):
-    if h1.empty or h2.empty:
+    if h1 is None or h2 is None or h1.empty or h2.empty:
         return None
     if h1["Close"].iloc[0] == 0 or h2["Close"].iloc[0] == 0:
         return None
@@ -263,6 +321,40 @@ def generate_comparison_chart(h1, h2, label1, label2):
     fig.tight_layout(pad=1.0)
     return _encode_figure(fig)
 
+
+def fetch_history_cached(symbol, period=None, start=None, end=None):
+    """Fetch history via yfinance with caching + retry, keyed by params."""
+    key = f"hist:{symbol}:{period}:{start}:{end}"
+    cached = cache_get(key)
+    if cached is not None:
+        return cached
+
+    ticker = make_ticker(symbol)
+
+    def _do_fetch():
+        if period:
+            return ticker.history(period=period)
+        return ticker.history(start=start, end=end)
+
+    history = _fetch_with_retry(_do_fetch, retries=4, base_delay=1.5)
+    if history is None:
+        history = pd.DataFrame()
+    history = _normalize_index(history)
+    cache_set(key, history, HISTORY_CACHE_TTL)
+    return history
+
+
+def fetch_info_cached(symbol):
+    key = f"info:{symbol}"
+    cached = cache_get(key)
+    if cached is not None:
+        return cached
+    ticker = make_ticker(symbol)
+    info = safe_get_info(ticker)
+    cache_set(key, info, INFO_CACHE_TTL)
+    return info
+
+
 def get_detail(stock):
     """Look up an Indian stock/ETF/index purely from stocks.csv, then pull data from Yahoo Finance."""
     stock = (stock or "").strip()
@@ -274,24 +366,30 @@ def get_detail(stock):
         return {"error": f"'{stock}' was not found in our list of Indian stocks/ETFs."}
 
     try:
-        ticker = yf.Ticker(resolved)
-        with ThreadPoolExecutor(max_workers=4) as ex:
-            f_info = ex.submit(lambda: _fetch_with_retry(lambda: ticker.info))
-            f_1y   = ex.submit(lambda: _fetch_with_retry(lambda: ticker.history(period="1y")))
-            f_3y   = ex.submit(lambda: _fetch_with_retry(lambda: ticker.history(period="3y")))
-            f_5y   = ex.submit(lambda: _fetch_with_retry(lambda: ticker.history(period="5y")))
-            info       = f_info.result()
-            history_1y = _normalize_index(f_1y.result())
-            history_3y = _normalize_index(f_3y.result())
-            history_5y = _normalize_index(f_5y.result())
-        name          = info.get("longName") or info.get("shortName") or "Not Available"
-        symbol        = info.get("symbol") or resolved
-        price         = info.get("currentPrice") or info.get("regularMarketPrice") or "Not Available"
-        asset_type    = info.get("quoteType") or "Not Available"
-        raw_expense   = info.get("annualReportExpenseRatio") or info.get("netExpenseRatio")
+        # Sequential-ish fetch with only 2 workers max — fewer simultaneous
+        # requests to Yahoo Finance means fewer rate-limit hits on free hosting.
+        with ThreadPoolExecutor(max_workers=2) as ex:
+            f_info = ex.submit(fetch_info_cached, resolved)
+            f_1y = ex.submit(fetch_history_cached, resolved, "1y")
+            info = f_info.result()
+            history_1y = f_1y.result()
+
+        history_3y = fetch_history_cached(resolved, "3y")
+        history_5y = fetch_history_cached(resolved, "5y")
+
+        csv_name = lookup_csv_name(resolved)
+        name = info.get("longName") or info.get("shortName") or csv_name or "Not Available"
+        symbol = info.get("symbol") or resolved
+        price = info.get("currentPrice") or info.get("regularMarketPrice")
+        if price is None and not history_1y.empty:
+            price = round(history_1y["Close"].iloc[-1], 2)
+        if price is None:
+            price = "Not Available"
+        asset_type = info.get("quoteType") or "Not Available"
+        raw_expense = info.get("annualReportExpenseRatio") or info.get("netExpenseRatio")
         expense_ratio = round(raw_expense * 100, 2) if raw_expense else "Not Available"
-        raw_exp       = info.get("longBusinessSummary", "")
-        explanation   = (raw_exp[:510] + "...") if len(raw_exp) > 510 else raw_exp or "Not Available"
+        raw_exp = info.get("longBusinessSummary", "") or ""
+        explanation = (raw_exp[:510] + "...") if len(raw_exp) > 510 else raw_exp or "Not Available"
 
         if not history_1y.empty or not history_3y.empty or not history_5y.empty:
             return {
@@ -309,7 +407,7 @@ def get_detail(stock):
                 "chart_5y":      make_chart(history_5y, "#fd7e14"),
             }
         else:
-            return {"error": f"No price data found for '{stock}'. Try a different stock."}
+            return {"error": "Data provider is currently rate-limiting requests. Please wait a minute and try again."}
     except Exception as e:
         return {"error": f"Could not fetch data: {e}"}
 
@@ -357,12 +455,10 @@ def api_historical():
         return jsonify({"error": "Amount must be greater than zero"})
 
     try:
-        ticker  = yf.Ticker(resolved)
-        history = ticker.history(start=start_date, end=end_date)
-        history = _normalize_index(history)
+        history = fetch_history_cached(resolved, start=start_date, end=end_date)
 
-        if history.empty:
-            return jsonify({"error": "No data found for the selected date range"})
+        if history is None or history.empty:
+            return jsonify({"error": "No data found for the selected date range, or the data provider is temporarily rate-limiting requests. Please try again shortly."})
 
         if history["Close"].iloc[0] == 0:
             return jsonify({"error": "Invalid price data for this stock"})
@@ -423,10 +519,9 @@ def api_future():
     resolved_stock = resolve_ticker(stock) or stock  # currentSymbol from frontend is already resolved
 
     try:
-        ticker    = yf.Ticker(resolved_stock)
-        history5y = _normalize_index(ticker.history(period="5y"))
-        info      = ticker.info
-        symbol    = info.get("symbol") or resolved_stock.upper()
+        history5y = fetch_history_cached(resolved_stock, "5y")
+        info = fetch_info_cached(resolved_stock)
+        symbol = info.get("symbol") or resolved_stock.upper()
         return_5y = round(calculate_return(history5y), 2)
     except Exception as e:
         return jsonify({"error": f"Could not fetch data: {e}"})
@@ -464,8 +559,8 @@ def api_compare():
         return jsonify({"error": details2["error"]})
 
     try:
-        h1 = _normalize_index(yf.Ticker(details1["symbol"]).history(period="1y"))
-        h2 = _normalize_index(yf.Ticker(details2["symbol"]).history(period="1y"))
+        h1 = fetch_history_cached(details1["symbol"], "1y")
+        h2 = fetch_history_cached(details2["symbol"], "1y")
         comparison_chart = generate_comparison_chart(h1, h2, details1["symbol"], details2["symbol"])
     except Exception:
         comparison_chart = None
