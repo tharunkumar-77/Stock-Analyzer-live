@@ -1,684 +1,684 @@
-name,ticker,category
-Nifty 50,^NSEI,Index
-Sensex,^BSESN,Index
-Nifty 100,^CNX100,Index
-Nifty 200,^CNX200,Index
-Nifty 500,^CNX500,Index
-Nifty Total Market,^CNXTOTALM,Index
-BSE 100,^BSE100,Index
-BSE 200,^BSE200,Index
-BSE 500,^BSE500,Index
-BSE Sensex 50,^BSESEN50,Index
-Nifty Next 50,^NSMIDCP,Index
-Nifty Midcap 50,^NIFMIDCAP50,Index
-Nifty Midcap 100,^CNXMC,Index
-Nifty Midcap 150,^NIFMDCP150,Index
-Nifty Midcap Select,^NIFMDCPSEL,Index
-Nifty Smallcap 50,^NIFSMCAP50,Index
-Nifty Smallcap 100,^CNXSC,Index
-Nifty Smallcap 250,^NIFSMCAP250,Index
-Nifty LargeMidcap 250,^NIFLRGMID250,Index
-Nifty MicroCap 250,^NIFMIC250,Index
-BSE Midcap,^BSEMIDCAP,Index
-BSE Smallcap,^BSESMLCAP,Index
-BSE Midcap Select,^BSEMIDSEL,Index
-Nifty Bank,^NSEBANK,Index
-Nifty Private Bank,^NIFPVTBNK,Index
-Nifty PSU Bank,^CNXPSUBANK,Index
-Nifty Financial Services,^CNXFIN,Index
-Nifty IT,^CNXIT,Index
-Nifty Auto,^CNXAUTO,Index
-Nifty FMCG,^CNXFMCG,Index
-Nifty Pharma,^CNXPHARMA,Index
-Nifty Healthcare,^CNXHEALTH,Index
-Nifty Metal,^CNXMETAL,Index
-Nifty Realty,^CNXREALTY,Index
-Nifty Energy,^CNXENERGY,Index
-Nifty Infra,^CNXINFRA,Index
-Nifty Commodities,^CNXCMDT,Index
-Nifty Oil & Gas,^CNXOILGAS,Index
-Nifty Media,^CNXMEDIA,Index
-Nifty Consumer Durables,^NIFCONSDUR,Index
-Nifty India Consumption,^CNXCONSUM,Index
-Nifty CPSE,^CNXCPSE,Index
-Nifty PSE,^CNXPSE,Index
-Nifty India Defence,^NIFINDDEF,Index
-Nifty India Digital,^NIFDIGITAL,Index
-Nifty Dividend Opp 50,^NIFTYDIV50,Index
-India VIX,^INDIAVIX,Index
-BSE Bankex,^BSEBANKEX,Index
-BSE IT,^BSEIT,Index
-BSE Healthcare,^BSEHC,Index
-BSE Auto,^BSEAUTO,Index
-BSE FMCG,^BSEFMCG,Index
-BSE Metal,^BSEMETAL,Index
-BSE Realty,^BSEREALTY,Index
-BSE Oil & Gas,^BSEOILGAS,Index
-BSE Power,^BSEPOWER,Index
-BSE Capital Goods,^BSECAPGOOD,Index
-BSE Consumer Durables,^BSECD,Index
-BSE Telecom,^BSETELECOM,Index
-Gift Nifty,NIFTYNXT50.NS,Index
-Reliance Industries,RELIANCE.NS,Nifty 50
-Tata Consultancy Services,TCS.NS,Nifty 50
-HDFC Bank,HDFCBANK.NS,Nifty 50
-Infosys,INFY.NS,Nifty 50
-ICICI Bank,ICICIBANK.NS,Nifty 50
-Hindustan Unilever,HINDUNILVR.NS,Nifty 50
-ITC,ITC.NS,Nifty 50
-State Bank of India,SBIN.NS,Nifty 50
-Bharti Airtel,BHARTIARTL.NS,Nifty 50
-Kotak Mahindra Bank,KOTAKBANK.NS,Nifty 50
-Larsen & Toubro,LT.NS,Nifty 50
-Axis Bank,AXISBANK.NS,Nifty 50
-Asian Paints,ASIANPAINT.NS,Nifty 50
-HCL Technologies,HCLTECH.NS,Nifty 50
-Maruti Suzuki,MARUTI.NS,Nifty 50
-Sun Pharmaceutical,SUNPHARMA.NS,Nifty 50
-Bajaj Finance,BAJFINANCE.NS,Nifty 50
-Titan Company,TITAN.NS,Nifty 50
-UltraTech Cement,ULTRACEMCO.NS,Nifty 50
-Wipro,WIPRO.NS,Nifty 50
-NTPC,NTPC.NS,Nifty 50
-Power Grid Corporation,POWERGRID.NS,Nifty 50
-Tech Mahindra,TECHM.NS,Nifty 50
-Mahindra & Mahindra,M&M.NS,Nifty 50
-Nestle India,NESTLEIND.NS,Nifty 50
-JSW Steel,JSWSTEEL.NS,Nifty 50
-Tata Motors,TATAMOTORS.NS,Nifty 50
-Adani Ports,ADANIPORTS.NS,Nifty 50
-Adani Enterprises,ADANIENT.NS,Nifty 50
-Coal India,COALINDIA.NS,Nifty 50
-Bajaj Auto,BAJAJ-AUTO.NS,Nifty 50
-Tata Steel,TATASTEEL.NS,Nifty 50
-Dr Reddys Laboratories,DRREDDY.NS,Nifty 50
-Cipla,CIPLA.NS,Nifty 50
-Hindalco Industries,HINDALCO.NS,Nifty 50
-Eicher Motors,EICHERMOT.NS,Nifty 50
-Shriram Finance,SHRIRAMFIN.NS,Nifty 50
-Grasim Industries,GRASIM.NS,Nifty 50
-Hero MotoCorp,HEROMOTOCO.NS,Nifty 50
-ONGC,ONGC.NS,Nifty 50
-Britannia Industries,BRITANNIA.NS,Nifty 50
-Divi's Laboratories,DIVISLAB.NS,Nifty 50
-Apollo Hospitals,APOLLOHOSP.NS,Nifty 50
-SBI Life Insurance,SBILIFE.NS,Nifty 50
-HDFC Life Insurance,HDFCLIFE.NS,Nifty 50
-Tata Consumer Products,TATACONSUM.NS,Nifty 50
-IndusInd Bank,INDUSINDBK.NS,Nifty 50
-BEL,BEL.NS,Nifty 50
-Bajaj Finserv,BAJAJFINSV.NS,Nifty 50
-Zomato,ZOMATO.NS,Nifty 50
-Adani Green Energy,ADANIGREEN.NS,Nifty Next 50
-Adani Total Gas,ATGL.NS,Nifty Next 50
-Adani Power,ADANIPOWER.NS,Nifty Next 50
-Ambuja Cements,AMBUJACEM.NS,Nifty Next 50
-Avenue Supermarts (DMart),DMART.NS,Nifty Next 50
-Bajaj Holdings,BAJAJHLDNG.NS,Nifty Next 50
-Bank of Baroda,BANKBARODA.NS,Nifty Next 50
-Berger Paints,BERGEPAINT.NS,Nifty Next 50
-Bharat Petroleum,BPCL.NS,Nifty Next 50
-Cholamandalam Investment,CHOLAFIN.NS,Nifty Next 50
-Colgate Palmolive India,COLPAL.NS,Nifty Next 50
-Dabur India,DABUR.NS,Nifty Next 50
-DLF,DLF.NS,Nifty Next 50
-Godrej Consumer Products,GODREJCP.NS,Nifty Next 50
-Havells India,HAVELLS.NS,Nifty Next 50
-HDFC Asset Management,HDFCAMC.NS,Nifty Next 50
-Indian Oil Corporation,IOC.NS,Nifty Next 50
-Interglobe Aviation IndiGo,INDIGO.NS,Nifty Next 50
-Jio Financial Services,JIOFIN.NS,Nifty Next 50
-Life Insurance Corporation,LICI.NS,Nifty Next 50
-Lupin,LUPIN.NS,Nifty Next 50
-Mankind Pharma,MANKIND.NS,Nifty Next 50
-Marico,MARICO.NS,Nifty Next 50
-Muthoot Finance,MUTHOOTFIN.NS,Nifty Next 50
-Naukri Info Edge,NAUKRI.NS,Nifty Next 50
-NHPC,NHPC.NS,Nifty Next 50
-Oil India,OIL.NS,Nifty Next 50
-Patanjali Foods,PATANJALI.NS,Nifty Next 50
-Persistent Systems,PERSISTENT.NS,Nifty Next 50
-Pidilite Industries,PIDILITIND.NS,Nifty Next 50
-Piramal Enterprises,PEL.NS,Nifty Next 50
-Power Finance Corporation,PFC.NS,Nifty Next 50
-REC Limited,RECLTD.NS,Nifty Next 50
-SBI Cards,SBICARD.NS,Nifty Next 50
-Siemens India,SIEMENS.NS,Nifty Next 50
-Torrent Pharmaceuticals,TORNTPHARM.NS,Nifty Next 50
-Trent,TRENT.NS,Nifty Next 50
-TVS Motor Company,TVSMOTOR.NS,Nifty Next 50
-United Spirits,MCDOWELL-N.NS,Nifty Next 50
-Vedanta,VEDL.NS,Nifty Next 50
-Voltas,VOLTAS.NS,Nifty Next 50
-Zydus Lifesciences,ZYDUSLIFE.NS,Nifty Next 50
-Oberoi Realty,OBEROIDVLP.NS,Nifty Next 50
-Page Industries,PAGEIND.NS,Nifty Next 50
-Samvardhana Motherson,MOTHERSON.NS,Nifty Next 50
-IRCTC,IRCTC.NS,Nifty Next 50
-Hindustan Aeronautics HAL,HAL.NS,Nifty Next 50
-IRFC,IRFC.NS,Nifty Next 50
-Bharat Forge,BHARATFORG.NS,Nifty Next 50
-Godrej Properties,GODREJPROP.NS,Nifty Next 50
-Shree Cement,SHREECEM.NS,Nifty Next 50
-ACC,ACC.NS,Nifty Next 50
-Star Health Insurance,STARHEALTH.NS,Nifty Next 50
-Go Digit Insurance,GODIGIT.NS,Nifty Next 50
-SRF Limited,SRF.NS,Nifty Next 50
-Bharat Dynamics,BDL.NS,Nifty Next 50
-RVNL Rail Vikas Nigam,RVNL.NS,Nifty Next 50
-Cochin Shipyard,COCHINSHIP.NS,Nifty Next 50
-Mazagon Dock Shipbuilders,MAZDOCK.NS,Nifty Next 50
-CDSL,CDSL.NS,Nifty Next 50
-BSE Limited,BSE.NS,Nifty Next 50
-Polycab India,POLYCAB.NS,Nifty Next 50
-Punjab National Bank,PNB.NS,Banking
-Canara Bank,CANBK.NS,Banking
-Bank of India,BANKINDIA.NS,Banking
-Union Bank of India,UNIONBANK.NS,Banking
-Indian Bank,INDIANB.NS,Banking
-Central Bank of India,CENTRALBK.NS,Banking
-UCO Bank,UCOBANK.NS,Banking
-Indian Overseas Bank,IOB.NS,Banking
-Bank of Maharashtra,MAHABANK.NS,Banking
-Punjab & Sind Bank,PSB.NS,Banking
-Yes Bank,YESBANK.NS,Banking
-RBL Bank,RBLBANK.NS,Banking
-Federal Bank,FEDERALBNK.NS,Banking
-IDFC First Bank,IDFCFIRSTB.NS,Banking
-Bandhan Bank,BANDHANBNK.NS,Banking
-Karnataka Bank,KTKBANK.NS,Banking
-City Union Bank,CUB.NS,Banking
-Karur Vysya Bank,KARURVYSYA.NS,Banking
-South Indian Bank,SOUTHBANK.NS,Banking
-Dhanlaxmi Bank,DHANBANK.NS,Banking
-Lakshmi Vilas Bank,LVBANK.NS,Banking
-Nainital Bank,NAINITAL.NS,Banking
-Jammu & Kashmir Bank,J&KBANK.NS,Banking
-CSB Bank,CSBBANK.NS,Banking
-DCB Bank,DCBBANK.NS,Banking
-Ujjivan Small Finance Bank,UJJIVANSFB.NS,Banking
-Equitas Small Finance Bank,EQUITASBNK.NS,Banking
-AU Small Finance Bank,AUBANK.NS,Banking
-ESAF Small Finance Bank,ESAFSFB.NS,Banking
-Suryoday Small Finance Bank,SURYODAY.NS,Banking
-Utkarsh Small Finance Bank,UTKARSHBNK.NS,Banking
-Fino Payments Bank,FINOPB.NS,Banking
-Paytm Payments Bank,PAYTM.NS,Banking
-Mahindra Finance,M&MFIN.NS,Finance
-Sundaram Finance,SUNDARMFIN.NS,Finance
-Shriram City Union Finance,SHRIRAMCIT.NS,Finance
-IIFL Finance,IIFL.NS,Finance
-Muthoot Microfin,MUTHOOTMF.NS,Finance
-CreditAccess Grameen,CREDITACC.NS,Finance
-Five Star Business Finance,FIVESTAR.NS,Finance
-Home First Finance,HOMEFIRST.NS,Finance
-Aptus Value Housing Finance,APTUS.NS,Finance
-Aavas Financiers,AAVAS.NS,Finance
-PNB Housing Finance,PNBHOUSING.NS,Finance
-LIC Housing Finance,LICHSGFIN.NS,Finance
-Repco Home Finance,REPCOHOME.NS,Finance
-Indiabulls Housing Finance,IBULHSGFIN.NS,Finance
-GIC Housing Finance,GICHSGFIN.NS,Finance
-Can Fin Homes,CANFINHOME.NS,Finance
-L&T Finance,LTF.NS,Finance
-Motilal Oswal Financial,MOTILALOFS.NS,Finance
-IIFL Securities,IIFLSEC.NS,Finance
-Angel One,ANGELONE.NS,Finance
-Geojit Financial Services,GEOJITFSL.NS,Finance
-MCX India,MCX.NS,Finance
-Indian Energy Exchange,IEX.NS,Finance
-CRISIL,CRISIL.NS,Finance
-ICRA,ICRA.NS,Finance
-Care Ratings,CARERATING.NS,Finance
-Nuvama Wealth Management,NUVAMA.NS,Finance
-Nippon Life India AMC,NAM-INDIA.NS,Finance
-UTI AMC,UTIAMC.NS,Finance
-Aditya Birla Sun Life AMC,ABSLAMC.NS,Finance
-KFIN Technologies,KFINTECH.NS,Finance
-Computer Age Management CAMS,CAMS.NS,Finance
-PolicyBazaar PB Fintech,POLICYBZR.NS,Finance
-LTIMindtree,LTIM.NS,IT
-Mphasis,MPHASIS.NS,IT
-L&T Technology Services,LTTS.NS,IT
-Coforge,COFORGE.NS,IT
-Tata Elxsi,TATAELXSI.NS,IT
-Hexaware Technologies,HEXAWARE.NS,IT
-KPIT Technologies,KPITTECH.NS,IT
-Birlasoft,BSOFT.NS,IT
-Zensar Technologies,ZENSARTECH.NS,IT
-Mastek,MASTEK.NS,IT
-Cyient,CYIENT.NS,IT
-Sonata Software,SONATSOFTW.NS,IT
-Oracle Financial Services,OFSS.NS,IT
-Tata Technologies,TATATECH.NS,IT
-Happiest Minds,HAPPSTMNDS.NS,IT
-Newgen Software,NEWGEN.NS,IT
-Rategain Travel Tech,RATEGAIN.NS,IT
-Intellect Design Arena,INTELLECT.NS,IT
-Sasken Technologies,SASKEN.NS,IT
-Quick Heal Technologies,QUICKHEAL.NS,IT
-Route Mobile,ROUTE.NS,IT
-Tanla Platforms,TANLA.NS,IT
-Tata Communications,TATACOMM.NS,IT
-Redington,REDINGTON.NS,IT
-Dixon Technologies,DIXON.NS,IT
-Data Patterns India,DATAPATTNS.NS,IT
-NIIT Learning Systems,NIITMTS.NS,IT
-Indiamart Intermesh,INDIAMART.NS,IT
-Just Dial,JUSTDIAL.NS,IT
-Nykaa FSN E-Commerce,FSN.NS,IT
-Swiggy,SWIGGY.NS,IT
-EaseMyTrip,EASEMYTRIP.NS,IT
-Nazara Technologies,NAZARA.NS,IT
-MapmyIndia CE Info Systems,MAPMYINDIA.NS,IT
-CarTrade Tech,CARTRADE.NS,IT
-Honasa Consumer Mamaearth,HONASA.NS,IT
-Tracxn Technologies,TRACXN.NS,IT
-Delhivery,DELHIVERY.NS,IT
-Aurobindo Pharma,AUROPHARMA.NS,Pharma
-Glenmark Pharmaceuticals,GLENMARK.NS,Pharma
-Alkem Laboratories,ALKEM.NS,Pharma
-IPCA Laboratories,IPCALAB.NS,Pharma
-Abbott India,ABBOTINDIA.NS,Pharma
-Pfizer India,PFIZER.NS,Pharma
-Sanofi India,SANOFI.NS,Pharma
-Biocon,BIOCON.NS,Pharma
-Ajanta Pharma,AJANTPHARM.NS,Pharma
-JB Chemicals,JBCHEPHARM.NS,Pharma
-Strides Pharma,STAR.NS,Pharma
-Eris Lifesciences,ERIS.NS,Pharma
-Granules India,GRANULES.NS,Pharma
-Laurus Labs,LAURUSLABS.NS,Pharma
-Suven Pharmaceuticals,SUVENPHAR.NS,Pharma
-Aarti Drugs,AARTIDRUGS.NS,Pharma
-Alembic Pharmaceuticals,APLLTD.NS,Pharma
-Caplin Point Laboratories,CAPLIPOINT.NS,Pharma
-Emcure Pharmaceuticals,EMCURE.NS,Pharma
-Piramal Pharma,PPLPHARMA.NS,Pharma
-Wockhardt,WOCKPHARMA.NS,Pharma
-Solara Active Pharma,SOLARA.NS,Pharma
-Gland Pharma,GLAND.NS,Pharma
-Syngene International,SYNGENE.NS,Pharma
-Thyrocare Technologies,THYROCARE.NS,Pharma
-Dr Lal PathLabs,LALPATHLAB.NS,Pharma
-Metropolis Healthcare,METROPOLIS.NS,Pharma
-Vijaya Diagnostic Centre,VIJAYA.NS,Pharma
-Krsnaa Diagnostics,KRSNAA.NS,Pharma
-Fortis Healthcare,FORTIS.NS,Pharma
-Max Healthcare,MAXHEALTH.NS,Pharma
-Narayana Hrudayalaya,NH.NS,Pharma
-KIMS Medical Sciences,KIMS.NS,Pharma
-Aster DM Healthcare,ASTERDM.NS,Pharma
-Rainbow Children Medicare,RAINBOW.NS,Pharma
-Shilpa Medicare,SHILPAMED.NS,Pharma
-Natco Pharma,NATCOPHARM.NS,Pharma
-Sequent Scientific,SEQUENT.NS,Pharma
-Supriya Lifescience,SUPRIYA.NS,Pharma
-Tatva Chintan Pharma,TATVA.NS,Pharma
-Ashok Leyland,ASHOKLEY.NS,Auto
-Escorts Kubota,ESCORTS.NS,Auto
-Force Motors,FORCEMOT.NS,Auto
-Atul Auto,ATULAUTO.NS,Auto
-Bosch India,BOSCHLTD.NS,Auto
-Minda Industries,MINDAIND.NS,Auto
-Tube Investments,TIINDIA.NS,Auto
-Balkrishna Industries,BALKRISIND.NS,Auto
-MRF,MRF.NS,Auto
-Apollo Tyres,APOLLOTYRE.NS,Auto
-CEAT,CEATLTD.NS,Auto
-JK Tyre,JKTYRE.NS,Auto
-Exide Industries,EXIDEIND.NS,Auto
-Amara Raja Energy,AMARAJABAT.NS,Auto
-Jamna Auto Industries,JAMNAAUTO.NS,Auto
-Suprajit Engineering,SUPRAJIT.NS,Auto
-Sona BLW Precision,SONACOMS.NS,Auto
-Craftsman Automation,CRAFTSMAN.NS,Auto
-Endurance Technologies,ENDURANCE.NS,Auto
-Olectra Greentech,OLECTRA.NS,Auto
-Mahindra CIE Auto,MAHINDCIE.NS,Auto
-Rico Auto Industries,RICOAUTO.NS,Auto
-Rane Holdings,RANE.NS,Auto
-Sundram Fasteners,SUNDRMFAST.NS,Auto
-ZF Commercial Vehicle,ZFCVINDIA.NS,Auto
-Emami,EMAMILTD.NS,FMCG
-Radico Khaitan,RADICO.NS,FMCG
-United Breweries,UBL.NS,FMCG
-Varun Beverages,VBL.NS,FMCG
-CCL Products,CCL.NS,FMCG
-Westlife Foodworld,WESTLIFE.NS,FMCG
-Jubilant Foodworks,JUBLFOOD.NS,FMCG
-Restaurant Brands Asia,RBA.NS,FMCG
-Sapphire Foods,SAPPHIRE.NS,FMCG
-Dodla Dairy,DODLA.NS,FMCG
-Heritage Foods,HERITGFOOD.NS,FMCG
-Tasty Bite Eatables,TASTYBITE.NS,FMCG
-Hindustan Foods,HNDFDS.NS,FMCG
-Bikaji Foods,BIKAJI.NS,FMCG
-Prataap Snacks,PRATAAP.NS,FMCG
-DFM Foods,DFMFOODS.NS,FMCG
-Balaji Wafers,BALAMINES.NS,FMCG
-P&G Hygiene,PGHH.NS,FMCG
-Jyothy Labs,JYOTHYLAB.NS,FMCG
-Gillette India,GILLETTE.NS,FMCG
-3M India,3MINDIA.NS,FMCG
-NMDC,NMDC.NS,Metal
-SAIL,SAIL.NS,Metal
-Hindustan Zinc,HINDZINC.NS,Metal
-National Aluminium NALCO,NATIONALUM.NS,Metal
-Shyam Metalics,SHYAMMETL.NS,Metal
-JSW Energy,JSWENERGY.NS,Metal
-Jindal Steel & Power,JINDALSTEL.NS,Metal
-Jindal Stainless,JSL.NS,Metal
-APL Apollo Tubes,APLAPOLLO.NS,Metal
-Ratnamani Metals,RATNAMANI.NS,Metal
-MOIL,MOIL.NS,Metal
-Sandur Manganese,SANDUMA.NS,Metal
-HEG,HEG.NS,Metal
-Graphite India,GRAPHITE.NS,Metal
-Rain Industries,RAIN.NS,Metal
-Hindustan Copper,HINDCOPPER.NS,Metal
-Welspun Corp,WELCORP.NS,Metal
-Maharashtra Seamless,MAHSEAMLES.NS,Metal
-Mishra Dhatu Nigam MIDHANI,MIDHANI.NS,Metal
-GMDC Gujarat Mineral,GMDCLTD.NS,Metal
-RHI Magnesita,RHIM.NS,Metal
-Carborundum Universal,CARBORUNIV.NS,Metal
-Torrent Power,TORNTPOWER.NS,Energy
-Tata Power,TATAPOWER.NS,Energy
-Adani Transmission,ADANITRANS.NS,Energy
-SJVN,SJVN.NS,Energy
-CESC,CESC.NS,Energy
-Gujarat Gas,GUJGASLTD.NS,Energy
-Indraprastha Gas,IGL.NS,Energy
-Mahanagar Gas,MGL.NS,Energy
-Gujarat State Petronet,GSPL.NS,Energy
-GAIL India,GAIL.NS,Energy
-Petronet LNG,PETRONET.NS,Energy
-Castrol India,CASTROLIND.NS,Energy
-HPCL,HINDPETRO.NS,Energy
-Chennai Petroleum,CHENNPETRO.NS,Energy
-Mangalore Refinery,MRPL.NS,Energy
-Inox Wind,INOXWIND.NS,Energy
-Suzlon Energy,SUZLON.NS,Energy
-Wind World India,WINDWORLD.NS,Energy
-Greenpanel Industries,GREENPANEL.NS,Energy
-IRCON International,IRCON.NS,Infrastructure
-KNR Constructions,KNRCON.NS,Infrastructure
-G R Infraprojects,GRINFRA.NS,Infrastructure
-Ahluwalia Contracts,AHLUCONT.NS,Infrastructure
-HG Infra Engineering,HGINFRA.NS,Infrastructure
-PNC Infratech,PNCINFRA.NS,Infrastructure
-NCC,NCC.NS,Infrastructure
-Simplex Infrastructures,SIMPLEXINF.NS,Infrastructure
-Ashoka Buildcon,ASHOKA.NS,Infrastructure
-JMC Projects,JMCPROJECT.NS,Infrastructure
-PSP Projects,PSPPROJECT.NS,Infrastructure
-Engineers India,ENGINERSIN.NS,Infrastructure
-Patel Engineering,PATELENG.NS,Infrastructure
-Container Corporation,CONCOR.NS,Infrastructure
-Gujarat Pipavav Port,GPPL.NS,Infrastructure
-IRB Infrastructure,IRB.NS,Infrastructure
-Sadbhav Engineering,SADBHAV.NS,Infrastructure
-Dilip Buildcon,DBL.NS,Infrastructure
-Capacite Infraprojects,CAPACITE.NS,Infrastructure
-Megha Engineering,MEKRO.NS,Infrastructure
-BEML,BEML.NS,Infrastructure
-Texmaco Rail,TEXRAIL.NS,Infrastructure
-TITAGARH WAGONS,TWL.NS,Infrastructure
-Blue Dart Express,BLUEDART.NS,Infrastructure
-Mahindra Logistics,MAHLOG.NS,Infrastructure
-VRL Logistics,VRLLOG.NS,Infrastructure
-TCI Express,TCIEXP.NS,Infrastructure
-Snowman Logistics,SNOWMAN.NS,Infrastructure
-Skipper,SKIPPER.NS,Infrastructure
-ITI Limited,ITI.NS,Infrastructure
-Garden Reach Shipbuilders,GRSE.NS,Defence
-Paras Defence & Space,PARAS.NS,Defence
-Astra Microwave,ASTRAMICRO.NS,Defence
-Solar Industries India,SOLARINDS.NS,Defence
-Premier Explosives,PREMEXPLN.NS,Defence
-Mtar Technologies,MTARTECH.NS,Defence
-Ideaforge Technology,IDEAFORGE.NS,Defence
-DCX Systems,DCXINDIA.NS,Defence
-Zen Technologies,ZENTEC.NS,Defence
-Ramco Cements,RAMCOCEM.NS,Cement
-JK Cement,JKCEMENT.NS,Cement
-Dalmia Bharat,DALBHARAT.NS,Cement
-India Cement,INDIACEM.NS,Cement
-Star Cement,STARCEMENT.NS,Cement
-Birla Corporation,BIRLACORPN.NS,Cement
-Heidelberg Cement India,HEIDELBERG.NS,Cement
-JK Lakshmi Cement,JKLAKSHMI.NS,Cement
-Nuvoco Vistas,NUVOCO.NS,Cement
-Orient Cement,ORIENTCEM.NS,Cement
-Prism Cement,PRISMCEM.NS,Cement
-Sagar Cement,SAGCEM.NS,Cement
-Sanghi Industries,SANGHIIND.NS,Cement
-Mangalam Cement,MANGLMCEM.NS,Cement
-Prestige Estates,PRESTIGE.NS,Realty
-Macrotech Developers Lodha,LODHA.NS,Realty
-Sunteck Realty,SUNTECK.NS,Realty
-Brigade Enterprises,BRIGADE.NS,Realty
-Sobha,SOBHA.NS,Realty
-Phoenix Mills,PHOENIXLTD.NS,Realty
-Puravankara,PURVA.NS,Realty
-Kolte Patil Developers,KOLTEPATIL.NS,Realty
-Signatureglobal India,SIGNATURE.NS,Realty
-Mahindra Lifespace,MAHLIFE.NS,Realty
-Anant Raj,ANANTRAJ.NS,Realty
-Unitech,UNITECH.NS,Realty
-HDIL,HDIL.NS,Realty
-Indiabulls Real Estate,IBREALEST.NS,Realty
-Raymond,RAYMOND.NS,Realty
-Nexus Select Trust,NEXUSSELECT.NS,Realty
-Embassy Office Parks,EMBASSY.NS,Realty
-Mindspace Business Parks,MINDSPACE.NS,Realty
-Brookfield India REIT,BIRET.NS,Realty
-Deepak Nitrite,DEEPAKNTR.NS,Chemicals
-Vinati Organics,VINATIORGA.NS,Chemicals
-Navin Fluorine,NAVINFLUOR.NS,Chemicals
-Gujarat Fluorochemicals,FLUOROCHEM.NS,Chemicals
-Aarti Industries,AARTIIND.NS,Chemicals
-Fine Organic Industries,FINEORG.NS,Chemicals
-Rossari Biotech,ROSSARI.NS,Chemicals
-Clean Science Technology,CLEAN.NS,Chemicals
-Alkyl Amines Chemicals,ALKYLAMINE.NS,Chemicals
-Anupam Rasayan,ANURAS.NS,Chemicals
-Archean Chemical,ARCHEAN.NS,Chemicals
-Camlin Fine Sciences,CAMLINFINE.NS,Chemicals
-NOCIL,NOCIL.NS,Chemicals
-Epigral,EPIGRAL.NS,Chemicals
-ATUL,ATUL.NS,Chemicals
-Tata Chemicals,TATACHEM.NS,Chemicals
-DCM Shriram,DCMSHRIRAM.NS,Chemicals
-Sudarshan Chemical,SUDARSCHEM.NS,Chemicals
-Galaxy Surfactants,GALAXYSURF.NS,Chemicals
-Sumitomo Chemical India,SUMICHEM.NS,Chemicals
-Coromandel International,COROMANDEL.NS,Chemicals
-PI Industries,PIIND.NS,Chemicals
-UPL,UPL.NS,Chemicals
-Rallis India,RALLIS.NS,Chemicals
-Bayer CropScience,BAYERCROP.NS,Chemicals
-Chambal Fertilizers,CHAMBLFERT.NS,Chemicals
-GSFC,GSFC.NS,Chemicals
-GNFC,GNFC.NS,Chemicals
-National Fertilizers,NFL.NS,Chemicals
-Deepak Fertilizers,DEEPAKFERT.NS,Chemicals
-Ion Exchange India,IONEXCHANG.NS,Chemicals
-Va Tech Wabag,WABAG.NS,Chemicals
-Praj Industries,PRAJIND.NS,Chemicals
-Whirlpool India,WHIRLPOOL.NS,Consumer
-V-Guard Industries,VGUARD.NS,Consumer
-Crompton Greaves Consumer,CROMPTON.NS,Consumer
-Orient Electric,ORIENTELEC.NS,Consumer
-Bajaj Electricals,BAJAJELEC.NS,Consumer
-Symphony,SYMPHONY.NS,Consumer
-Blue Star,BLUESTARCO.NS,Consumer
-Amber Enterprises,AMBER.NS,Consumer
-Kaynes Technology,KAYNES.NS,Consumer
-Finolex Cables,FINCABLES.NS,Consumer
-KEI Industries,KEI.NS,Consumer
-Sterlite Technologies,STLTECH.NS,Consumer
-HFCL,HFCL.NS,Consumer
-Kansai Nerolac,KANSAINER.NS,Consumer
-Indigo Paints,INDIGOPNTS.NS,Consumer
-Astral,ASTRAL.NS,Consumer
-Supreme Industries,SUPREMEIND.NS,Consumer
-Nilkamal,NILKAMAL.NS,Consumer
-VIP Industries,VIPIND.NS,Consumer
-Safari Industries,SAFARI.NS,Consumer
-Relaxo Footwears,RELAXO.NS,Consumer
-Bata India,BATAINDIA.NS,Consumer
-Metro Brands,METROBRAND.NS,Consumer
-Campus Activewear,CAMPUS.NS,Consumer
-Wonderla Holidays,WONDERLA.NS,Consumer
-PVR Inox,PVRINOX.NS,Consumer
-Vaibhav Global,VAIBHAVGBL.NS,Consumer
-Kalyan Jewellers,KALYANKJIL.NS,Consumer
-PC Jeweller,PCJEWELLER.NS,Consumer
-Senco Gold,SENCO.NS,Consumer
-Thangamayil Jewellery,THANGAMAYL.NS,Consumer
-Welspun India,WELSPUNIND.NS,Textiles
-Arvind,ARVIND.NS,Textiles
-Vardhman Textiles,VTL.NS,Textiles
-Trident,TRIDENT.NS,Textiles
-Indo Count Industries,ICIL.NS,Textiles
-KPR Mill,KPRMILL.NS,Textiles
-Kewal Kiran Clothing,KEWALKTRO.NS,Textiles
-Aditya Birla Fashion,ABFRL.NS,Textiles
-Vedant Fashions Manyavar,MANYAVAR.NS,Textiles
-Go Fashion India,GOCOLORS.NS,Textiles
-Pearl Global Industries,PGIL.NS,Textiles
-Filatex India,FILATEX.NS,Textiles
-Garden Silk Mills,GARDENSILK.NS,Textiles
-Bombay Dyeing,BOMDYEING.NS,Textiles
-Himatsingka Seide,HIMATSEIDE.NS,Textiles
-Siyaram Silk Mills,SIYSLA.NS,Textiles
-Indian Hotels Taj,INDHOTEL.NS,Hospitality
-EIH Oberoi,EIHOTEL.NS,Hospitality
-Lemon Tree Hotels,LEMONTREE.NS,Hospitality
-Chalet Hotels,CHALHOTEL.NS,Hospitality
-Mahindra Holidays,MHRIL.NS,Hospitality
-Thomas Cook India,THOMASCOOK.NS,Hospitality
-SpiceJet,SPICEJET.NS,Hospitality
-Air India X Ayala,AIIL.NS,Hospitality
-Devyani International KFC,DEVYANI.NS,Hospitality
-Barbeque Nation,BARBEQUE.NS,Hospitality
-Vodafone Idea,IDEA.NS,Telecom
-MTNL,MTNL.NS,Telecom
-Zee Entertainment,ZEEL.NS,Media
-Sun TV Network,SUNTV.NS,Media
-Tips Music,TIPSMUSIC.NS,Media
-Saregama India,SAREGAMA.NS,Media
-Network18 Media,NETWORK18.NS,Media
-TV18 Broadcast,TV18BRDCST.NS,Media
-Dish TV India,DISHTV.NS,Media
-Hathway Cable,HATHWAY.NS,Media
-Den Networks,DEN.NS,Media
-Navneet Education,NAVNETEDUL.NS,Media
-Aakash Educational,AARTI.NS,Media
-Nippon India ETF Nifty 50 BeES,NIFTYBEES.NS,ETF
-SBI ETF Nifty 50,SETFNIF50.NS,ETF
-HDFC Nifty 50 ETF,HDFCNIFTY.NS,ETF
-ICICI Prudential Nifty 50 ETF,ICICINIFTY.NS,ETF
-Kotak Nifty 50 ETF,KOTAKNIFTY.NS,ETF
-UTI Nifty 50 ETF,UTINIFTETF.NS,ETF
-Axis Nifty 50 ETF,AXISNIFTY.NS,ETF
-Mirae Asset Nifty 50 ETF,MIRAEN50.NS,ETF
-Motilal Oswal Nifty 50 ETF,MONIFTY50.NS,ETF
-Aditya Birla Nifty 50 ETF,ABNIFTY.NS,ETF
-SBI ETF Sensex,SETFNIFBK.NS,ETF
-HDFC Sensex ETF,HDFCSENSEX.NS,ETF
-Nippon India ETF Sensex,SENSEXETF.NS,ETF
-ICICI Prudential Sensex ETF,ICICISENSEX.NS,ETF
-Kotak Sensex ETF,KOTAKSENSEX.NS,ETF
-Nippon India ETF Nifty Next 50,JUNIORBEES.NS,ETF
-HDFC Nifty Next 50 ETF,HDFCNXTETF.NS,ETF
-Kotak Nifty Next 50 ETF,KOTAKNXT50.NS,ETF
-SBI Nifty Next 50 ETF,SETFNN50.NS,ETF
-Nippon India ETF Nifty Midcap 150,MID150BEES.NS,ETF
-HDFC Nifty Midcap 150 ETF,HDFCMID150.NS,ETF
-Motilal Oswal Midcap 100 ETF,MOM100.NS,ETF
-Kotak Nifty Midcap 50 ETF,KOTAKMID50.NS,ETF
-Mirae Asset Midcap 150 ETF,MIAEN150.NS,ETF
-Nippon India ETF Nifty Smallcap 250,SMALL250.NS,ETF
-HDFC Nifty Smallcap 250 ETF,HDFCSML250.NS,ETF
-Nippon India ETF Bank BeES,BANKBEES.NS,ETF
-Kotak Nifty Bank ETF,KOTAKBKETF.NS,ETF
-HDFC Nifty Bank ETF,HDFCNIFBAN.NS,ETF
-Mirae Asset Nifty Bank ETF,MIRAENBANK.NS,ETF
-Nippon India ETF Nifty IT,ITBEES.NS,ETF
-HDFC Nifty IT ETF,HDFCNIFTYIT.NS,ETF
-Nippon India ETF Pharma BeES,PHARMABEES.NS,ETF
-Nippon India Nifty Auto ETF,AUTOBEES.NS,ETF
-Nippon India Nifty PSU Bank BeES,PSUBNKBEES.NS,ETF
-Nippon India Nifty Infra BeES,INFRABEES.NS,ETF
-Nippon India Consumption ETF,CONSUMBEES.NS,ETF
-BHARAT 22 ETF,BHARAT22.NS,ETF
-CPSE ETF,CPSEETF.NS,ETF
-Mirae Asset Nifty Financial ETF,MIRAEFINETF.NS,ETF
-Nippon India Gold BeES,GOLDBEES.NS,ETF
-SBI ETF Gold,SETFGOLD.NS,ETF
-HDFC Gold ETF,HDFCGOLD.NS,ETF
-ICICI Prudential Gold ETF,ICICIGOLD.NS,ETF
-Kotak Gold ETF,KOTAKGOLD.NS,ETF
-Axis Gold ETF,AXISGOLD.NS,ETF
-UTI Gold ETF,GOLDETF.NS,ETF
-Nippon India Silver ETF,SILVERBEES.NS,ETF
-ICICI Prudential Silver ETF,ICICISILVE.NS,ETF
-Mirae Asset Gold ETF,MGOLD.NS,ETF
-Mirae Asset NYSE FANG+ ETF,MAFANG.NS,ETF
-Mirae Asset S&P 500 Top 50 ETF,MIRAESP500.NS,ETF
-Nippon India ETF Hang Seng BeES,HNGSNGBEES.NS,ETF
-Edelweiss US Technology ETF,EDLWEISS.NS,ETF
-Mirae Asset Nifty Total Market ETF,MIRAETM.NS,ETF
-ICICI Prudential Nasdaq 100 ETF,ICICINASDAQ.NS,ETF
-Edelweiss Bharat Bond ETF Apr 2025,EBBETF0425.NS,ETF
-Edelweiss Bharat Bond ETF Apr 2030,EBBETF0430.NS,ETF
-Edelweiss Bharat Bond ETF Apr 2031,EBBETF0431.NS,ETF
-Edelweiss Bharat Bond ETF Apr 2032,EBBETF0432.NS,ETF
-SBI ETF 10 Year Gilt,SETF10GILT.NS,ETF
-Mirae Asset Nifty India Defence ETF,MIRAEDEF.NS,ETF
-Motilal Oswal Nifty India Defence,MODEF.NS,ETF
-HDFC Defence Fund ETF,HDFCDEF.NS,ETF
-Tata Investment Corporation,TATAINVEST.NS,Conglomerate
-Godrej Industries,GODREJIND.NS,Conglomerate
-Bombay Burmah Trading,BBTC.NS,Conglomerate
-Aditya Birla Capital,ABCAPITAL.NS,Finance
-Welspun Living,WELSPUNLIV.NS,Textiles
-Finolex Industries,FINPIPE.NS,Consumer
-Prince Pipes,PRINCEPIPE.NS,Consumer
-Time Technoplast,TIMETECHNO.NS,Consumer
-EID Parry,EIDPARRY.NS,Agri
-Balrampur Chini Mills,BALRAMCHIN.NS,Agri
-Triveni Engineering,TRIVENI.NS,Agri
-Shree Renuka Sugars,RENUKA.NS,Agri
-Dhampur Sugar,DHAMPURSUG.NS,Agri
-Godrej Agrovet,GODREJAGRO.NS,Agri
-Kaveri Seed Company,KSCL.NS,Agri
-Avanti Feeds,AVANTIFEED.NS,Agri
-Waterbase,WATERBASE.NS,Agri
-Honeywell Automation,HONAUT.NS,Diversified
-ABB India,ABB.NS,Diversified
-Cummins India,CUMMINSIND.NS,Diversified
-Thermax,THERMAX.NS,Diversified
-Schaeffler India,SCHAEFFLER.NS,Diversified
-SKF India,SKFINDIA.NS,Diversified
-Timken India,TIMKEN.NS,Diversified
-Grindwell Norton,GRINDWELL.NS,Diversified
-GMM Pfaudler,GMMPFAUDLR.NS,Diversified
-Kirloskar Brothers,KIRLOSBROS.NS,Diversified
-Kirloskar Oil Engines,KIRLOSENG.NS,Diversified
-Elecon Engineering,ELECON.NS,Diversified
-BHEL,BHEL.NS,Diversified
-Crompton Greaves,CRGR.NS,Diversified
-GE Power India,GEPIL.NS,Diversified
-Kennametal India,KENNAMET.NS,Diversified
-EPL Limited,EPL.NS,Packaging
-Uflex,UFLEX.NS,Packaging
-Huhtamaki PPL,HUHTAMAKI.NS,Packaging
-Max Financial Services,MFSL.NS,Finance
-ICICI Prudential Life,ICICIPRULI.NS,Insurance
-New India Assurance,NIACL.NS,Insurance
-General Insurance Corp GIC,GICRE.NS,Insurance
-Niva Bupa Health,NIVABUPA.NS,Insurance
+name,ticker,category,description
+Nifty 50,^NSEI,Index,"Nifty 50 tracks the 50 largest and most liquid companies listed on the National Stock Exchange of India, spanning all major sectors, and is the primary benchmark index for the Indian equity market."
+Sensex,^BSESN,Index,"Sensex (BSE Sensex) tracks 30 large, financially sound and actively traded companies listed on the Bombay Stock Exchange, and is India's oldest and most widely followed benchmark index."
+Nifty 100,^CNX100,Index,"Nifty 100 tracks the 100 largest companies by market capitalisation on the NSE, combining the Nifty 50 and Nifty Next 50 constituents to represent about the top of India's listed universe."
+Nifty 200,^CNX200,Index,"Nifty 200 tracks the 200 largest NSE-listed companies by market capitalisation, offering broader large- and mid-cap coverage of the Indian market."
+Nifty 500,^CNX500,Index,"Nifty 500 tracks the top 500 companies by market capitalisation on the NSE, representing roughly the bulk of listed Indian market capitalisation across sectors."
+Nifty Total Market,^CNXTOTALM,Index,"Nifty Total Market tracks an even broader universe of NSE-listed companies across large-, mid-, small- and micro-cap segments, aiming to represent the total investable Indian equity market."
+BSE 100,^BSE100,Index,BSE 100 tracks the 100 largest companies listed on the Bombay Stock Exchange by market capitalisation.
+BSE 200,^BSE200,Index,BSE 200 tracks 200 large- and mid-sized companies listed on the Bombay Stock Exchange.
+BSE 500,^BSE500,Index,"BSE 500 tracks 500 companies listed on the Bombay Stock Exchange, covering around 93% of total market capitalisation on the exchange."
+BSE Sensex 50,^BSESEN50,Index,"BSE Sensex 50 tracks 50 large, liquid companies on the Bombay Stock Exchange, extending the Sensex universe to a broader large-cap set."
+Nifty Next 50,^NSMIDCP,Index,Nifty Next 50 tracks the 50 companies ranked 51st to 100th by market capitalisation on the NSE — often viewed as potential future entrants to the Nifty 50.
+Nifty Midcap 50,^NIFMIDCAP50,Index,"Nifty Midcap 50 tracks 50 mid-sized companies listed on the NSE, representing the mid-cap segment of the Indian market."
+Nifty Midcap 100,^CNXMC,Index,Nifty Midcap 100 tracks 100 mid-cap companies listed on the NSE by market capitalisation.
+Nifty Midcap 150,^NIFMDCP150,Index,"Nifty Midcap 150 tracks 150 mid-cap companies on the NSE, offering broader mid-cap coverage than the Midcap 50 or 100 indices."
+Nifty Midcap Select,^NIFMDCPSEL,Index,"Nifty Midcap Select tracks a curated, more liquid and tradable subset of NSE mid-cap companies, designed to support derivatives trading."
+Nifty Smallcap 50,^NIFSMCAP50,Index,Nifty Smallcap 50 tracks 50 small-cap companies listed on the NSE.
+Nifty Smallcap 100,^CNXSC,Index,Nifty Smallcap 100 tracks 100 small-cap companies listed on the NSE by market capitalisation.
+Nifty Smallcap 250,^NIFSMCAP250,Index,"Nifty Smallcap 250 tracks 250 small-cap companies on the NSE, giving broader coverage of India's smaller listed companies."
+Nifty LargeMidcap 250,^NIFLRGMID250,Index,Nifty LargeMidcap 250 combines the top 100 large-cap and next 150 mid-cap NSE-listed companies into a single blended index.
+Nifty MicroCap 250,^NIFMIC250,Index,"Nifty MicroCap 250 tracks 250 very small (micro-cap) companies listed on the NSE, sitting below the small-cap segment."
+BSE Midcap,^BSEMIDCAP,Index,BSE Midcap tracks mid-sized companies listed on the Bombay Stock Exchange.
+BSE Smallcap,^BSESMLCAP,Index,BSE Smallcap tracks small-cap companies listed on the Bombay Stock Exchange.
+BSE Midcap Select,^BSEMIDSEL,Index,"BSE Midcap Select tracks a curated, more liquid subset of BSE-listed mid-cap companies."
+Nifty Bank,^NSEBANK,Index,"Nifty Bank tracks the most liquid and large Indian banking stocks listed on the NSE, and is a widely traded benchmark for the banking sector."
+Nifty Private Bank,^NIFPVTBNK,Index,Nifty Private Bank tracks the largest and most liquid private-sector banks listed on the NSE.
+Nifty PSU Bank,^CNXPSUBANK,Index,Nifty PSU Bank tracks public-sector (government-owned) banks listed on the NSE.
+Nifty Financial Services,^CNXFIN,Index,"Nifty Financial Services tracks banks, NBFCs, insurance, housing finance and other financial-services companies listed on the NSE."
+Nifty IT,^CNXIT,Index,Nifty IT tracks the largest Indian information-technology and software-services companies listed on the NSE.
+Nifty Auto,^CNXAUTO,Index,Nifty Auto tracks automobile manufacturers and auto-ancillary companies listed on the NSE.
+Nifty FMCG,^CNXFMCG,Index,Nifty FMCG tracks fast-moving-consumer-goods companies listed on the NSE.
+Nifty Pharma,^CNXPHARMA,Index,Nifty Pharma tracks pharmaceutical and drug-manufacturing companies listed on the NSE.
+Nifty Healthcare,^CNXHEALTH,Index,"Nifty Healthcare tracks hospitals, diagnostics, pharma and broader healthcare-services companies listed on the NSE."
+Nifty Metal,^CNXMETAL,Index,Nifty Metal tracks metal and mining companies listed on the NSE.
+Nifty Realty,^CNXREALTY,Index,Nifty Realty tracks real-estate developers and construction companies listed on the NSE.
+Nifty Energy,^CNXENERGY,Index,"Nifty Energy tracks power, oil & gas and other energy-sector companies listed on the NSE."
+Nifty Infra,^CNXINFRA,Index,"Nifty Infra tracks companies involved in infrastructure development, construction and related services listed on the NSE."
+Nifty Commodities,^CNXCMDT,Index,"Nifty Commodities tracks companies engaged in commodity-linked businesses such as metals, energy and materials, listed on the NSE."
+Nifty Oil & Gas,^CNXOILGAS,Index,"Nifty Oil & Gas tracks companies in exploration, refining, marketing and distribution of oil and gas, listed on the NSE."
+Nifty Media,^CNXMEDIA,Index,"Nifty Media tracks media, entertainment and publishing companies listed on the NSE."
+Nifty Consumer Durables,^NIFCONSDUR,Index,"Nifty Consumer Durables tracks companies manufacturing consumer durable goods such as appliances and electronics, listed on the NSE."
+Nifty India Consumption,^CNXCONSUM,Index,"Nifty India Consumption tracks companies whose revenue is closely tied to domestic consumption spending, across sectors such as FMCG, auto, retail and media."
+Nifty CPSE,^CNXCPSE,Index,Nifty CPSE tracks Central Public Sector Enterprises — companies majority-owned by the Government of India — listed on the NSE.
+Nifty PSE,^CNXPSE,Index,"Nifty PSE tracks public-sector enterprises listed on the NSE, including companies owned by both central and state governments."
+Nifty India Defence,^NIFINDDEF,Index,Nifty India Defence tracks companies engaged in defence manufacturing and related services listed on the NSE.
+Nifty India Digital,^NIFDIGITAL,Index,"Nifty India Digital tracks companies deriving a significant share of revenue from digital and internet-based businesses, listed on the NSE."
+Nifty Dividend Opp 50,^NIFTYDIV50,Index,Nifty Dividend Opportunities 50 tracks 50 NSE-listed companies with a consistent record of dividend payouts.
+India VIX,^INDIAVIX,Index,"India VIX is a volatility index computed from Nifty option prices, reflecting the market's expectation of near-term volatility; it is a sentiment gauge rather than a tradable price index."
+BSE Bankex,^BSEBANKEX,Index,BSE Bankex tracks major banking-sector companies listed on the Bombay Stock Exchange.
+BSE IT,^BSEIT,Index,BSE IT tracks information-technology companies listed on the Bombay Stock Exchange.
+BSE Healthcare,^BSEHC,Index,BSE Healthcare tracks pharmaceutical and healthcare companies listed on the Bombay Stock Exchange.
+BSE Auto,^BSEAUTO,Index,BSE Auto tracks automobile and auto-ancillary companies listed on the Bombay Stock Exchange.
+BSE FMCG,^BSEFMCG,Index,BSE FMCG tracks fast-moving-consumer-goods companies listed on the Bombay Stock Exchange.
+BSE Metal,^BSEMETAL,Index,BSE Metal tracks metal and mining companies listed on the Bombay Stock Exchange.
+BSE Realty,^BSEREALTY,Index,BSE Realty tracks real-estate companies listed on the Bombay Stock Exchange.
+BSE Oil & Gas,^BSEOILGAS,Index,BSE Oil & Gas tracks oil and gas companies listed on the Bombay Stock Exchange.
+BSE Power,^BSEPOWER,Index,BSE Power tracks power-generation and power-infrastructure companies listed on the Bombay Stock Exchange.
+BSE Capital Goods,^BSECAPGOOD,Index,BSE Capital Goods tracks industrial and capital-goods manufacturers listed on the Bombay Stock Exchange.
+BSE Consumer Durables,^BSECD,Index,BSE Consumer Durables tracks consumer-durables manufacturers listed on the Bombay Stock Exchange.
+BSE Telecom,^BSETELECOM,Index,BSE Telecom tracks telecommunications companies listed on the Bombay Stock Exchange.
+Gift Nifty,NIFTYNXT50.NS,Index,"Gift Nifty is the international derivative contract on the Nifty 50, traded on NSE IX at GIFT City, widely watched as an early indicator of how Indian markets may open."
+Reliance Industries,RELIANCE.NS,Nifty 50,
+Tata Consultancy Services,TCS.NS,Nifty 50,
+HDFC Bank,HDFCBANK.NS,Nifty 50,
+Infosys,INFY.NS,Nifty 50,
+ICICI Bank,ICICIBANK.NS,Nifty 50,
+Hindustan Unilever,HINDUNILVR.NS,Nifty 50,
+ITC,ITC.NS,Nifty 50,
+State Bank of India,SBIN.NS,Nifty 50,
+Bharti Airtel,BHARTIARTL.NS,Nifty 50,
+Kotak Mahindra Bank,KOTAKBANK.NS,Nifty 50,
+Larsen & Toubro,LT.NS,Nifty 50,
+Axis Bank,AXISBANK.NS,Nifty 50,
+Asian Paints,ASIANPAINT.NS,Nifty 50,
+HCL Technologies,HCLTECH.NS,Nifty 50,
+Maruti Suzuki,MARUTI.NS,Nifty 50,
+Sun Pharmaceutical,SUNPHARMA.NS,Nifty 50,
+Bajaj Finance,BAJFINANCE.NS,Nifty 50,
+Titan Company,TITAN.NS,Nifty 50,
+UltraTech Cement,ULTRACEMCO.NS,Nifty 50,
+Wipro,WIPRO.NS,Nifty 50,
+NTPC,NTPC.NS,Nifty 50,
+Power Grid Corporation,POWERGRID.NS,Nifty 50,
+Tech Mahindra,TECHM.NS,Nifty 50,
+Mahindra & Mahindra,M&M.NS,Nifty 50,
+Nestle India,NESTLEIND.NS,Nifty 50,
+JSW Steel,JSWSTEEL.NS,Nifty 50,
+Tata Motors,TATAMOTORS.NS,Nifty 50,
+Adani Ports,ADANIPORTS.NS,Nifty 50,
+Adani Enterprises,ADANIENT.NS,Nifty 50,
+Coal India,COALINDIA.NS,Nifty 50,
+Bajaj Auto,BAJAJ-AUTO.NS,Nifty 50,
+Tata Steel,TATASTEEL.NS,Nifty 50,
+Dr Reddys Laboratories,DRREDDY.NS,Nifty 50,
+Cipla,CIPLA.NS,Nifty 50,
+Hindalco Industries,HINDALCO.NS,Nifty 50,
+Eicher Motors,EICHERMOT.NS,Nifty 50,
+Shriram Finance,SHRIRAMFIN.NS,Nifty 50,
+Grasim Industries,GRASIM.NS,Nifty 50,
+Hero MotoCorp,HEROMOTOCO.NS,Nifty 50,
+ONGC,ONGC.NS,Nifty 50,
+Britannia Industries,BRITANNIA.NS,Nifty 50,
+Divi's Laboratories,DIVISLAB.NS,Nifty 50,
+Apollo Hospitals,APOLLOHOSP.NS,Nifty 50,
+SBI Life Insurance,SBILIFE.NS,Nifty 50,
+HDFC Life Insurance,HDFCLIFE.NS,Nifty 50,
+Tata Consumer Products,TATACONSUM.NS,Nifty 50,
+IndusInd Bank,INDUSINDBK.NS,Nifty 50,
+BEL,BEL.NS,Nifty 50,
+Bajaj Finserv,BAJAJFINSV.NS,Nifty 50,
+Zomato,ZOMATO.NS,Nifty 50,
+Adani Green Energy,ADANIGREEN.NS,Nifty Next 50,
+Adani Total Gas,ATGL.NS,Nifty Next 50,
+Adani Power,ADANIPOWER.NS,Nifty Next 50,
+Ambuja Cements,AMBUJACEM.NS,Nifty Next 50,
+Avenue Supermarts (DMart),DMART.NS,Nifty Next 50,
+Bajaj Holdings,BAJAJHLDNG.NS,Nifty Next 50,
+Bank of Baroda,BANKBARODA.NS,Nifty Next 50,
+Berger Paints,BERGEPAINT.NS,Nifty Next 50,
+Bharat Petroleum,BPCL.NS,Nifty Next 50,
+Cholamandalam Investment,CHOLAFIN.NS,Nifty Next 50,
+Colgate Palmolive India,COLPAL.NS,Nifty Next 50,
+Dabur India,DABUR.NS,Nifty Next 50,
+DLF,DLF.NS,Nifty Next 50,
+Godrej Consumer Products,GODREJCP.NS,Nifty Next 50,
+Havells India,HAVELLS.NS,Nifty Next 50,
+HDFC Asset Management,HDFCAMC.NS,Nifty Next 50,
+Indian Oil Corporation,IOC.NS,Nifty Next 50,
+Interglobe Aviation IndiGo,INDIGO.NS,Nifty Next 50,
+Jio Financial Services,JIOFIN.NS,Nifty Next 50,
+Life Insurance Corporation,LICI.NS,Nifty Next 50,
+Lupin,LUPIN.NS,Nifty Next 50,
+Mankind Pharma,MANKIND.NS,Nifty Next 50,
+Marico,MARICO.NS,Nifty Next 50,
+Muthoot Finance,MUTHOOTFIN.NS,Nifty Next 50,
+Naukri Info Edge,NAUKRI.NS,Nifty Next 50,
+NHPC,NHPC.NS,Nifty Next 50,
+Oil India,OIL.NS,Nifty Next 50,
+Patanjali Foods,PATANJALI.NS,Nifty Next 50,
+Persistent Systems,PERSISTENT.NS,Nifty Next 50,
+Pidilite Industries,PIDILITIND.NS,Nifty Next 50,
+Piramal Enterprises,PEL.NS,Nifty Next 50,
+Power Finance Corporation,PFC.NS,Nifty Next 50,
+REC Limited,RECLTD.NS,Nifty Next 50,
+SBI Cards,SBICARD.NS,Nifty Next 50,
+Siemens India,SIEMENS.NS,Nifty Next 50,
+Torrent Pharmaceuticals,TORNTPHARM.NS,Nifty Next 50,
+Trent,TRENT.NS,Nifty Next 50,
+TVS Motor Company,TVSMOTOR.NS,Nifty Next 50,
+United Spirits,MCDOWELL-N.NS,Nifty Next 50,
+Vedanta,VEDL.NS,Nifty Next 50,
+Voltas,VOLTAS.NS,Nifty Next 50,
+Zydus Lifesciences,ZYDUSLIFE.NS,Nifty Next 50,
+Oberoi Realty,OBEROIDVLP.NS,Nifty Next 50,
+Page Industries,PAGEIND.NS,Nifty Next 50,
+Samvardhana Motherson,MOTHERSON.NS,Nifty Next 50,
+IRCTC,IRCTC.NS,Nifty Next 50,
+Hindustan Aeronautics HAL,HAL.NS,Nifty Next 50,
+IRFC,IRFC.NS,Nifty Next 50,
+Bharat Forge,BHARATFORG.NS,Nifty Next 50,
+Godrej Properties,GODREJPROP.NS,Nifty Next 50,
+Shree Cement,SHREECEM.NS,Nifty Next 50,
+ACC,ACC.NS,Nifty Next 50,
+Star Health Insurance,STARHEALTH.NS,Nifty Next 50,
+Go Digit Insurance,GODIGIT.NS,Nifty Next 50,
+SRF Limited,SRF.NS,Nifty Next 50,
+Bharat Dynamics,BDL.NS,Nifty Next 50,
+RVNL Rail Vikas Nigam,RVNL.NS,Nifty Next 50,
+Cochin Shipyard,COCHINSHIP.NS,Nifty Next 50,
+Mazagon Dock Shipbuilders,MAZDOCK.NS,Nifty Next 50,
+CDSL,CDSL.NS,Nifty Next 50,
+BSE Limited,BSE.NS,Nifty Next 50,
+Polycab India,POLYCAB.NS,Nifty Next 50,
+Punjab National Bank,PNB.NS,Banking,
+Canara Bank,CANBK.NS,Banking,
+Bank of India,BANKINDIA.NS,Banking,
+Union Bank of India,UNIONBANK.NS,Banking,
+Indian Bank,INDIANB.NS,Banking,
+Central Bank of India,CENTRALBK.NS,Banking,
+UCO Bank,UCOBANK.NS,Banking,
+Indian Overseas Bank,IOB.NS,Banking,
+Bank of Maharashtra,MAHABANK.NS,Banking,
+Punjab & Sind Bank,PSB.NS,Banking,
+Yes Bank,YESBANK.NS,Banking,
+RBL Bank,RBLBANK.NS,Banking,
+Federal Bank,FEDERALBNK.NS,Banking,
+IDFC First Bank,IDFCFIRSTB.NS,Banking,
+Bandhan Bank,BANDHANBNK.NS,Banking,
+Karnataka Bank,KTKBANK.NS,Banking,
+City Union Bank,CUB.NS,Banking,
+Karur Vysya Bank,KARURVYSYA.NS,Banking,
+South Indian Bank,SOUTHBANK.NS,Banking,
+Dhanlaxmi Bank,DHANBANK.NS,Banking,
+Lakshmi Vilas Bank,LVBANK.NS,Banking,
+Nainital Bank,NAINITAL.NS,Banking,
+Jammu & Kashmir Bank,J&KBANK.NS,Banking,
+CSB Bank,CSBBANK.NS,Banking,
+DCB Bank,DCBBANK.NS,Banking,
+Ujjivan Small Finance Bank,UJJIVANSFB.NS,Banking,
+Equitas Small Finance Bank,EQUITASBNK.NS,Banking,
+AU Small Finance Bank,AUBANK.NS,Banking,
+ESAF Small Finance Bank,ESAFSFB.NS,Banking,
+Suryoday Small Finance Bank,SURYODAY.NS,Banking,
+Utkarsh Small Finance Bank,UTKARSHBNK.NS,Banking,
+Fino Payments Bank,FINOPB.NS,Banking,
+Paytm Payments Bank,PAYTM.NS,Banking,
+Mahindra Finance,M&MFIN.NS,Finance,
+Sundaram Finance,SUNDARMFIN.NS,Finance,
+Shriram City Union Finance,SHRIRAMCIT.NS,Finance,
+IIFL Finance,IIFL.NS,Finance,
+Muthoot Microfin,MUTHOOTMF.NS,Finance,
+CreditAccess Grameen,CREDITACC.NS,Finance,
+Five Star Business Finance,FIVESTAR.NS,Finance,
+Home First Finance,HOMEFIRST.NS,Finance,
+Aptus Value Housing Finance,APTUS.NS,Finance,
+Aavas Financiers,AAVAS.NS,Finance,
+PNB Housing Finance,PNBHOUSING.NS,Finance,
+LIC Housing Finance,LICHSGFIN.NS,Finance,
+Repco Home Finance,REPCOHOME.NS,Finance,
+Indiabulls Housing Finance,IBULHSGFIN.NS,Finance,
+GIC Housing Finance,GICHSGFIN.NS,Finance,
+Can Fin Homes,CANFINHOME.NS,Finance,
+L&T Finance,LTF.NS,Finance,
+Motilal Oswal Financial,MOTILALOFS.NS,Finance,
+IIFL Securities,IIFLSEC.NS,Finance,
+Angel One,ANGELONE.NS,Finance,
+Geojit Financial Services,GEOJITFSL.NS,Finance,
+MCX India,MCX.NS,Finance,
+Indian Energy Exchange,IEX.NS,Finance,
+CRISIL,CRISIL.NS,Finance,
+ICRA,ICRA.NS,Finance,
+Care Ratings,CARERATING.NS,Finance,
+Nuvama Wealth Management,NUVAMA.NS,Finance,
+Nippon Life India AMC,NAM-INDIA.NS,Finance,
+UTI AMC,UTIAMC.NS,Finance,
+Aditya Birla Sun Life AMC,ABSLAMC.NS,Finance,
+KFIN Technologies,KFINTECH.NS,Finance,
+Computer Age Management CAMS,CAMS.NS,Finance,
+PolicyBazaar PB Fintech,POLICYBZR.NS,Finance,
+LTIMindtree,LTIM.NS,IT,
+Mphasis,MPHASIS.NS,IT,
+L&T Technology Services,LTTS.NS,IT,
+Coforge,COFORGE.NS,IT,
+Tata Elxsi,TATAELXSI.NS,IT,
+Hexaware Technologies,HEXAWARE.NS,IT,
+KPIT Technologies,KPITTECH.NS,IT,
+Birlasoft,BSOFT.NS,IT,
+Zensar Technologies,ZENSARTECH.NS,IT,
+Mastek,MASTEK.NS,IT,
+Cyient,CYIENT.NS,IT,
+Sonata Software,SONATSOFTW.NS,IT,
+Oracle Financial Services,OFSS.NS,IT,
+Tata Technologies,TATATECH.NS,IT,
+Happiest Minds,HAPPSTMNDS.NS,IT,
+Newgen Software,NEWGEN.NS,IT,
+Rategain Travel Tech,RATEGAIN.NS,IT,
+Intellect Design Arena,INTELLECT.NS,IT,
+Sasken Technologies,SASKEN.NS,IT,
+Quick Heal Technologies,QUICKHEAL.NS,IT,
+Route Mobile,ROUTE.NS,IT,
+Tanla Platforms,TANLA.NS,IT,
+Tata Communications,TATACOMM.NS,IT,
+Redington,REDINGTON.NS,IT,
+Dixon Technologies,DIXON.NS,IT,
+Data Patterns India,DATAPATTNS.NS,IT,
+NIIT Learning Systems,NIITMTS.NS,IT,
+Indiamart Intermesh,INDIAMART.NS,IT,
+Just Dial,JUSTDIAL.NS,IT,
+Nykaa FSN E-Commerce,FSN.NS,IT,
+Swiggy,SWIGGY.NS,IT,
+EaseMyTrip,EASEMYTRIP.NS,IT,
+Nazara Technologies,NAZARA.NS,IT,
+MapmyIndia CE Info Systems,MAPMYINDIA.NS,IT,
+CarTrade Tech,CARTRADE.NS,IT,
+Honasa Consumer Mamaearth,HONASA.NS,IT,
+Tracxn Technologies,TRACXN.NS,IT,
+Delhivery,DELHIVERY.NS,IT,
+Aurobindo Pharma,AUROPHARMA.NS,Pharma,
+Glenmark Pharmaceuticals,GLENMARK.NS,Pharma,
+Alkem Laboratories,ALKEM.NS,Pharma,
+IPCA Laboratories,IPCALAB.NS,Pharma,
+Abbott India,ABBOTINDIA.NS,Pharma,
+Pfizer India,PFIZER.NS,Pharma,
+Sanofi India,SANOFI.NS,Pharma,
+Biocon,BIOCON.NS,Pharma,
+Ajanta Pharma,AJANTPHARM.NS,Pharma,
+JB Chemicals,JBCHEPHARM.NS,Pharma,
+Strides Pharma,STAR.NS,Pharma,
+Eris Lifesciences,ERIS.NS,Pharma,
+Granules India,GRANULES.NS,Pharma,
+Laurus Labs,LAURUSLABS.NS,Pharma,
+Suven Pharmaceuticals,SUVENPHAR.NS,Pharma,
+Aarti Drugs,AARTIDRUGS.NS,Pharma,
+Alembic Pharmaceuticals,APLLTD.NS,Pharma,
+Caplin Point Laboratories,CAPLIPOINT.NS,Pharma,
+Emcure Pharmaceuticals,EMCURE.NS,Pharma,
+Piramal Pharma,PPLPHARMA.NS,Pharma,
+Wockhardt,WOCKPHARMA.NS,Pharma,
+Solara Active Pharma,SOLARA.NS,Pharma,
+Gland Pharma,GLAND.NS,Pharma,
+Syngene International,SYNGENE.NS,Pharma,
+Thyrocare Technologies,THYROCARE.NS,Pharma,
+Dr Lal PathLabs,LALPATHLAB.NS,Pharma,
+Metropolis Healthcare,METROPOLIS.NS,Pharma,
+Vijaya Diagnostic Centre,VIJAYA.NS,Pharma,
+Krsnaa Diagnostics,KRSNAA.NS,Pharma,
+Fortis Healthcare,FORTIS.NS,Pharma,
+Max Healthcare,MAXHEALTH.NS,Pharma,
+Narayana Hrudayalaya,NH.NS,Pharma,
+KIMS Medical Sciences,KIMS.NS,Pharma,
+Aster DM Healthcare,ASTERDM.NS,Pharma,
+Rainbow Children Medicare,RAINBOW.NS,Pharma,
+Shilpa Medicare,SHILPAMED.NS,Pharma,
+Natco Pharma,NATCOPHARM.NS,Pharma,
+Sequent Scientific,SEQUENT.NS,Pharma,
+Supriya Lifescience,SUPRIYA.NS,Pharma,
+Tatva Chintan Pharma,TATVA.NS,Pharma,
+Ashok Leyland,ASHOKLEY.NS,Auto,
+Escorts Kubota,ESCORTS.NS,Auto,
+Force Motors,FORCEMOT.NS,Auto,
+Atul Auto,ATULAUTO.NS,Auto,
+Bosch India,BOSCHLTD.NS,Auto,
+Minda Industries,MINDAIND.NS,Auto,
+Tube Investments,TIINDIA.NS,Auto,
+Balkrishna Industries,BALKRISIND.NS,Auto,
+MRF,MRF.NS,Auto,
+Apollo Tyres,APOLLOTYRE.NS,Auto,
+CEAT,CEATLTD.NS,Auto,
+JK Tyre,JKTYRE.NS,Auto,
+Exide Industries,EXIDEIND.NS,Auto,
+Amara Raja Energy,AMARAJABAT.NS,Auto,
+Jamna Auto Industries,JAMNAAUTO.NS,Auto,
+Suprajit Engineering,SUPRAJIT.NS,Auto,
+Sona BLW Precision,SONACOMS.NS,Auto,
+Craftsman Automation,CRAFTSMAN.NS,Auto,
+Endurance Technologies,ENDURANCE.NS,Auto,
+Olectra Greentech,OLECTRA.NS,Auto,
+Mahindra CIE Auto,MAHINDCIE.NS,Auto,
+Rico Auto Industries,RICOAUTO.NS,Auto,
+Rane Holdings,RANE.NS,Auto,
+Sundram Fasteners,SUNDRMFAST.NS,Auto,
+ZF Commercial Vehicle,ZFCVINDIA.NS,Auto,
+Emami,EMAMILTD.NS,FMCG,
+Radico Khaitan,RADICO.NS,FMCG,
+United Breweries,UBL.NS,FMCG,
+Varun Beverages,VBL.NS,FMCG,
+CCL Products,CCL.NS,FMCG,
+Westlife Foodworld,WESTLIFE.NS,FMCG,
+Jubilant Foodworks,JUBLFOOD.NS,FMCG,
+Restaurant Brands Asia,RBA.NS,FMCG,
+Sapphire Foods,SAPPHIRE.NS,FMCG,
+Dodla Dairy,DODLA.NS,FMCG,
+Heritage Foods,HERITGFOOD.NS,FMCG,
+Tasty Bite Eatables,TASTYBITE.NS,FMCG,
+Hindustan Foods,HNDFDS.NS,FMCG,
+Bikaji Foods,BIKAJI.NS,FMCG,
+Prataap Snacks,PRATAAP.NS,FMCG,
+DFM Foods,DFMFOODS.NS,FMCG,
+Balaji Wafers,BALAMINES.NS,FMCG,
+P&G Hygiene,PGHH.NS,FMCG,
+Jyothy Labs,JYOTHYLAB.NS,FMCG,
+Gillette India,GILLETTE.NS,FMCG,
+3M India,3MINDIA.NS,FMCG,
+NMDC,NMDC.NS,Metal,
+SAIL,SAIL.NS,Metal,
+Hindustan Zinc,HINDZINC.NS,Metal,
+National Aluminium NALCO,NATIONALUM.NS,Metal,
+Shyam Metalics,SHYAMMETL.NS,Metal,
+JSW Energy,JSWENERGY.NS,Metal,
+Jindal Steel & Power,JINDALSTEL.NS,Metal,
+Jindal Stainless,JSL.NS,Metal,
+APL Apollo Tubes,APLAPOLLO.NS,Metal,
+Ratnamani Metals,RATNAMANI.NS,Metal,
+MOIL,MOIL.NS,Metal,
+Sandur Manganese,SANDUMA.NS,Metal,
+HEG,HEG.NS,Metal,
+Graphite India,GRAPHITE.NS,Metal,
+Rain Industries,RAIN.NS,Metal,
+Hindustan Copper,HINDCOPPER.NS,Metal,
+Welspun Corp,WELCORP.NS,Metal,
+Maharashtra Seamless,MAHSEAMLES.NS,Metal,
+Mishra Dhatu Nigam MIDHANI,MIDHANI.NS,Metal,
+GMDC Gujarat Mineral,GMDCLTD.NS,Metal,
+RHI Magnesita,RHIM.NS,Metal,
+Carborundum Universal,CARBORUNIV.NS,Metal,
+Torrent Power,TORNTPOWER.NS,Energy,
+Tata Power,TATAPOWER.NS,Energy,
+Adani Transmission,ADANITRANS.NS,Energy,
+SJVN,SJVN.NS,Energy,
+CESC,CESC.NS,Energy,
+Gujarat Gas,GUJGASLTD.NS,Energy,
+Indraprastha Gas,IGL.NS,Energy,
+Mahanagar Gas,MGL.NS,Energy,
+Gujarat State Petronet,GSPL.NS,Energy,
+GAIL India,GAIL.NS,Energy,
+Petronet LNG,PETRONET.NS,Energy,
+Castrol India,CASTROLIND.NS,Energy,
+HPCL,HINDPETRO.NS,Energy,
+Chennai Petroleum,CHENNPETRO.NS,Energy,
+Mangalore Refinery,MRPL.NS,Energy,
+Inox Wind,INOXWIND.NS,Energy,
+Suzlon Energy,SUZLON.NS,Energy,
+Wind World India,WINDWORLD.NS,Energy,
+Greenpanel Industries,GREENPANEL.NS,Energy,
+IRCON International,IRCON.NS,Infrastructure,
+KNR Constructions,KNRCON.NS,Infrastructure,
+G R Infraprojects,GRINFRA.NS,Infrastructure,
+Ahluwalia Contracts,AHLUCONT.NS,Infrastructure,
+HG Infra Engineering,HGINFRA.NS,Infrastructure,
+PNC Infratech,PNCINFRA.NS,Infrastructure,
+NCC,NCC.NS,Infrastructure,
+Simplex Infrastructures,SIMPLEXINF.NS,Infrastructure,
+Ashoka Buildcon,ASHOKA.NS,Infrastructure,
+JMC Projects,JMCPROJECT.NS,Infrastructure,
+PSP Projects,PSPPROJECT.NS,Infrastructure,
+Engineers India,ENGINERSIN.NS,Infrastructure,
+Patel Engineering,PATELENG.NS,Infrastructure,
+Container Corporation,CONCOR.NS,Infrastructure,
+Gujarat Pipavav Port,GPPL.NS,Infrastructure,
+IRB Infrastructure,IRB.NS,Infrastructure,
+Sadbhav Engineering,SADBHAV.NS,Infrastructure,
+Dilip Buildcon,DBL.NS,Infrastructure,
+Capacite Infraprojects,CAPACITE.NS,Infrastructure,
+Megha Engineering,MEKRO.NS,Infrastructure,
+BEML,BEML.NS,Infrastructure,
+Texmaco Rail,TEXRAIL.NS,Infrastructure,
+TITAGARH WAGONS,TWL.NS,Infrastructure,
+Blue Dart Express,BLUEDART.NS,Infrastructure,
+Mahindra Logistics,MAHLOG.NS,Infrastructure,
+VRL Logistics,VRLLOG.NS,Infrastructure,
+TCI Express,TCIEXP.NS,Infrastructure,
+Snowman Logistics,SNOWMAN.NS,Infrastructure,
+Skipper,SKIPPER.NS,Infrastructure,
+ITI Limited,ITI.NS,Infrastructure,
+Garden Reach Shipbuilders,GRSE.NS,Defence,
+Paras Defence & Space,PARAS.NS,Defence,
+Astra Microwave,ASTRAMICRO.NS,Defence,
+Solar Industries India,SOLARINDS.NS,Defence,
+Premier Explosives,PREMEXPLN.NS,Defence,
+Mtar Technologies,MTARTECH.NS,Defence,
+Ideaforge Technology,IDEAFORGE.NS,Defence,
+DCX Systems,DCXINDIA.NS,Defence,
+Zen Technologies,ZENTEC.NS,Defence,
+Ramco Cements,RAMCOCEM.NS,Cement,
+JK Cement,JKCEMENT.NS,Cement,
+Dalmia Bharat,DALBHARAT.NS,Cement,
+India Cement,INDIACEM.NS,Cement,
+Star Cement,STARCEMENT.NS,Cement,
+Birla Corporation,BIRLACORPN.NS,Cement,
+Heidelberg Cement India,HEIDELBERG.NS,Cement,
+JK Lakshmi Cement,JKLAKSHMI.NS,Cement,
+Nuvoco Vistas,NUVOCO.NS,Cement,
+Orient Cement,ORIENTCEM.NS,Cement,
+Prism Cement,PRISMCEM.NS,Cement,
+Sagar Cement,SAGCEM.NS,Cement,
+Sanghi Industries,SANGHIIND.NS,Cement,
+Mangalam Cement,MANGLMCEM.NS,Cement,
+Prestige Estates,PRESTIGE.NS,Realty,
+Macrotech Developers Lodha,LODHA.NS,Realty,
+Sunteck Realty,SUNTECK.NS,Realty,
+Brigade Enterprises,BRIGADE.NS,Realty,
+Sobha,SOBHA.NS,Realty,
+Phoenix Mills,PHOENIXLTD.NS,Realty,
+Puravankara,PURVA.NS,Realty,
+Kolte Patil Developers,KOLTEPATIL.NS,Realty,
+Signatureglobal India,SIGNATURE.NS,Realty,
+Mahindra Lifespace,MAHLIFE.NS,Realty,
+Anant Raj,ANANTRAJ.NS,Realty,
+Unitech,UNITECH.NS,Realty,
+HDIL,HDIL.NS,Realty,
+Indiabulls Real Estate,IBREALEST.NS,Realty,
+Raymond,RAYMOND.NS,Realty,
+Nexus Select Trust,NEXUSSELECT.NS,Realty,
+Embassy Office Parks,EMBASSY.NS,Realty,
+Mindspace Business Parks,MINDSPACE.NS,Realty,
+Brookfield India REIT,BIRET.NS,Realty,
+Deepak Nitrite,DEEPAKNTR.NS,Chemicals,
+Vinati Organics,VINATIORGA.NS,Chemicals,
+Navin Fluorine,NAVINFLUOR.NS,Chemicals,
+Gujarat Fluorochemicals,FLUOROCHEM.NS,Chemicals,
+Aarti Industries,AARTIIND.NS,Chemicals,
+Fine Organic Industries,FINEORG.NS,Chemicals,
+Rossari Biotech,ROSSARI.NS,Chemicals,
+Clean Science Technology,CLEAN.NS,Chemicals,
+Alkyl Amines Chemicals,ALKYLAMINE.NS,Chemicals,
+Anupam Rasayan,ANURAS.NS,Chemicals,
+Archean Chemical,ARCHEAN.NS,Chemicals,
+Camlin Fine Sciences,CAMLINFINE.NS,Chemicals,
+NOCIL,NOCIL.NS,Chemicals,
+Epigral,EPIGRAL.NS,Chemicals,
+ATUL,ATUL.NS,Chemicals,
+Tata Chemicals,TATACHEM.NS,Chemicals,
+DCM Shriram,DCMSHRIRAM.NS,Chemicals,
+Sudarshan Chemical,SUDARSCHEM.NS,Chemicals,
+Galaxy Surfactants,GALAXYSURF.NS,Chemicals,
+Sumitomo Chemical India,SUMICHEM.NS,Chemicals,
+Coromandel International,COROMANDEL.NS,Chemicals,
+PI Industries,PIIND.NS,Chemicals,
+UPL,UPL.NS,Chemicals,
+Rallis India,RALLIS.NS,Chemicals,
+Bayer CropScience,BAYERCROP.NS,Chemicals,
+Chambal Fertilizers,CHAMBLFERT.NS,Chemicals,
+GSFC,GSFC.NS,Chemicals,
+GNFC,GNFC.NS,Chemicals,
+National Fertilizers,NFL.NS,Chemicals,
+Deepak Fertilizers,DEEPAKFERT.NS,Chemicals,
+Ion Exchange India,IONEXCHANG.NS,Chemicals,
+Va Tech Wabag,WABAG.NS,Chemicals,
+Praj Industries,PRAJIND.NS,Chemicals,
+Whirlpool India,WHIRLPOOL.NS,Consumer,
+V-Guard Industries,VGUARD.NS,Consumer,
+Crompton Greaves Consumer,CROMPTON.NS,Consumer,
+Orient Electric,ORIENTELEC.NS,Consumer,
+Bajaj Electricals,BAJAJELEC.NS,Consumer,
+Symphony,SYMPHONY.NS,Consumer,
+Blue Star,BLUESTARCO.NS,Consumer,
+Amber Enterprises,AMBER.NS,Consumer,
+Kaynes Technology,KAYNES.NS,Consumer,
+Finolex Cables,FINCABLES.NS,Consumer,
+KEI Industries,KEI.NS,Consumer,
+Sterlite Technologies,STLTECH.NS,Consumer,
+HFCL,HFCL.NS,Consumer,
+Kansai Nerolac,KANSAINER.NS,Consumer,
+Indigo Paints,INDIGOPNTS.NS,Consumer,
+Astral,ASTRAL.NS,Consumer,
+Supreme Industries,SUPREMEIND.NS,Consumer,
+Nilkamal,NILKAMAL.NS,Consumer,
+VIP Industries,VIPIND.NS,Consumer,
+Safari Industries,SAFARI.NS,Consumer,
+Relaxo Footwears,RELAXO.NS,Consumer,
+Bata India,BATAINDIA.NS,Consumer,
+Metro Brands,METROBRAND.NS,Consumer,
+Campus Activewear,CAMPUS.NS,Consumer,
+Wonderla Holidays,WONDERLA.NS,Consumer,
+PVR Inox,PVRINOX.NS,Consumer,
+Vaibhav Global,VAIBHAVGBL.NS,Consumer,
+Kalyan Jewellers,KALYANKJIL.NS,Consumer,
+PC Jeweller,PCJEWELLER.NS,Consumer,
+Senco Gold,SENCO.NS,Consumer,
+Thangamayil Jewellery,THANGAMAYL.NS,Consumer,
+Welspun India,WELSPUNIND.NS,Textiles,
+Arvind,ARVIND.NS,Textiles,
+Vardhman Textiles,VTL.NS,Textiles,
+Trident,TRIDENT.NS,Textiles,
+Indo Count Industries,ICIL.NS,Textiles,
+KPR Mill,KPRMILL.NS,Textiles,
+Kewal Kiran Clothing,KEWALKTRO.NS,Textiles,
+Aditya Birla Fashion,ABFRL.NS,Textiles,
+Vedant Fashions Manyavar,MANYAVAR.NS,Textiles,
+Go Fashion India,GOCOLORS.NS,Textiles,
+Pearl Global Industries,PGIL.NS,Textiles,
+Filatex India,FILATEX.NS,Textiles,
+Garden Silk Mills,GARDENSILK.NS,Textiles,
+Bombay Dyeing,BOMDYEING.NS,Textiles,
+Himatsingka Seide,HIMATSEIDE.NS,Textiles,
+Siyaram Silk Mills,SIYSLA.NS,Textiles,
+Indian Hotels Taj,INDHOTEL.NS,Hospitality,
+EIH Oberoi,EIHOTEL.NS,Hospitality,
+Lemon Tree Hotels,LEMONTREE.NS,Hospitality,
+Chalet Hotels,CHALHOTEL.NS,Hospitality,
+Mahindra Holidays,MHRIL.NS,Hospitality,
+Thomas Cook India,THOMASCOOK.NS,Hospitality,
+SpiceJet,SPICEJET.NS,Hospitality,
+Air India X Ayala,AIIL.NS,Hospitality,
+Devyani International KFC,DEVYANI.NS,Hospitality,
+Barbeque Nation,BARBEQUE.NS,Hospitality,
+Vodafone Idea,IDEA.NS,Telecom,
+MTNL,MTNL.NS,Telecom,
+Zee Entertainment,ZEEL.NS,Media,
+Sun TV Network,SUNTV.NS,Media,
+Tips Music,TIPSMUSIC.NS,Media,
+Saregama India,SAREGAMA.NS,Media,
+Network18 Media,NETWORK18.NS,Media,
+TV18 Broadcast,TV18BRDCST.NS,Media,
+Dish TV India,DISHTV.NS,Media,
+Hathway Cable,HATHWAY.NS,Media,
+Den Networks,DEN.NS,Media,
+Navneet Education,NAVNETEDUL.NS,Media,
+Aakash Educational,AARTI.NS,Media,
+Nippon India ETF Nifty 50 BeES,NIFTYBEES.NS,ETF,
+SBI ETF Nifty 50,SETFNIF50.NS,ETF,
+HDFC Nifty 50 ETF,HDFCNIFTY.NS,ETF,
+ICICI Prudential Nifty 50 ETF,ICICINIFTY.NS,ETF,
+Kotak Nifty 50 ETF,KOTAKNIFTY.NS,ETF,
+UTI Nifty 50 ETF,UTINIFTETF.NS,ETF,
+Axis Nifty 50 ETF,AXISNIFTY.NS,ETF,
+Mirae Asset Nifty 50 ETF,MIRAEN50.NS,ETF,
+Motilal Oswal Nifty 50 ETF,MONIFTY50.NS,ETF,
+Aditya Birla Nifty 50 ETF,ABNIFTY.NS,ETF,
+SBI ETF Sensex,SETFNIFBK.NS,ETF,
+HDFC Sensex ETF,HDFCSENSEX.NS,ETF,
+Nippon India ETF Sensex,SENSEXETF.NS,ETF,
+ICICI Prudential Sensex ETF,ICICISENSEX.NS,ETF,
+Kotak Sensex ETF,KOTAKSENSEX.NS,ETF,
+Nippon India ETF Nifty Next 50,JUNIORBEES.NS,ETF,
+HDFC Nifty Next 50 ETF,HDFCNXTETF.NS,ETF,
+Kotak Nifty Next 50 ETF,KOTAKNXT50.NS,ETF,
+SBI Nifty Next 50 ETF,SETFNN50.NS,ETF,
+Nippon India ETF Nifty Midcap 150,MID150BEES.NS,ETF,
+HDFC Nifty Midcap 150 ETF,HDFCMID150.NS,ETF,
+Motilal Oswal Midcap 100 ETF,MOM100.NS,ETF,
+Kotak Nifty Midcap 50 ETF,KOTAKMID50.NS,ETF,
+Mirae Asset Midcap 150 ETF,MIAEN150.NS,ETF,
+Nippon India ETF Nifty Smallcap 250,SMALL250.NS,ETF,
+HDFC Nifty Smallcap 250 ETF,HDFCSML250.NS,ETF,
+Nippon India ETF Bank BeES,BANKBEES.NS,ETF,
+Kotak Nifty Bank ETF,KOTAKBKETF.NS,ETF,
+HDFC Nifty Bank ETF,HDFCNIFBAN.NS,ETF,
+Mirae Asset Nifty Bank ETF,MIRAENBANK.NS,ETF,
+Nippon India ETF Nifty IT,ITBEES.NS,ETF,
+HDFC Nifty IT ETF,HDFCNIFTYIT.NS,ETF,
+Nippon India ETF Pharma BeES,PHARMABEES.NS,ETF,
+Nippon India Nifty Auto ETF,AUTOBEES.NS,ETF,
+Nippon India Nifty PSU Bank BeES,PSUBNKBEES.NS,ETF,
+Nippon India Nifty Infra BeES,INFRABEES.NS,ETF,
+Nippon India Consumption ETF,CONSUMBEES.NS,ETF,
+BHARAT 22 ETF,BHARAT22.NS,ETF,
+CPSE ETF,CPSEETF.NS,ETF,
+Mirae Asset Nifty Financial ETF,MIRAEFINETF.NS,ETF,
+Nippon India Gold BeES,GOLDBEES.NS,ETF,
+SBI ETF Gold,SETFGOLD.NS,ETF,
+HDFC Gold ETF,HDFCGOLD.NS,ETF,
+ICICI Prudential Gold ETF,ICICIGOLD.NS,ETF,
+Kotak Gold ETF,KOTAKGOLD.NS,ETF,
+Axis Gold ETF,AXISGOLD.NS,ETF,
+UTI Gold ETF,GOLDETF.NS,ETF,
+Nippon India Silver ETF,SILVERBEES.NS,ETF,
+ICICI Prudential Silver ETF,ICICISILVE.NS,ETF,
+Mirae Asset Gold ETF,MGOLD.NS,ETF,
+Mirae Asset NYSE FANG+ ETF,MAFANG.NS,ETF,
+Mirae Asset S&P 500 Top 50 ETF,MIRAESP500.NS,ETF,
+Nippon India ETF Hang Seng BeES,HNGSNGBEES.NS,ETF,
+Edelweiss US Technology ETF,EDLWEISS.NS,ETF,
+Mirae Asset Nifty Total Market ETF,MIRAETM.NS,ETF,
+ICICI Prudential Nasdaq 100 ETF,ICICINASDAQ.NS,ETF,
+Edelweiss Bharat Bond ETF Apr 2025,EBBETF0425.NS,ETF,
+Edelweiss Bharat Bond ETF Apr 2030,EBBETF0430.NS,ETF,
+Edelweiss Bharat Bond ETF Apr 2031,EBBETF0431.NS,ETF,
+Edelweiss Bharat Bond ETF Apr 2032,EBBETF0432.NS,ETF,
+SBI ETF 10 Year Gilt,SETF10GILT.NS,ETF,
+Mirae Asset Nifty India Defence ETF,MIRAEDEF.NS,ETF,
+Motilal Oswal Nifty India Defence,MODEF.NS,ETF,
+HDFC Defence Fund ETF,HDFCDEF.NS,ETF,
+Tata Investment Corporation,TATAINVEST.NS,Conglomerate,
+Godrej Industries,GODREJIND.NS,Conglomerate,
+Bombay Burmah Trading,BBTC.NS,Conglomerate,
+Aditya Birla Capital,ABCAPITAL.NS,Finance,
+Welspun Living,WELSPUNLIV.NS,Textiles,
+Finolex Industries,FINPIPE.NS,Consumer,
+Prince Pipes,PRINCEPIPE.NS,Consumer,
+Time Technoplast,TIMETECHNO.NS,Consumer,
+EID Parry,EIDPARRY.NS,Agri,
+Balrampur Chini Mills,BALRAMCHIN.NS,Agri,
+Triveni Engineering,TRIVENI.NS,Agri,
+Shree Renuka Sugars,RENUKA.NS,Agri,
+Dhampur Sugar,DHAMPURSUG.NS,Agri,
+Godrej Agrovet,GODREJAGRO.NS,Agri,
+Kaveri Seed Company,KSCL.NS,Agri,
+Avanti Feeds,AVANTIFEED.NS,Agri,
+Waterbase,WATERBASE.NS,Agri,
+Honeywell Automation,HONAUT.NS,Diversified,
+ABB India,ABB.NS,Diversified,
+Cummins India,CUMMINSIND.NS,Diversified,
+Thermax,THERMAX.NS,Diversified,
+Schaeffler India,SCHAEFFLER.NS,Diversified,
+SKF India,SKFINDIA.NS,Diversified,
+Timken India,TIMKEN.NS,Diversified,
+Grindwell Norton,GRINDWELL.NS,Diversified,
+GMM Pfaudler,GMMPFAUDLR.NS,Diversified,
+Kirloskar Brothers,KIRLOSBROS.NS,Diversified,
+Kirloskar Oil Engines,KIRLOSENG.NS,Diversified,
+Elecon Engineering,ELECON.NS,Diversified,
+BHEL,BHEL.NS,Diversified,
+Crompton Greaves,CRGR.NS,Diversified,
+GE Power India,GEPIL.NS,Diversified,
+Kennametal India,KENNAMET.NS,Diversified,
+EPL Limited,EPL.NS,Packaging,
+Uflex,UFLEX.NS,Packaging,
+Huhtamaki PPL,HUHTAMAKI.NS,Packaging,
+Max Financial Services,MFSL.NS,Finance,
+ICICI Prudential Life,ICICIPRULI.NS,Insurance,
+New India Assurance,NIACL.NS,Insurance,
+General Insurance Corp GIC,GICRE.NS,Insurance,
+Niva Bupa Health,NIVABUPA.NS,Insurance,

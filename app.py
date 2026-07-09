@@ -64,9 +64,12 @@ try:
     _stocks_df = pd.read_csv(CSV_PATH)
     _stocks_df["name"] = _stocks_df["name"].astype(str)
     _stocks_df["ticker"] = _stocks_df["ticker"].astype(str)
+    if "description" not in _stocks_df.columns:
+        _stocks_df["description"] = ""
+    _stocks_df["description"] = _stocks_df["description"].fillna("").astype(str)
 except Exception as e:
     print(f"[WARN] Could not load stocks.csv from {CSV_PATH}: {e}")
-    _stocks_df = pd.DataFrame(columns=["name", "ticker", "category"])
+    _stocks_df = pd.DataFrame(columns=["name", "ticker", "category", "description"])
 
 
 def get_suggestions():
@@ -102,6 +105,18 @@ def lookup_csv_name(ticker_symbol):
     match = _stocks_df[_stocks_df["ticker"].str.lower() == str(ticker_symbol).lower()]
     if not match.empty:
         return match.iloc[0]["name"]
+    return None
+
+
+def lookup_csv_description(ticker_symbol):
+    """Best-effort fallback business/index description from stocks.csv.
+    Used when Yahoo's longBusinessSummary is empty (always the case for
+    indices, and often the case for ETFs/mutual funds)."""
+    match = _stocks_df[_stocks_df["ticker"].str.lower() == str(ticker_symbol).lower()]
+    if not match.empty:
+        desc = match.iloc[0].get("description", "")
+        if isinstance(desc, str) and desc.strip():
+            return desc.strip()
     return None
 
 
@@ -389,7 +404,13 @@ def get_detail(stock):
         raw_expense = info.get("annualReportExpenseRatio") or info.get("netExpenseRatio")
         expense_ratio = round(raw_expense * 100, 2) if raw_expense else "Not Available"
         raw_exp = info.get("longBusinessSummary", "") or ""
-        explanation = (raw_exp[:510] + "...") if len(raw_exp) > 510 else raw_exp or "Not Available"
+        if raw_exp:
+            explanation = (raw_exp[:510] + "...") if len(raw_exp) > 510 else raw_exp
+        else:
+            # Yahoo doesn't provide longBusinessSummary for indices, and often
+            # not for ETFs/mutual funds either — fall back to stocks.csv.
+            csv_description = lookup_csv_description(resolved)
+            explanation = csv_description or "Not Available"
 
         if not history_1y.empty or not history_3y.empty or not history_5y.empty:
             return {
