@@ -370,7 +370,10 @@ def fetch_info_cached(symbol):
         return cached
     ticker = make_ticker(symbol)
     info = safe_get_info(ticker)
-    cache_set(key, info, INFO_CACHE_TTL)
+    if info:
+        cache_set(key, info, INFO_CACHE_TTL)   #  cache 15 min
+    else:
+        cache_set(key, info, 45)               # empty/failed -> cache only 45s
     return info
 
 
