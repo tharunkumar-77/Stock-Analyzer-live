@@ -20,11 +20,6 @@ CSV_PATH = os.path.join(BASE_DIR, "stocks.csv")
 HF_API_KEY = os.getenv("HF_API_KEY", "")
 HF_API_URL = "https://api-inference.huggingface.co/models/ProsusAI/finbert"
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Shared HTTP session for yfinance
-# Using a real browser User-Agent significantly reduces the odds of Yahoo
-# Finance soft-blocking requests coming from a shared/free-tier hosting IP.
-# ─────────────────────────────────────────────────────────────────────────────
 _session = requests.Session()
 _session.headers.update({
     "User-Agent": (
@@ -35,17 +30,12 @@ _session.headers.update({
 
 
 def make_ticker(symbol):
-    """Create a yfinance Ticker using our shared, browser-like session."""
     return yf.Ticker(symbol, session=_session)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Very small in-memory cache to avoid hammering Yahoo Finance with repeat
-# requests for the same symbol (helps a LOT with free-tier rate limits).
-# ─────────────────────────────────────────────────────────────────────────────
 _cache = {}
-INFO_CACHE_TTL = 15 * 60       # 15 minutes — info/price rarely needs to be fresher
-HISTORY_CACHE_TTL = 10 * 60    # 10 minutes
+INFO_CACHE_TTL = 15 * 60
+HISTORY_CACHE_TTL = 10 * 60
 
 
 def cache_get(key):
@@ -59,7 +49,6 @@ def cache_set(key, value, ttl):
     _cache[key] = (time.time(), value, ttl)
 
 
-# Load CSV once at startup instead of on every request
 try:
     _stocks_df = pd.read_csv(CSV_PATH)
     _stocks_df["name"] = _stocks_df["name"].astype(str)
@@ -77,11 +66,6 @@ def get_suggestions():
 
 
 def resolve_ticker(stock):
-    """
-    Resolve user input to a known Indian ticker using ONLY stocks.csv.
-    Tries exact name match, exact ticker match, then partial name match.
-    Returns the ticker string, or None if nothing matches.
-    """
     if not stock:
         return None
     stock_clean = stock.strip().lower()
@@ -101,7 +85,6 @@ def resolve_ticker(stock):
 
 
 def lookup_csv_name(ticker_symbol):
-    """Best-effort fallback name lookup from stocks.csv when Yahoo info fails."""
     match = _stocks_df[_stocks_df["ticker"].str.lower() == str(ticker_symbol).lower()]
     if not match.empty:
         return match.iloc[0]["name"]
@@ -109,9 +92,6 @@ def lookup_csv_name(ticker_symbol):
 
 
 def lookup_csv_description(ticker_symbol):
-    """Best-effort fallback business/index description from stocks.csv.
-    Used when Yahoo's longBusinessSummary is empty (always the case for
-    indices, and often the case for ETFs/mutual funds)."""
     match = _stocks_df[_stocks_df["ticker"].str.lower() == str(ticker_symbol).lower()]
     if not match.empty:
         desc = match.iloc[0].get("description", "")
@@ -145,14 +125,12 @@ def get_sentiment(symbol):
             return None, None
 
         results = response.json()
-        # HF returns list of lists when inputs is a list
         if not results or not isinstance(results, list):
             return None, None
 
         score_map = {"positive": 1, "negative": -1, "neutral": 0}
         scores = []
         for item in results:
-            # each item is a list of dicts [{"label":..,"score":..}, ...]
             if isinstance(item, list):
                 top = max(item, key=lambda x: x["score"])
             elif isinstance(item, dict):
@@ -195,6 +173,39 @@ def calculate_projection(amount, return_5y, sentiment_score, horizon_days):
     return projected, round(projected * (1 - uncertainty), 2), round(projected * (1 + uncertainty), 2)
 
 
+def calculate_sip_projection(monthly_amount, return_5y, sentiment_score, horizon_days):
+    """
+    SIP (monthly contribution) version of calculate_projection.
+    Same rate model as the lump-sum version, just compounded contribution-by-contribution.
+    Returns (projected, low, high, total_invested).
+    """
+    try:
+        annual_rate = (1 + float(return_5y) / 100) ** (1 / 5) - 1
+    except Exception:
+        annual_rate = 0.08
+
+    months = max(1, round(horizon_days / 30.44))
+    monthly_rate = (1 + annual_rate) ** (1 / 12) - 1
+
+    sentiment_weight = max(0.0, 1.0 - (horizon_days / 365))
+    sentiment_nudge = (sentiment_score or 0) * sentiment_weight * (0.05 / 12)
+    adjusted_monthly_rate = max(monthly_rate + sentiment_nudge, -0.99)
+
+    future_value = 0.0
+    for i in range(months):
+        remaining_months = months - i
+        future_value += monthly_amount * (1 + adjusted_monthly_rate) ** remaining_months
+
+    total_invested = monthly_amount * months
+    years = horizon_days / 365.25
+    uncertainty = min(0.5, 0.08 + 0.1 * years)
+
+    projected = round(future_value, 2)
+    low = round(projected * (1 - uncertainty), 2)
+    high = round(projected * (1 + uncertainty), 2)
+    return projected, low, high, round(total_invested, 2)
+
+
 def _encode_figure(fig):
     buf = io.BytesIO()
     fig.savefig(buf, format="png", dpi=100, bbox_inches="tight")
@@ -212,11 +223,6 @@ def _normalize_index(history):
 
 
 def _fetch_with_retry(fn, retries=4, base_delay=1.5):
-    """
-    Retry helper with exponential backoff + jitter.
-    Never lets an exception escape on the final attempt — returns None instead,
-    so callers can degrade gracefully rather than crashing with a raw traceback.
-    """
     last_result = None
     for i in range(retries):
         try:
@@ -233,7 +239,6 @@ def _fetch_with_retry(fn, retries=4, base_delay=1.5):
 
 
 def safe_get_info(ticker):
-    """Fetch ticker.info defensively. Always returns a dict (never None)."""
     result = _fetch_with_retry(lambda: ticker.info, retries=4, base_delay=1.5)
     if not isinstance(result, dict):
         return {}
@@ -338,7 +343,6 @@ def generate_comparison_chart(h1, h2, label1, label2):
 
 
 def fetch_history_cached(symbol, period=None, start=None, end=None):
-    """Fetch history via yfinance with caching + retry, keyed by params."""
     key = f"hist:{symbol}:{period}:{start}:{end}"
     cached = cache_get(key)
     if cached is not None:
@@ -371,7 +375,6 @@ def fetch_info_cached(symbol):
 
 
 def get_detail(stock):
-    """Look up an Indian stock/ETF/index purely from stocks.csv, then pull data from Yahoo Finance."""
     stock = (stock or "").strip()
     if not stock:
         return {"error": "No stock provided"}
@@ -381,8 +384,6 @@ def get_detail(stock):
         return {"error": f"'{stock}' was not found in our list of Indian stocks/ETFs."}
 
     try:
-        # Sequential-ish fetch with only 2 workers max — fewer simultaneous
-        # requests to Yahoo Finance means fewer rate-limit hits on free hosting.
         with ThreadPoolExecutor(max_workers=2) as ex:
             f_info = ex.submit(fetch_info_cached, resolved)
             f_1y = ex.submit(fetch_history_cached, resolved, "1y")
@@ -407,8 +408,6 @@ def get_detail(stock):
         if raw_exp:
             explanation = (raw_exp[:510] + "...") if len(raw_exp) > 510 else raw_exp
         else:
-            # Yahoo doesn't provide longBusinessSummary for indices, and often
-            # not for ETFs/mutual funds either — fall back to stocks.csv.
             csv_description = lookup_csv_description(resolved)
             explanation = csv_description or "Not Available"
 
@@ -465,7 +464,7 @@ def api_historical():
     if not stock:
         return jsonify({"error": "No stock provided"})
 
-    resolved = resolve_ticker(stock) or stock  # currentSymbol from the frontend is already resolved
+    resolved = resolve_ticker(stock) or stock
 
     try:
         amount = float(data.get("amount", 0))
@@ -521,23 +520,20 @@ def api_historical():
 def api_future():
     data  = request.get_json(silent=True) or {}
     stock = data.get("stock", "").strip()
+    mode  = data.get("mode", "lumpsum")  # NEW: "lumpsum" (default, original behavior) or "sip"
 
     if not stock:
         return jsonify({"error": "No stock provided"})
 
     try:
-        amount  = float(data.get("amount", 0))
         horizon = int(data.get("horizon", 30))
     except (TypeError, ValueError):
         return jsonify({"error": "Invalid amount or horizon"})
 
-    if amount <= 0:
-        return jsonify({"error": "Amount must be greater than zero"})
-
     if horizon not in [7, 14, 30, 90, 180, 365]:
         return jsonify({"error": "Invalid horizon value"})
 
-    resolved_stock = resolve_ticker(stock) or stock  # currentSymbol from frontend is already resolved
+    resolved_stock = resolve_ticker(stock) or stock
 
     try:
         history5y = fetch_history_cached(resolved_stock, "5y")
@@ -548,17 +544,53 @@ def api_future():
         return jsonify({"error": f"Could not fetch data: {e}"})
 
     sentiment_label, sentiment_score = get_sentiment(symbol)
+    horizon_labels = {7: "1 Week", 14: "2 Weeks", 30: "1 Month", 90: "3 Months", 180: "6 Months", 365: "1 Year"}
+    horizon_label = horizon_labels.get(horizon, f"{horizon} days")
+
+    # NEW: SIP branch
+    if mode == "sip":
+        try:
+            monthly_amount = float(data.get("monthly_amount", 0))
+        except (TypeError, ValueError):
+            return jsonify({"error": "Invalid monthly amount"})
+
+        if monthly_amount <= 0:
+            return jsonify({"error": "Monthly SIP amount must be greater than zero"})
+
+        projected, low, high, total_invested = calculate_sip_projection(
+            monthly_amount, return_5y, sentiment_score, horizon
+        )
+
+        return jsonify({
+            "mode":            "sip",
+            "projected":       projected,
+            "low":             low,
+            "high":            high,
+            "total_invested":  total_invested,
+            "sentiment_label": sentiment_label,
+            "sentiment_score": sentiment_score,
+            "horizon_label":   horizon_label,
+        })
+
+    # Original lump-sum branch — unchanged
+    try:
+        amount = float(data.get("amount", 0))
+    except (TypeError, ValueError):
+        return jsonify({"error": "Invalid amount or horizon"})
+
+    if amount <= 0:
+        return jsonify({"error": "Amount must be greater than zero"})
+
     projected, low, high = calculate_projection(amount, return_5y, sentiment_score, horizon)
 
-    horizon_labels = {7: "1 Week", 14: "2 Weeks", 30: "1 Month", 90: "3 Months", 180: "6 Months", 365: "1 Year"}
-
     return jsonify({
+        "mode":            "lumpsum",
         "projected":       projected,
         "low":             low,
         "high":            high,
         "sentiment_label": sentiment_label,
         "sentiment_score": sentiment_score,
-        "horizon_label":   horizon_labels.get(horizon, f"{horizon} days"),
+        "horizon_label":   horizon_label,
     })
 
 

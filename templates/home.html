@@ -106,10 +106,25 @@
 
                 <div class="col-md-6">
                     <h6 class="fw-semibold mb-3">Calculate Future Returns</h6>
+
                     <div class="mb-3">
+                        <label class="form-label">Investment Mode</label>
+                        <div class="btn-group w-100" role="group" aria-label="Future investment mode">
+                            <button type="button" class="btn btn-outline-primary active" id="mode-lumpsum-btn" onclick="setFutureMode('lumpsum')">Lump Sum</button>
+                            <button type="button" class="btn btn-outline-primary" id="mode-sip-btn" onclick="setFutureMode('sip')">Monthly SIP</button>
+                        </div>
+                    </div>
+
+                    <div class="mb-3" id="lumpsum-amount-group">
                         <label class="form-label">Investment Amount (₹)</label>
                         <input type="number" class="form-control" id="future-amount" placeholder="10000">
                     </div>
+
+                    <div class="mb-3" id="sip-amount-group" style="display:none">
+                        <label class="form-label">Monthly SIP Amount (₹)</label>
+                        <input type="number" class="form-control" id="future-sip-amount" placeholder="5000">
+                    </div>
+
                     <div class="mb-3">
                         <label class="form-label">Time Horizon</label>
                         <select class="form-select" id="future-horizon">
@@ -164,18 +179,13 @@
 <script type="application/json" id="suggestions-data">{{ suggestions | tojson }}</script>
 
 <script>
-// ─────────────────────────────────────────────────────────────────────────────
-// Globals
-// ─────────────────────────────────────────────────────────────────────────────
 let currentSymbol = "";
+let futureMode = "lumpsum";
 
 const allSuggestions = JSON.parse(
     document.getElementById("suggestions-data").textContent || "[]"
 );
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Helpers
-// ─────────────────────────────────────────────────────────────────────────────
 function esc(str) {
     const d = document.createElement("div");
     d.textContent = String(str ?? "");
@@ -187,6 +197,11 @@ function hideLoader(id) { document.getElementById(id).style.display = "none"; }
 
 function returnClass(val) {
     return val >= 0 ? "return-positive" : "return-negative";
+}
+
+function fmtINR(num) {
+    const n = typeof num === "number" ? num : parseFloat(num);
+    return isNaN(n) ? esc(num) : n.toLocaleString("en-IN");
 }
 
 async function post(url, body) {
@@ -210,13 +225,12 @@ function resetCalculator() {
     document.getElementById("monthly-check").checked   = false;
     document.getElementById("hist-result").innerHTML   = "";
     document.getElementById("future-amount").value     = "";
+    document.getElementById("future-sip-amount").value = "";
     document.getElementById("future-horizon").value    = "30";
     document.getElementById("future-result").innerHTML = "";
+    setFutureMode("lumpsum");
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Autocomplete — shared for all inputs
-// ─────────────────────────────────────────────────────────────────────────────
 function setupAutocomplete(inputId, boxId, onSelect) {
     const input = document.getElementById(inputId);
     const box   = document.getElementById(boxId);
@@ -258,18 +272,15 @@ function setupAutocomplete(inputId, boxId, onSelect) {
     });
 }
 
-// Wire up search input
 setupAutocomplete("search-input", "suggestions-box", function() { doSearch(); });
 
 document.getElementById("search-input").addEventListener("keydown", function(e) {
     if (e.key === "Enter") doSearch();
 });
 
-// Wire up compare inputs (no auto-trigger — user clicks Compare)
 setupAutocomplete("compare-s1", "suggest-box-s1", null);
 setupAutocomplete("compare-s2", "suggest-box-s2", null);
 
-// Close all dropdowns on outside click
 document.addEventListener("click", function(e) {
     ["suggestions-box", "suggest-box-s1", "suggest-box-s2"].forEach(function(id) {
         const box   = document.getElementById(id);
@@ -280,9 +291,6 @@ document.addEventListener("click", function(e) {
     });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Search
-// ─────────────────────────────────────────────────────────────────────────────
 async function doSearch() {
     const stock = document.getElementById("search-input").value.trim();
     if (!stock) return;
@@ -362,9 +370,6 @@ async function doSearch() {
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Historical Calculator
-// ─────────────────────────────────────────────────────────────────────────────
 async function doHistorical() {
     if (!currentSymbol) { alert("Search a stock first."); return; }
     const amount    = parseFloat(document.getElementById("hist-amount").value);
@@ -405,18 +410,36 @@ async function doHistorical() {
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Future Projection
-// ─────────────────────────────────────────────────────────────────────────────
+function setFutureMode(mode) {
+    futureMode = mode;
+    document.getElementById("mode-lumpsum-btn").classList.toggle("active", mode === "lumpsum");
+    document.getElementById("mode-sip-btn").classList.toggle("active", mode === "sip");
+    document.getElementById("lumpsum-amount-group").style.display = mode === "lumpsum" ? "block" : "none";
+    document.getElementById("sip-amount-group").style.display     = mode === "sip" ? "block" : "none";
+}
+
 async function doFuture() {
     if (!currentSymbol) { alert("Search a stock first."); return; }
-    const amount  = parseFloat(document.getElementById("future-amount").value);
     const horizon = parseInt(document.getElementById("future-horizon").value);
-    if (!amount) { alert("Please enter an investment amount."); return; }
+
+    const payload = { stock: currentSymbol, horizon, mode: futureMode };
+
+    let amountForLabel = "";
+    if (futureMode === "sip") {
+        const monthlyAmount = parseFloat(document.getElementById("future-sip-amount").value);
+        if (!monthlyAmount) { alert("Please enter a monthly SIP amount."); return; }
+        payload.monthly_amount = monthlyAmount;
+        amountForLabel = "SIP of ₹" + fmtINR(monthlyAmount) + "/month";
+    } else {
+        const amount = parseFloat(document.getElementById("future-amount").value);
+        if (!amount) { alert("Please enter an investment amount."); return; }
+        payload.amount = amount;
+        amountForLabel = "₹" + fmtINR(amount);
+    }
 
     showLoader("future-loader");
     try {
-        const data = await post("/api/future", { stock: currentSymbol, amount, horizon });
+        const data = await post("/api/future", payload);
 
         if (data.error) {
             document.getElementById("future-result").innerHTML =
@@ -428,13 +451,19 @@ async function doFuture() {
             ? '— Sentiment: <span class="' + (data.sentiment_label === "Positive" ? "return-positive" : data.sentiment_label === "Negative" ? "return-negative" : "text-secondary") + '">' + esc(data.sentiment_label) + '</span>'
             : "";
 
+        let investedHtml = "";
+        if (data.mode === "sip" && data.total_invested !== undefined) {
+            investedHtml = '<p class="text-center text-muted small mb-2">Total Invested: ₹' + fmtINR(data.total_invested) + '</p>';
+        }
+
         document.getElementById("future-result").innerHTML =
             '<div class="result-box">' +
-                '<p class="card-title mb-2">₹' + esc(amount) + ' over ' + esc(data.horizon_label) + ' ' + sentHtml + '</p>' +
+                '<p class="card-title mb-2">' + amountForLabel + ' over ' + esc(data.horizon_label) + ' ' + sentHtml + '</p>' +
+                investedHtml +
                 '<div class="row text-center">' +
-                    '<div class="col-4"><p class="card-title mb-1">Low</p><p class="return-negative fw-bold mb-0">₹' + esc(data.low) + '</p></div>' +
-                    '<div class="col-4"><p class="card-title mb-1">Expected</p><p class="fw-bold fs-5 mb-0">₹' + esc(data.projected) + '</p></div>' +
-                    '<div class="col-4"><p class="card-title mb-1">High</p><p class="return-positive fw-bold mb-0">₹' + esc(data.high) + '</p></div>' +
+                    '<div class="col-4"><p class="card-title mb-1">Low</p><p class="return-negative fw-bold mb-0">₹' + fmtINR(data.low) + '</p></div>' +
+                    '<div class="col-4"><p class="card-title mb-1">Expected</p><p class="fw-bold fs-5 mb-0">₹' + fmtINR(data.projected) + '</p></div>' +
+                    '<div class="col-4"><p class="card-title mb-1">High</p><p class="return-positive fw-bold mb-0">₹' + fmtINR(data.high) + '</p></div>' +
                 '</div>' +
             '</div>';
 
@@ -443,9 +472,6 @@ async function doFuture() {
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Compare
-// ─────────────────────────────────────────────────────────────────────────────
 async function doCompare() {
     const s1 = document.getElementById("compare-s1").value.trim();
     const s2 = document.getElementById("compare-s2").value.trim();
