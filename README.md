@@ -37,6 +37,10 @@ FinBERT/torch are excluded from requirements.txt in the deployed version to stay
 
 
 Running locally
+git clone https://github.com/tharunkumar-77/Stock-Analyzer-live.git
+cd Stock-Analyzer-live
+pip install -r requirements.txt
+python app.py
 
 bashgit clone https://github.com/tharunkumar-77/Stock-Analyzer-live.git
 cd Stock-Analyzer-live
