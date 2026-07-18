@@ -222,7 +222,7 @@ def _normalize_index(history):
     return history
 
 
-def _fetch_with_retry(fn, retries=4, base_delay=1.5):
+def _fetch_with_retry(fn, retries=5, base_delay=1.0, max_delay=4.0):
     last_result = None
     for i in range(retries):
         try:
@@ -233,7 +233,7 @@ def _fetch_with_retry(fn, retries=4, base_delay=1.5):
         except Exception:
             last_result = None
         if i < retries - 1:
-            sleep_time = base_delay * (2 ** i) + random.uniform(0, 0.5)
+            sleep_time = min(max_delay, base_delay * (2 ** i)) + random.uniform(0, 0.5)
             time.sleep(sleep_time)
     return last_result
 
@@ -325,13 +325,30 @@ def generate_comparison_chart(h1, h2, label1, label2):
         return None
     if h1["Close"].iloc[0] == 0 or h2["Close"].iloc[0] == 0:
         return None
+
     n1 = h1["Close"] / h1["Close"].iloc[0] * 100
     n2 = h2["Close"] / h2["Close"].iloc[0] * 100
-    fig, ax = plt.subplots(figsize=(7, 3), dpi=100)
-    ax.plot(h1.index, n1, label=label1, color="#0d6efd", linewidth=1.5)
-    ax.plot(h2.index, n2, label=label2, color="#fd7e14", linewidth=1.5)
-    ax.axhline(y=100, color="#adb5bd", linestyle="--", linewidth=0.8)
-    ax.set_xlim(min(h1.index[0], h2.index[0]), max(h1.index[-1], h2.index[-1]))
+
+    # align both series on a common index so fill_between works cleanly
+    combined = pd.concat([n1.rename(label1), n2.rename(label2)], axis=1).dropna()
+    if combined.empty:
+        return None
+
+    idx = combined.index
+    s1  = combined[label1]
+    s2  = combined[label2]
+
+    fig, ax = plt.subplots(figsize=(7, 2.8), dpi=100)
+
+    ax.plot(idx, s1, label=label1, color="#0d6efd", linewidth=1.5)
+    ax.plot(idx, s2, label=label2, color="#fd7e14", linewidth=1.5)
+
+    ax.fill_between(idx, s1, s2, where=(s1 >= s2), interpolate=True, alpha=0.10, color="#0d6efd")
+    ax.fill_between(idx, s1, s2, where=(s1 < s2),  interpolate=True, alpha=0.10, color="#fd7e14")
+
+    ax.axhline(y=100, color="#adb5bd", linestyle="--", linewidth=1.0)
+
+    ax.set_xlim(idx[0], idx[-1])
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{x:.0f}'))
     ax.tick_params(labelsize=8)
     ax.legend(fontsize=8, loc='upper left')
@@ -355,11 +372,14 @@ def fetch_history_cached(symbol, period=None, start=None, end=None):
             return ticker.history(period=period)
         return ticker.history(start=start, end=end)
 
-    history = _fetch_with_retry(_do_fetch, retries=4, base_delay=1.5)
+    history = _fetch_with_retry(_do_fetch, retries=5, base_delay=1.0, max_delay=4.0)
     if history is None:
         history = pd.DataFrame()
     history = _normalize_index(history)
-    cache_set(key, history, HISTORY_CACHE_TTL)
+    if history.empty:
+        cache_set(key, history, 30)          # short TTL - retry soon instead of locking out for 10 min
+    else:
+        cache_set(key, history, HISTORY_CACHE_TTL)
     return history
 
 
@@ -496,7 +516,7 @@ def api_historical():
                 total_invested += amount
             final_value  = round(total_units * history["Close"].iloc[-1], 2)
             profit       = round(final_value - total_invested, 2)
-            buy_price    = round(history["Close"].iloc[0], 2)
+            buy_price    = round(total_invested / total_units, 2) if total_units > 0 else 0
             sell_price   = round(history["Close"].iloc[-1], 2)
             growth_chart = generate_growth_chart_monthly(monthly_history, amount)
         else:

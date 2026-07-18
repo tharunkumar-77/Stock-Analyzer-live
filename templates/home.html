@@ -10,10 +10,16 @@
 </head>
 <body>
 
-<nav class="navbar navbar-dark bg-dark mb-4">
-    <div class="container">
-        <span class="navbar-brand">📈 Stock Analyzer</span>
-        <span class="text-secondary small">Your Finance Friend</span>
+<nav class="navbar navbar-dark bg-dark mb-4 sticky-top">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <span class="navbar-brand mb-0">📈 Stock Analyzer</span>
+
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+            <a href="#section-historical" class="nav-pill-link sub-nav-link">Past Returns</a>
+            <a href="#section-future" class="nav-pill-link sub-nav-link">Future Returns</a>
+            <a href="#section-compare" class="nav-pill-link sub-nav-link">Compare</a>
+            <span class="text-secondary small d-none d-md-inline">Your Finance Friend</span>
+        </div>
     </div>
 </nav>
 
@@ -82,7 +88,7 @@
             <p class="section-title">Investment Calculator</p>
             <div class="row g-4">
 
-                <div class="col-md-6">
+                <div class="col-md-6" id="section-historical">
                     <h6 class="fw-semibold mb-3">Calculate Past Returns</h6>
                     <div class="mb-3">
                         <label class="form-label">Investment Amount (₹)</label>
@@ -105,7 +111,7 @@
                     <div id="hist-result" class="mt-2"></div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6" id="section-future">
                     <h6 class="fw-semibold mb-3">Calculate Future Returns</h6>
 
                     <div class="mb-3">
@@ -150,7 +156,7 @@
     </div>
 
     <!-- Compare -->
-    <div class="card mb-4">
+    <div class="card mb-4" id="section-compare">
         <div class="card-body">
             <p class="section-title">Compare Two Investments</p>
             <div class="row g-2 align-items-end">
@@ -182,6 +188,15 @@
 <script>
 let currentSymbol = "";
 let futureMode = "lumpsum";
+document.querySelectorAll(".sub-nav-link").forEach(function (link) {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    });
+});
 
 const allSuggestions = JSON.parse(
     document.getElementById("suggestions-data").textContent || "[]"
@@ -391,10 +406,11 @@ async function doHistorical() {
             return;
         }
 
-        const plClass = data.returns >= 0 ? "return-positive" : "return-negative";
+        const plClass  = data.returns >= 0 ? "return-positive" : "return-negative";
+        const buyLabel = monthly ? "Avg. Buy Price" : "Buy Price";
         let html = '<div class="result-box">' +
             '<div class="row text-center">' +
-                '<div class="col-6"><p class="card-title mb-1">Buy Price</p><p class="fw-bold mb-0">₹' + esc(data.buy_price) + '</p></div>' +
+                '<div class="col-6"><p class="card-title mb-1">' + buyLabel + '</p><p class="fw-bold mb-0">₹' + esc(data.buy_price) + '</p></div>' +
                 '<div class="col-6"><p class="card-title mb-1">Sell Price</p><p class="fw-bold mb-0">₹' + esc(data.sell_price) + '</p></div>' +
             '</div>';
         if (monthly) {
