@@ -36,11 +36,6 @@ Info and historical data are fetched concurrently using a thread pool to reduce 
 FinBERT/torch are excluded from requirements.txt in the deployed version to stay within Render's free-tier memory limits; sentiment analysis runs via the Hugging Face Inference API instead of a local model.
 
 
-Running locally
-git clone https://github.com/tharunkumar-77/Stock-Analyzer-live.git
-cd Stock-Analyzer-live
-pip install -r requirements.txt
-python app.py
 
 bashgit clone https://github.com/tharunkumar-77/Stock-Analyzer-live.git
 cd Stock-Analyzer-live
