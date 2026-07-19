@@ -315,12 +315,21 @@ async function doSearch() {
     showLoader("search-loader");
     document.getElementById("search-btn").disabled = true;
 
-    try {
+try {
         const data = await post("/api/search", { stock });
 
         if (data.error) {
             document.getElementById("info-content").innerHTML =
                 '<div class="alert alert-danger mb-0">' + esc(data.error) + '</div>';
+
+            // clear stale sections from previous search
+            document.getElementById("sentiment-card").style.display = "none";
+            document.getElementById("about-content").innerHTML =
+                '<p class="text-muted mb-0">No description available.</p>';
+            document.getElementById("performance-content").innerHTML =
+                '<p class="text-muted mb-0">Performance will appear after searching a stock.</p>';
+            currentSymbol = "";
+
             return;
         }
 
