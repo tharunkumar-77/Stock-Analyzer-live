@@ -3,62 +3,24 @@ Nifty 50,^NSEI,Index,"Nifty 50 tracks the 50 largest and most liquid companies l
 Sensex,^BSESN,Index,"Sensex (BSE Sensex) tracks 30 large, financially sound and actively traded companies listed on the Bombay Stock Exchange, and is India's oldest and most widely followed benchmark index.","The starting point for most Indian equity portfolios; used as the benchmark for index funds, ETFs and to judge whether active funds or stock picks are actually adding value."
 Nifty 100,^CNX100,Index,"Nifty 100 tracks the 100 largest companies by market capitalisation on the NSE, combining the Nifty 50 and Nifty Next 50 constituents to represent about the top of India's listed universe.",A slightly broader large-cap benchmark than the Nifty 50/Sensex; useful for comparing large-cap mutual funds or ETFs that track a 100-stock universe instead of 50.
 Nifty 200,^CNX200,Index,"Nifty 200 tracks the 200 largest NSE-listed companies by market capitalisation, offering broader large- and mid-cap coverage of the Indian market.",Bridges large and mid caps in one benchmark; a reference point for 'large and midcap' category mutual funds rather than something retail investors track directly.
-Nifty 500,^CNX500,Index,"Nifty 500 tracks the top 500 companies by market capitalisation on the NSE, representing roughly the bulk of listed Indian market capitalisation across sectors.",A broad-market benchmark covering roughly the top 500 companies; used to gauge how diversified equity or flexi-cap funds are performing against the wider market.
-Nifty Total Market,^CNXTOTALM,Index,"Nifty Total Market tracks an even broader universe of NSE-listed companies across large-, mid-, small- and micro-cap segments, aiming to represent the total investable Indian equity market.","The widest Indian equity benchmark, spanning large, mid, small and micro caps; mainly relevant for judging total-market index funds rather than direct investing."
-BSE 100,^BSE100,Index,BSE 100 tracks the 100 largest companies listed on the Bombay Stock Exchange by market capitalisation.,A slightly broader large-cap benchmark than the Nifty 50/Sensex; useful for comparing large-cap mutual funds or ETFs that track a 100-stock universe instead of 50.
-BSE 200,^BSE200,Index,BSE 200 tracks 200 large- and mid-sized companies listed on the Bombay Stock Exchange.,Bridges large and mid caps in one benchmark; a reference point for 'large and midcap' category mutual funds rather than something retail investors track directly.
-BSE 500,^BSE500,Index,"BSE 500 tracks 500 companies listed on the Bombay Stock Exchange, covering around 93% of total market capitalisation on the exchange.",A broad-market benchmark covering roughly the top 500 companies; used to gauge how diversified equity or flexi-cap funds are performing against the wider market.
-BSE Sensex 50,^BSESEN50,Index,"BSE Sensex 50 tracks 50 large, liquid companies on the Bombay Stock Exchange, extending the Sensex universe to a broader large-cap set.","An extension of the Sensex to 50 large, liquid BSE stocks; mostly used as a comparison benchmark rather than a widely tracked investable index."
 Nifty Next 50,^NSMIDCP,Index,Nifty Next 50 tracks the 50 companies ranked 51st to 100th by market capitalisation on the NSE — often viewed as potential future entrants to the Nifty 50.,Watched as a pipeline of companies likely to be promoted into the Nifty 50; a reference index for Next-50 ETFs and for spotting emerging large caps early.
-Nifty Midcap 50,^NIFMIDCAP50,Index,"Nifty Midcap 50 tracks 50 mid-sized companies listed on the NSE, representing the mid-cap segment of the Indian market.",A mid-cap benchmark used to judge midcap mutual funds and ETFs; relevant for investors deciding how much growth-tilted mid-cap exposure to add to a core large-cap holding.
-Nifty Midcap 100,^CNXMC,Index,Nifty Midcap 100 tracks 100 mid-cap companies listed on the NSE by market capitalisation.,A mid-cap benchmark used to judge midcap mutual funds and ETFs; relevant for investors deciding how much growth-tilted mid-cap exposure to add to a core large-cap holding.
-Nifty Midcap 150,^NIFMDCP150,Index,"Nifty Midcap 150 tracks 150 mid-cap companies on the NSE, offering broader mid-cap coverage than the Midcap 50 or 100 indices.",A mid-cap benchmark used to judge midcap mutual funds and ETFs; relevant for investors deciding how much growth-tilted mid-cap exposure to add to a core large-cap holding.
-Nifty Midcap Select,^NIFMDCPSEL,Index,"Nifty Midcap Select tracks a curated, more liquid and tradable subset of NSE mid-cap companies, designed to support derivatives trading.",A mid-cap benchmark used to judge midcap mutual funds and ETFs; relevant for investors deciding how much growth-tilted mid-cap exposure to add to a core large-cap holding.
-Nifty Smallcap 50,^NIFSMCAP50,Index,Nifty Smallcap 50 tracks 50 small-cap companies listed on the NSE.,"A small-cap benchmark, mainly useful for evaluating small-cap fund performance; small caps carry the highest volatility and drawdown risk in Indian equities, so this index moves in sharp cycles."
 Nifty Smallcap 100,^CNXSC,Index,Nifty Smallcap 100 tracks 100 small-cap companies listed on the NSE by market capitalisation.,"A small-cap benchmark, mainly useful for evaluating small-cap fund performance; small caps carry the highest volatility and drawdown risk in Indian equities, so this index moves in sharp cycles."
-Nifty Smallcap 250,^NIFSMCAP250,Index,"Nifty Smallcap 250 tracks 250 small-cap companies on the NSE, giving broader coverage of India's smaller listed companies.","A small-cap benchmark, mainly useful for evaluating small-cap fund performance; small caps carry the highest volatility and drawdown risk in Indian equities, so this index moves in sharp cycles."
-Nifty LargeMidcap 250,^NIFLRGMID250,Index,Nifty LargeMidcap 250 combines the top 100 large-cap and next 150 mid-cap NSE-listed companies into a single blended index.,A blended large-and-midcap benchmark used to judge 'large & midcap' category mutual funds that must hold both segments by mandate.
-Nifty MicroCap 250,^NIFMIC250,Index,"Nifty MicroCap 250 tracks 250 very small (micro-cap) companies listed on the NSE, sitting below the small-cap segment.","Tracks India's smallest listed companies; a niche benchmark for aggressive micro-cap strategies, not something typical retail investors track or invest in directly."
-BSE Midcap,^BSEMIDCAP,Index,BSE Midcap tracks mid-sized companies listed on the Bombay Stock Exchange.,BSE's version of the mid/small-cap benchmarks; used the same way as their NSE counterparts to evaluate fund performance in that market-cap segment.
-BSE Smallcap,^BSESMLCAP,Index,BSE Smallcap tracks small-cap companies listed on the Bombay Stock Exchange.,BSE's version of the mid/small-cap benchmarks; used the same way as their NSE counterparts to evaluate fund performance in that market-cap segment.
-BSE Midcap Select,^BSEMIDSEL,Index,"BSE Midcap Select tracks a curated, more liquid subset of BSE-listed mid-cap companies.",BSE's version of the mid/small-cap benchmarks; used the same way as their NSE counterparts to evaluate fund performance in that market-cap segment.
 Nifty Bank,^NSEBANK,Index,"Nifty Bank tracks the most liquid and large Indian banking stocks listed on the NSE, and is a widely traded benchmark for the banking sector.",The key benchmark for India's banking sector and the most actively traded index in the derivatives market; a proxy for credit growth and financial-sector health.
-Nifty Private Bank,^NIFPVTBNK,Index,Nifty Private Bank tracks the largest and most liquid private-sector banks listed on the NSE.,Isolates private-sector banks from PSU banks within the Nifty Bank universe; useful for investors who want banking exposure without PSU-bank volatility and governance risk.
 Nifty PSU Bank,^CNXPSUBANK,Index,Nifty PSU Bank tracks public-sector (government-owned) banks listed on the NSE.,Tracks government-owned banks specifically; historically far more volatile than private banks and closely tied to government reform and recapitalisation cycles.
 Nifty Financial Services,^CNXFIN,Index,"Nifty Financial Services tracks banks, NBFCs, insurance, housing finance and other financial-services companies listed on the NSE.","A broader financial-sector benchmark than Nifty Bank, adding NBFCs, insurers and asset managers; useful for judging financial-sector funds with a wider mandate than banks alone."
 Nifty IT,^CNXIT,Index,Nifty IT tracks the largest Indian information-technology and software-services companies listed on the NSE.,The benchmark for India's IT-services exporters; closely watched alongside the rupee-dollar rate and US tech-spend commentary since export revenue drives sector earnings.
 Nifty Auto,^CNXAUTO,Index,Nifty Auto tracks automobile manufacturers and auto-ancillary companies listed on the NSE.,"Tracks auto manufacturers and ancillaries; a cyclical benchmark that moves with festive-season sales data, interest rates and the EV transition."
 Nifty FMCG,^CNXFMCG,Index,Nifty FMCG tracks fast-moving-consumer-goods companies listed on the NSE.,"A defensive-sector benchmark for consumer staples; tends to hold up better than cyclical sectors during slowdowns, making it a common comparison point for 'safety' allocations."
 Nifty Pharma,^CNXPHARMA,Index,Nifty Pharma tracks pharmaceutical and drug-manufacturing companies listed on the NSE.,"Benchmarks for pharma and broader healthcare; relatively defensive and partly export-driven (US generics), so they diversify a portfolio that's heavy on cyclical sectors."
-Nifty Healthcare,^CNXHEALTH,Index,"Nifty Healthcare tracks hospitals, diagnostics, pharma and broader healthcare-services companies listed on the NSE.","Benchmarks for pharma and broader healthcare; relatively defensive and partly export-driven (US generics), so they diversify a portfolio that's heavy on cyclical sectors."
 Nifty Metal,^CNXMETAL,Index,Nifty Metal tracks metal and mining companies listed on the NSE.,A highly cyclical commodity-linked benchmark that moves with global metal prices and Chinese demand; more of a trading/cyclical-timing index than a buy-and-hold one.
 Nifty Realty,^CNXREALTY,Index,Nifty Realty tracks real-estate developers and construction companies listed on the NSE.,"Tracks real-estate developers; extremely cyclical and rate-sensitive, useful mainly as a tactical bet on housing-cycle upturns rather than a core long-term holding."
 Nifty Energy,^CNXENERGY,Index,"Nifty Energy tracks power, oil & gas and other energy-sector companies listed on the NSE.","Tracks power, oil & gas and energy companies; sensitive to crude prices, regulated tariffs and government energy policy, so it's a cyclical, policy-linked benchmark."
 Nifty Infra,^CNXINFRA,Index,"Nifty Infra tracks companies involved in infrastructure development, construction and related services listed on the NSE.","A capex-cycle benchmark spanning construction, power and infra-linked companies; tends to track government capex spending and interest-rate trends closely."
 Nifty Commodities,^CNXCMDT,Index,"Nifty Commodities tracks companies engaged in commodity-linked businesses such as metals, energy and materials, listed on the NSE.","A broad commodity-linked benchmark (metals, energy, materials); moves with global commodity cycles rather than domestic consumption trends, adding diversification away from consumer-facing sectors."
-Nifty Oil & Gas,^CNXOILGAS,Index,"Nifty Oil & Gas tracks companies in exploration, refining, marketing and distribution of oil and gas, listed on the NSE.","Tracks oil & gas exploration, refining and marketing companies; sensitive to crude oil prices and government fuel-pricing policy, making it a cyclical, policy-linked benchmark rather than a core holding."
 Nifty Media,^CNXMEDIA,Index,"Nifty Media tracks media, entertainment and publishing companies listed on the NSE.","A small, niche benchmark for media and entertainment stocks; low weight in most portfolios and prone to company-specific swings rather than broad sector trends."
-Nifty Consumer Durables,^NIFCONSDUR,Index,"Nifty Consumer Durables tracks companies manufacturing consumer durable goods such as appliances and electronics, listed on the NSE.","Tracks consumer-durables makers (appliances, electronics); a discretionary-spending benchmark that benefits from rising incomes and festive/wedding-season demand cycles."
 Nifty India Consumption,^CNXCONSUM,Index,"Nifty India Consumption tracks companies whose revenue is closely tied to domestic consumption spending, across sectors such as FMCG, auto, retail and media.","A broad domestic-consumption benchmark spanning FMCG, auto, retail and media; used as a single proxy for India's consumption growth story across sectors."
-Nifty CPSE,^CNXCPSE,Index,Nifty CPSE tracks Central Public Sector Enterprises — companies majority-owned by the Government of India — listed on the NSE.,"Tracks government-owned enterprises; often trades at value-ish multiples with higher dividend yields, but carries policy, governance and disinvestment-timing risk."
 Nifty PSE,^CNXPSE,Index,"Nifty PSE tracks public-sector enterprises listed on the NSE, including companies owned by both central and state governments.","Tracks government-owned enterprises; often trades at value-ish multiples with higher dividend yields, but carries policy, governance and disinvestment-timing risk."
-Nifty India Defence,^NIFINDDEF,Index,Nifty India Defence tracks companies engaged in defence manufacturing and related services listed on the NSE.,"The benchmark for India's defence-manufacturing theme; a high-momentum, policy-driven index tied to indigenisation and rising defence budgets, prone to sharp rallies and corrections."
-Nifty India Digital,^NIFDIGITAL,Index,"Nifty India Digital tracks companies deriving a significant share of revenue from digital and internet-based businesses, listed on the NSE.",Tracks companies with meaningful digital/internet revenue; a newer thematic benchmark for India's internet-economy and new-age tech listings.
-Nifty Dividend Opp 50,^NIFTYDIV50,Index,Nifty Dividend Opportunities 50 tracks 50 NSE-listed companies with a consistent record of dividend payouts.,A benchmark of 50 companies with a consistent dividend track record; used by income-focused investors comparing dividend-yield strategies against the broader market.
 India VIX,^INDIAVIX,Index,"India VIX is a volatility index computed from Nifty option prices, reflecting the market's expectation of near-term volatility; it is a sentiment gauge rather than a tradable price index.","Not an investable index but a fear gauge — a rising India VIX signals rising expected volatility, often used by traders to time hedges rather than for direct investment."
-BSE Bankex,^BSEBANKEX,Index,BSE Bankex tracks major banking-sector companies listed on the Bombay Stock Exchange.,The key benchmark for India's banking sector and the most actively traded index in the derivatives market; a proxy for credit growth and financial-sector health.
-BSE IT,^BSEIT,Index,BSE IT tracks information-technology companies listed on the Bombay Stock Exchange.,"BSE's IT-sector benchmark, functionally similar to Nifty IT; useful for comparing IT-focused funds benchmarked to the BSE universe instead of NSE."
-BSE Healthcare,^BSEHC,Index,BSE Healthcare tracks pharmaceutical and healthcare companies listed on the Bombay Stock Exchange.,"BSE's healthcare benchmark, the BSE counterpart to Nifty Healthcare; used to evaluate healthcare-sector funds benchmarked against BSE indices."
-BSE Auto,^BSEAUTO,Index,BSE Auto tracks automobile and auto-ancillary companies listed on the Bombay Stock Exchange.,"BSE's auto-sector benchmark, mirroring Nifty Auto; a comparison point for auto-focused funds tracking the BSE universe."
-BSE FMCG,^BSEFMCG,Index,BSE FMCG tracks fast-moving-consumer-goods companies listed on the Bombay Stock Exchange.,"BSE's FMCG benchmark, the BSE equivalent of Nifty FMCG; used to judge consumer-staple fund performance against the BSE universe."
-BSE Metal,^BSEMETAL,Index,BSE Metal tracks metal and mining companies listed on the Bombay Stock Exchange.,"BSE's metals benchmark, tracking the same cyclical commodity theme as Nifty Metal on the BSE universe."
-BSE Realty,^BSEREALTY,Index,BSE Realty tracks real-estate companies listed on the Bombay Stock Exchange.,"Tracks real-estate developers; extremely cyclical and rate-sensitive, useful mainly as a tactical bet on housing-cycle upturns rather than a core long-term holding."
-BSE Oil & Gas,^BSEOILGAS,Index,BSE Oil & Gas tracks oil and gas companies listed on the Bombay Stock Exchange.,"Tracks power, oil & gas and energy companies; sensitive to crude prices, regulated tariffs and government energy policy, so it's a cyclical, policy-linked benchmark."
-BSE Power,^BSEPOWER,Index,BSE Power tracks power-generation and power-infrastructure companies listed on the Bombay Stock Exchange.,"Tracks power, oil & gas and energy companies; sensitive to crude prices, regulated tariffs and government energy policy, so it's a cyclical, policy-linked benchmark."
-BSE Capital Goods,^BSECAPGOOD,Index,BSE Capital Goods tracks industrial and capital-goods manufacturers listed on the Bombay Stock Exchange.,Tracks capital-goods and engineering companies; a capex-cycle benchmark that benefits from rising industrial and infrastructure investment.
-BSE Consumer Durables,^BSECD,Index,BSE Consumer Durables tracks consumer-durables manufacturers listed on the Bombay Stock Exchange.,"Tracks consumer-durables makers (appliances, electronics); a discretionary-spending benchmark that benefits from rising incomes and festive/wedding-season demand cycles."
-BSE Telecom,^BSETELECOM,Index,BSE Telecom tracks telecommunications companies listed on the Bombay Stock Exchange.,"A concentrated telecom-sector benchmark; dominated by a handful of large operators, so it moves heavily with tariff-hike cycles and subscriber-market-share shifts."
-Gift Nifty,NIFTYNXT50.NS,Index,"Gift Nifty is the international derivative contract on the Nifty 50, traded on NSE IX at GIFT City, widely watched as an early indicator of how Indian markets may open.","Gift Nifty is the international (GIFT City) version of Nifty futures, trading ahead of Indian market hours; primarily watched by traders as an early signal for how Indian markets may open, not a retail investment vehicle."
 Reliance Industries,RELIANCE.NS,Nifty 50,,
 Tata Consultancy Services,TCS.NS,Nifty 50,,
 HDFC Bank,HDFCBANK.NS,Nifty 50,,
@@ -85,7 +47,8 @@ Tech Mahindra,TECHM.NS,Nifty 50,,
 Mahindra & Mahindra,M&M.NS,Nifty 50,,
 Nestle India,NESTLEIND.NS,Nifty 50,,
 JSW Steel,JSWSTEEL.NS,Nifty 50,,
-Tata Motors,TATAMOTORS.NS,Nifty 50,,
+Tata Motors Passenger Vehicles,TMPV.NS,Nifty 50,,
+Tata Motors Commercial Vehicles,TMCV.NS,Nifty 50,,
 Adani Ports,ADANIPORTS.NS,Nifty 50,,
 Adani Enterprises,ADANIENT.NS,Nifty 50,,
 Coal India,COALINDIA.NS,Nifty 50,,
@@ -108,7 +71,7 @@ Tata Consumer Products,TATACONSUM.NS,Nifty 50,,
 IndusInd Bank,INDUSINDBK.NS,Nifty 50,,
 BEL,BEL.NS,Nifty 50,,
 Bajaj Finserv,BAJAJFINSV.NS,Nifty 50,,
-Zomato,ZOMATO.NS,Nifty 50,,
+Eternal (Zomato),ETERNAL.NS,Nifty 50,,
 Adani Green Energy,ADANIGREEN.NS,Nifty Next 50,,
 Adani Total Gas,ATGL.NS,Nifty Next 50,,
 Adani Power,ADANIPOWER.NS,Nifty Next 50,,
@@ -147,11 +110,10 @@ Siemens India,SIEMENS.NS,Nifty Next 50,,
 Torrent Pharmaceuticals,TORNTPHARM.NS,Nifty Next 50,,
 Trent,TRENT.NS,Nifty Next 50,,
 TVS Motor Company,TVSMOTOR.NS,Nifty Next 50,,
-United Spirits,MCDOWELL-N.NS,Nifty Next 50,,
+United Spirits,UNITDSPR.NS,Nifty Next 50,,
 Vedanta,VEDL.NS,Nifty Next 50,,
 Voltas,VOLTAS.NS,Nifty Next 50,,
 Zydus Lifesciences,ZYDUSLIFE.NS,Nifty Next 50,,
-Oberoi Realty,OBEROIDVLP.NS,Nifty Next 50,,
 Page Industries,PAGEIND.NS,Nifty Next 50,,
 Samvardhana Motherson,MOTHERSON.NS,Nifty Next 50,,
 IRCTC,IRCTC.NS,Nifty Next 50,,
@@ -191,8 +153,6 @@ City Union Bank,CUB.NS,Banking,,
 Karur Vysya Bank,KARURVYSYA.NS,Banking,,
 South Indian Bank,SOUTHBANK.NS,Banking,,
 Dhanlaxmi Bank,DHANBANK.NS,Banking,,
-Lakshmi Vilas Bank,LVBANK.NS,Banking,,
-Nainital Bank,NAINITAL.NS,Banking,,
 Jammu & Kashmir Bank,J&KBANK.NS,Banking,,
 CSB Bank,CSBBANK.NS,Banking,,
 DCB Bank,DCBBANK.NS,Banking,,
@@ -206,7 +166,6 @@ Fino Payments Bank,FINOPB.NS,Banking,,
 Paytm Payments Bank,PAYTM.NS,Banking,,
 Mahindra Finance,M&MFIN.NS,Finance,,
 Sundaram Finance,SUNDARMFIN.NS,Finance,,
-Shriram City Union Finance,SHRIRAMCIT.NS,Finance,,
 IIFL Finance,IIFL.NS,Finance,,
 Muthoot Microfin,MUTHOOTMF.NS,Finance,,
 CreditAccess Grameen,CREDITACC.NS,Finance,,
@@ -217,12 +176,11 @@ Aavas Financiers,AAVAS.NS,Finance,,
 PNB Housing Finance,PNBHOUSING.NS,Finance,,
 LIC Housing Finance,LICHSGFIN.NS,Finance,,
 Repco Home Finance,REPCOHOME.NS,Finance,,
-Indiabulls Housing Finance,IBULHSGFIN.NS,Finance,,
+Sammaan Capital (Indiabulls Housing Finance),SAMMAANCAP.NS,Finance,,
 GIC Housing Finance,GICHSGFIN.NS,Finance,,
 Can Fin Homes,CANFINHOME.NS,Finance,,
 L&T Finance,LTF.NS,Finance,,
 Motilal Oswal Financial,MOTILALOFS.NS,Finance,,
-IIFL Securities,IIFLSEC.NS,Finance,,
 Angel One,ANGELONE.NS,Finance,,
 Geojit Financial Services,GEOJITFSL.NS,Finance,,
 MCX India,MCX.NS,Finance,,
@@ -266,7 +224,6 @@ Data Patterns India,DATAPATTNS.NS,IT,,
 NIIT Learning Systems,NIITMTS.NS,IT,,
 Indiamart Intermesh,INDIAMART.NS,IT,,
 Just Dial,JUSTDIAL.NS,IT,,
-Nykaa FSN E-Commerce,FSN.NS,IT,,
 Swiggy,SWIGGY.NS,IT,,
 EaseMyTrip,EASEMYTRIP.NS,IT,,
 Nazara Technologies,NAZARA.NS,IT,,
@@ -289,7 +246,6 @@ Strides Pharma,STAR.NS,Pharma,,
 Eris Lifesciences,ERIS.NS,Pharma,,
 Granules India,GRANULES.NS,Pharma,,
 Laurus Labs,LAURUSLABS.NS,Pharma,,
-Suven Pharmaceuticals,SUVENPHAR.NS,Pharma,,
 Aarti Drugs,AARTIDRUGS.NS,Pharma,,
 Alembic Pharmaceuticals,APLLTD.NS,Pharma,,
 Caplin Point Laboratories,CAPLIPOINT.NS,Pharma,,
@@ -312,7 +268,6 @@ Aster DM Healthcare,ASTERDM.NS,Pharma,,
 Rainbow Children Medicare,RAINBOW.NS,Pharma,,
 Shilpa Medicare,SHILPAMED.NS,Pharma,,
 Natco Pharma,NATCOPHARM.NS,Pharma,,
-Sequent Scientific,SEQUENT.NS,Pharma,,
 Supriya Lifescience,SUPRIYA.NS,Pharma,,
 Tatva Chintan Pharma,TATVA.NS,Pharma,,
 Ashok Leyland,ASHOKLEY.NS,Auto,,
@@ -320,7 +275,6 @@ Escorts Kubota,ESCORTS.NS,Auto,,
 Force Motors,FORCEMOT.NS,Auto,,
 Atul Auto,ATULAUTO.NS,Auto,,
 Bosch India,BOSCHLTD.NS,Auto,,
-Minda Industries,MINDAIND.NS,Auto,,
 Tube Investments,TIINDIA.NS,Auto,,
 Balkrishna Industries,BALKRISIND.NS,Auto,,
 MRF,MRF.NS,Auto,,
@@ -328,7 +282,6 @@ Apollo Tyres,APOLLOTYRE.NS,Auto,,
 CEAT,CEATLTD.NS,Auto,,
 JK Tyre,JKTYRE.NS,Auto,,
 Exide Industries,EXIDEIND.NS,Auto,,
-Amara Raja Energy,AMARAJABAT.NS,Auto,,
 Jamna Auto Industries,JAMNAAUTO.NS,Auto,,
 Suprajit Engineering,SUPRAJIT.NS,Auto,,
 Sona BLW Precision,SONACOMS.NS,Auto,,
@@ -354,8 +307,6 @@ Heritage Foods,HERITGFOOD.NS,FMCG,,
 Tasty Bite Eatables,TASTYBITE.NS,FMCG,,
 Hindustan Foods,HNDFDS.NS,FMCG,,
 Bikaji Foods,BIKAJI.NS,FMCG,,
-Prataap Snacks,PRATAAP.NS,FMCG,,
-DFM Foods,DFMFOODS.NS,FMCG,,
 Balaji Wafers,BALAMINES.NS,FMCG,,
 P&G Hygiene,PGHH.NS,FMCG,,
 Jyothy Labs,JYOTHYLAB.NS,FMCG,,
@@ -385,7 +336,6 @@ RHI Magnesita,RHIM.NS,Metal,,
 Carborundum Universal,CARBORUNIV.NS,Metal,,
 Torrent Power,TORNTPOWER.NS,Energy,,
 Tata Power,TATAPOWER.NS,Energy,,
-Adani Transmission,ADANITRANS.NS,Energy,,
 SJVN,SJVN.NS,Energy,,
 CESC,CESC.NS,Energy,,
 Gujarat Gas,GUJGASLTD.NS,Energy,,
@@ -411,7 +361,6 @@ PNC Infratech,PNCINFRA.NS,Infrastructure,,
 NCC,NCC.NS,Infrastructure,,
 Simplex Infrastructures,SIMPLEXINF.NS,Infrastructure,,
 Ashoka Buildcon,ASHOKA.NS,Infrastructure,,
-JMC Projects,JMCPROJECT.NS,Infrastructure,,
 PSP Projects,PSPPROJECT.NS,Infrastructure,,
 Engineers India,ENGINERSIN.NS,Infrastructure,,
 Patel Engineering,PATELENG.NS,Infrastructure,,
@@ -421,10 +370,8 @@ IRB Infrastructure,IRB.NS,Infrastructure,,
 Sadbhav Engineering,SADBHAV.NS,Infrastructure,,
 Dilip Buildcon,DBL.NS,Infrastructure,,
 Capacite Infraprojects,CAPACITE.NS,Infrastructure,,
-Megha Engineering,MEKRO.NS,Infrastructure,,
 BEML,BEML.NS,Infrastructure,,
 Texmaco Rail,TEXRAIL.NS,Infrastructure,,
-TITAGARH WAGONS,TWL.NS,Infrastructure,,
 Blue Dart Express,BLUEDART.NS,Infrastructure,,
 Mahindra Logistics,MAHLOG.NS,Infrastructure,,
 VRL Logistics,VRLLOG.NS,Infrastructure,,
@@ -451,9 +398,7 @@ Heidelberg Cement India,HEIDELBERG.NS,Cement,,
 JK Lakshmi Cement,JKLAKSHMI.NS,Cement,,
 Nuvoco Vistas,NUVOCO.NS,Cement,,
 Orient Cement,ORIENTCEM.NS,Cement,,
-Prism Cement,PRISMCEM.NS,Cement,,
 Sagar Cement,SAGCEM.NS,Cement,,
-Sanghi Industries,SANGHIIND.NS,Cement,,
 Mangalam Cement,MANGLMCEM.NS,Cement,,
 Prestige Estates,PRESTIGE.NS,Realty,,
 Macrotech Developers Lodha,LODHA.NS,Realty,,
@@ -484,7 +429,6 @@ Rossari Biotech,ROSSARI.NS,Chemicals,,
 Clean Science Technology,CLEAN.NS,Chemicals,,
 Alkyl Amines Chemicals,ALKYLAMINE.NS,Chemicals,,
 Anupam Rasayan,ANURAS.NS,Chemicals,,
-Archean Chemical,ARCHEAN.NS,Chemicals,,
 Camlin Fine Sciences,CAMLINFINE.NS,Chemicals,,
 NOCIL,NOCIL.NS,Chemicals,,
 Epigral,EPIGRAL.NS,Chemicals,,
@@ -538,7 +482,6 @@ Kalyan Jewellers,KALYANKJIL.NS,Consumer,,
 PC Jeweller,PCJEWELLER.NS,Consumer,,
 Senco Gold,SENCO.NS,Consumer,,
 Thangamayil Jewellery,THANGAMAYL.NS,Consumer,,
-Welspun India,WELSPUNIND.NS,Textiles,,
 Arvind,ARVIND.NS,Textiles,,
 Vardhman Textiles,VTL.NS,Textiles,,
 Trident,TRIDENT.NS,Textiles,,
@@ -550,14 +493,11 @@ Vedant Fashions Manyavar,MANYAVAR.NS,Textiles,,
 Go Fashion India,GOCOLORS.NS,Textiles,,
 Pearl Global Industries,PGIL.NS,Textiles,,
 Filatex India,FILATEX.NS,Textiles,,
-Garden Silk Mills,GARDENSILK.NS,Textiles,,
 Bombay Dyeing,BOMDYEING.NS,Textiles,,
 Himatsingka Seide,HIMATSEIDE.NS,Textiles,,
-Siyaram Silk Mills,SIYSLA.NS,Textiles,,
 Indian Hotels Taj,INDHOTEL.NS,Hospitality,,
 EIH Oberoi,EIHOTEL.NS,Hospitality,,
 Lemon Tree Hotels,LEMONTREE.NS,Hospitality,,
-Chalet Hotels,CHALHOTEL.NS,Hospitality,,
 Mahindra Holidays,MHRIL.NS,Hospitality,,
 Thomas Cook India,THOMASCOOK.NS,Hospitality,,
 SpiceJet,SPICEJET.NS,Hospitality,,
@@ -576,71 +516,40 @@ Dish TV India,DISHTV.NS,Media,,
 Hathway Cable,HATHWAY.NS,Media,,
 Den Networks,DEN.NS,Media,,
 Navneet Education,NAVNETEDUL.NS,Media,,
-Aakash Educational,AARTI.NS,Media,,
 Nippon India ETF Nifty 50 BeES,NIFTYBEES.NS,ETF,"An exchange-traded fund that passively replicates the Nifty 50 index, holding India's 50 largest NSE-listed companies in index weight.","A low-cost, single-ticket way to own India's blue-chip large caps; suits long-term SIP investors who want broad market exposure without picking individual stocks and want to keep expense ratios near-zero."
 SBI ETF Nifty 50,SETFNIF50.NS,ETF,"An exchange-traded fund that passively replicates the Nifty 50 index, holding India's 50 largest NSE-listed companies in index weight.","A low-cost, single-ticket way to own India's blue-chip large caps; suits long-term SIP investors who want broad market exposure without picking individual stocks and want to keep expense ratios near-zero."
 HDFC Nifty 50 ETF,HDFCNIFTY.NS,ETF,"An exchange-traded fund that passively replicates the Nifty 50 index, holding India's 50 largest NSE-listed companies in index weight.","A low-cost, single-ticket way to own India's blue-chip large caps; suits long-term SIP investors who want broad market exposure without picking individual stocks and want to keep expense ratios near-zero."
-ICICI Prudential Nifty 50 ETF,ICICINIFTY.NS,ETF,"An exchange-traded fund that passively replicates the Nifty 50 index, holding India's 50 largest NSE-listed companies in index weight.","A low-cost, single-ticket way to own India's blue-chip large caps; suits long-term SIP investors who want broad market exposure without picking individual stocks and want to keep expense ratios near-zero."
-Kotak Nifty 50 ETF,KOTAKNIFTY.NS,ETF,"An exchange-traded fund that passively replicates the Nifty 50 index, holding India's 50 largest NSE-listed companies in index weight.","A low-cost, single-ticket way to own India's blue-chip large caps; suits long-term SIP investors who want broad market exposure without picking individual stocks and want to keep expense ratios near-zero."
-UTI Nifty 50 ETF,UTINIFTETF.NS,ETF,"An exchange-traded fund that passively replicates the Nifty 50 index, holding India's 50 largest NSE-listed companies in index weight.","A low-cost, single-ticket way to own India's blue-chip large caps; suits long-term SIP investors who want broad market exposure without picking individual stocks and want to keep expense ratios near-zero."
 Axis Nifty 50 ETF,AXISNIFTY.NS,ETF,"An exchange-traded fund that passively replicates the Nifty 50 index, holding India's 50 largest NSE-listed companies in index weight.","A low-cost, single-ticket way to own India's blue-chip large caps; suits long-term SIP investors who want broad market exposure without picking individual stocks and want to keep expense ratios near-zero."
-Mirae Asset Nifty 50 ETF,MIRAEN50.NS,ETF,"An exchange-traded fund that passively replicates the Nifty 50 index, holding India's 50 largest NSE-listed companies in index weight.","A low-cost, single-ticket way to own India's blue-chip large caps; suits long-term SIP investors who want broad market exposure without picking individual stocks and want to keep expense ratios near-zero."
-Motilal Oswal Nifty 50 ETF,MONIFTY50.NS,ETF,"An exchange-traded fund that passively replicates the Nifty 50 index, holding India's 50 largest NSE-listed companies in index weight.","A low-cost, single-ticket way to own India's blue-chip large caps; suits long-term SIP investors who want broad market exposure without picking individual stocks and want to keep expense ratios near-zero."
-Aditya Birla Nifty 50 ETF,ABNIFTY.NS,ETF,"An exchange-traded fund that passively replicates the Nifty 50 index, holding India's 50 largest NSE-listed companies in index weight.","A low-cost, single-ticket way to own India's blue-chip large caps; suits long-term SIP investors who want broad market exposure without picking individual stocks and want to keep expense ratios near-zero."
 SBI ETF Sensex,SETFNIFBK.NS,ETF,"An ETF that tracks the BSE Sensex, mirroring the 30 large, financially sound companies that make up India's oldest benchmark index.","Near-identical exposure to the Nifty 50 story through the Sensex instead; good for investors who already hold a Sensex-linked fund elsewhere and want to add without overlap, or simply prefer BSE's benchmark."
 HDFC Sensex ETF,HDFCSENSEX.NS,ETF,"An ETF that tracks the BSE Sensex, mirroring the 30 large, financially sound companies that make up India's oldest benchmark index.","Near-identical exposure to the Nifty 50 story through the Sensex instead; good for investors who already hold a Sensex-linked fund elsewhere and want to add without overlap, or simply prefer BSE's benchmark."
 Nippon India ETF Sensex,SENSEXETF.NS,ETF,"An ETF that tracks the BSE Sensex, mirroring the 30 large, financially sound companies that make up India's oldest benchmark index.","Near-identical exposure to the Nifty 50 story through the Sensex instead; good for investors who already hold a Sensex-linked fund elsewhere and want to add without overlap, or simply prefer BSE's benchmark."
-ICICI Prudential Sensex ETF,ICICISENSEX.NS,ETF,"An ETF that tracks the BSE Sensex, mirroring the 30 large, financially sound companies that make up India's oldest benchmark index.","Near-identical exposure to the Nifty 50 story through the Sensex instead; good for investors who already hold a Sensex-linked fund elsewhere and want to add without overlap, or simply prefer BSE's benchmark."
-Kotak Sensex ETF,KOTAKSENSEX.NS,ETF,"An ETF that tracks the BSE Sensex, mirroring the 30 large, financially sound companies that make up India's oldest benchmark index.","Near-identical exposure to the Nifty 50 story through the Sensex instead; good for investors who already hold a Sensex-linked fund elsewhere and want to add without overlap, or simply prefer BSE's benchmark."
 Nippon India ETF Nifty Next 50,JUNIORBEES.NS,ETF,"Tracks the Nifty Next 50 index, the 50 companies ranked just below the Nifty 50 by market cap - often called tomorrow's large caps.","A higher-growth, higher-volatility complement to a core Nifty 50 holding; suited to investors comfortable with more swings in exchange for a shot at companies graduating into the Nifty 50 over time."
-HDFC Nifty Next 50 ETF,HDFCNXTETF.NS,ETF,"Tracks the Nifty Next 50 index, the 50 companies ranked just below the Nifty 50 by market cap - often called tomorrow's large caps.","A higher-growth, higher-volatility complement to a core Nifty 50 holding; suited to investors comfortable with more swings in exchange for a shot at companies graduating into the Nifty 50 over time."
-Kotak Nifty Next 50 ETF,KOTAKNXT50.NS,ETF,"Tracks the Nifty Next 50 index, the 50 companies ranked just below the Nifty 50 by market cap - often called tomorrow's large caps.","A higher-growth, higher-volatility complement to a core Nifty 50 holding; suited to investors comfortable with more swings in exchange for a shot at companies graduating into the Nifty 50 over time."
 SBI Nifty Next 50 ETF,SETFNN50.NS,ETF,"Tracks the Nifty Next 50 index, the 50 companies ranked just below the Nifty 50 by market cap - often called tomorrow's large caps.","A higher-growth, higher-volatility complement to a core Nifty 50 holding; suited to investors comfortable with more swings in exchange for a shot at companies graduating into the Nifty 50 over time."
 Nippon India ETF Nifty Midcap 150,MID150BEES.NS,ETF,"An ETF tracking a Nifty Midcap index (100/150/50 depending on the fund), giving diversified exposure to India's mid-sized listed companies.",Mid caps have historically outgrown large caps over full cycles but with sharper drawdowns; fits investors with a 5-7 year horizon who can stomach volatility for a growth tilt in the portfolio.
 HDFC Nifty Midcap 150 ETF,HDFCMID150.NS,ETF,"An ETF tracking a Nifty Midcap index (100/150/50 depending on the fund), giving diversified exposure to India's mid-sized listed companies.",Mid caps have historically outgrown large caps over full cycles but with sharper drawdowns; fits investors with a 5-7 year horizon who can stomach volatility for a growth tilt in the portfolio.
 Motilal Oswal Midcap 100 ETF,MOM100.NS,ETF,"An ETF tracking a Nifty Midcap index (100/150/50 depending on the fund), giving diversified exposure to India's mid-sized listed companies.",Mid caps have historically outgrown large caps over full cycles but with sharper drawdowns; fits investors with a 5-7 year horizon who can stomach volatility for a growth tilt in the portfolio.
-Kotak Nifty Midcap 50 ETF,KOTAKMID50.NS,ETF,"An ETF tracking a Nifty Midcap index (100/150/50 depending on the fund), giving diversified exposure to India's mid-sized listed companies.",Mid caps have historically outgrown large caps over full cycles but with sharper drawdowns; fits investors with a 5-7 year horizon who can stomach volatility for a growth tilt in the portfolio.
-Mirae Asset Midcap 150 ETF,MIAEN150.NS,ETF,"An ETF tracking a Nifty Midcap index (100/150/50 depending on the fund), giving diversified exposure to India's mid-sized listed companies.",Mid caps have historically outgrown large caps over full cycles but with sharper drawdowns; fits investors with a 5-7 year horizon who can stomach volatility for a growth tilt in the portfolio.
 Nippon India ETF Nifty Smallcap 250,SMALL250.NS,ETF,"Tracks the Nifty Smallcap 250 index, spreading exposure across 250 small-cap NSE-listed companies rather than betting on any single one.","The highest-risk, highest-potential-reward slice of Indian equities in ETF form; best used as a small satellite allocation (not a core holding) for investors with a long runway and high risk tolerance."
 HDFC Nifty Smallcap 250 ETF,HDFCSML250.NS,ETF,"Tracks the Nifty Smallcap 250 index, spreading exposure across 250 small-cap NSE-listed companies rather than betting on any single one.","The highest-risk, highest-potential-reward slice of Indian equities in ETF form; best used as a small satellite allocation (not a core holding) for investors with a long runway and high risk tolerance."
 Nippon India ETF Bank BeES,BANKBEES.NS,ETF,"A sector ETF tracking the Nifty Bank index, concentrated in India's largest private and public sector banks.","A leveraged-ish bet on Indian credit growth and financial-sector earnings; useful for investors who want to overweight banking beyond its natural index weight, but it adds concentration risk versus a broad index fund."
-Kotak Nifty Bank ETF,KOTAKBKETF.NS,ETF,"A sector ETF tracking the Nifty Bank index, concentrated in India's largest private and public sector banks.","A leveraged-ish bet on Indian credit growth and financial-sector earnings; useful for investors who want to overweight banking beyond its natural index weight, but it adds concentration risk versus a broad index fund."
 HDFC Nifty Bank ETF,HDFCNIFBAN.NS,ETF,"A sector ETF tracking the Nifty Bank index, concentrated in India's largest private and public sector banks.","A leveraged-ish bet on Indian credit growth and financial-sector earnings; useful for investors who want to overweight banking beyond its natural index weight, but it adds concentration risk versus a broad index fund."
-Mirae Asset Nifty Bank ETF,MIRAENBANK.NS,ETF,"A sector ETF tracking the Nifty Bank index, concentrated in India's largest private and public sector banks.","A leveraged-ish bet on Indian credit growth and financial-sector earnings; useful for investors who want to overweight banking beyond its natural index weight, but it adds concentration risk versus a broad index fund."
 Nippon India ETF Nifty IT,ITBEES.NS,ETF,"Tracks the Nifty IT index, holding India's largest listed IT services and software exporters.","A way to play India's IT-export and global tech-spend cycle; returns are sensitive to the rupee-dollar rate and US/Europe discretionary tech budgets, so it's a cyclical satellite bet rather than a core holding."
-HDFC Nifty IT ETF,HDFCNIFTYIT.NS,ETF,"Tracks the Nifty IT index, holding India's largest listed IT services and software exporters.","A way to play India's IT-export and global tech-spend cycle; returns are sensitive to the rupee-dollar rate and US/Europe discretionary tech budgets, so it's a cyclical satellite bet rather than a core holding."
 Nippon India ETF Pharma BeES,PHARMABEES.NS,ETF,"Tracks the Nifty Pharma index, covering India's largest pharmaceutical and drug-manufacturing companies.","A defensive, largely domestic-and-export-demand sector play; pharma tends to hold up better in slowdowns, making this a useful diversifier alongside more cyclical sector bets."
 Nippon India Nifty Auto ETF,AUTOBEES.NS,ETF,"Tracks the Nifty Auto index, holding India's listed auto manufacturers and ancillary component makers.","A direct bet on Indian consumption and EV-transition capex; cyclical and sensitive to interest rates and fuel prices, best added tactically rather than as a permanent core position."
 Nippon India Nifty PSU Bank BeES,PSUBNKBEES.NS,ETF,"Tracks the Nifty PSU Bank index, concentrated in government-owned banks such as SBI, PNB and Bank of Baroda.","A high-beta, high-volatility bet on public-sector bank re-rating and government reform momentum; historically more boom-bust than private banks, so size the position accordingly."
 Nippon India Nifty Infra BeES,INFRABEES.NS,ETF,"Tracks the Nifty Infra index, spanning construction, capital goods, telecom and energy companies tied to India's infrastructure build-out.","A structural bet on India's capex and infrastructure spending cycle; ties returns closely to government capex budgets and interest-rate trends, so it's more cyclical than a broad-market fund."
 Nippon India Consumption ETF,CONSUMBEES.NS,ETF,"Tracks a Nifty India Consumption-style index, spanning FMCG, auto, retail and media companies geared to domestic demand.","A relatively defensive way to bet on rising Indian household consumption and discretionary spending as incomes grow, without picking individual consumer stocks."
-BHARAT 22 ETF,BHARAT22.NS,ETF,A government-divestment ETF holding a basket of PSU and select private companies (including some non-PSU stakes) across six sectors.,Gives exposure to India's disinvestment story and often trades at value-ish multiples versus the broader market; carries policy and government-ownership risk that a diversified index fund doesn't.
 CPSE ETF,CPSEETF.NS,ETF,"Tracks the Nifty CPSE index of Central Public Sector Enterprises, majority-owned by the Government of India.","A concentrated, dividend-heavy PSU bet often used by the government itself to divest stakes; suits income-focused investors comfortable with policy and commodity-cycle risk."
-Mirae Asset Nifty Financial ETF,MIRAEFINETF.NS,ETF,"Tracks the Nifty Financial Services index, covering banks, NBFCs, insurers and housing financiers.","A broader financial-sector bet than a pure bank ETF, adding insurance and NBFC growth stories; useful for investors wanting financial-sector exposure without picking individual lenders."
 Nippon India Gold BeES,GOLDBEES.NS,ETF,"A gold ETF where each unit is backed by physical gold of high purity, letting investors hold gold electronically instead of jewellery or coins.",A classic portfolio diversifier and inflation/currency hedge that's uncorrelated with equities; typically sized at 5-10% of a portfolio rather than held as a primary growth asset.
 SBI ETF Gold,SETFGOLD.NS,ETF,"A gold ETF where each unit is backed by physical gold of high purity, letting investors hold gold electronically instead of jewellery or coins.",A classic portfolio diversifier and inflation/currency hedge that's uncorrelated with equities; typically sized at 5-10% of a portfolio rather than held as a primary growth asset.
 HDFC Gold ETF,HDFCGOLD.NS,ETF,"A gold ETF where each unit is backed by physical gold of high purity, letting investors hold gold electronically instead of jewellery or coins.",A classic portfolio diversifier and inflation/currency hedge that's uncorrelated with equities; typically sized at 5-10% of a portfolio rather than held as a primary growth asset.
-ICICI Prudential Gold ETF,ICICIGOLD.NS,ETF,"A gold ETF where each unit is backed by physical gold of high purity, letting investors hold gold electronically instead of jewellery or coins.",A classic portfolio diversifier and inflation/currency hedge that's uncorrelated with equities; typically sized at 5-10% of a portfolio rather than held as a primary growth asset.
-Kotak Gold ETF,KOTAKGOLD.NS,ETF,"A gold ETF where each unit is backed by physical gold of high purity, letting investors hold gold electronically instead of jewellery or coins.",A classic portfolio diversifier and inflation/currency hedge that's uncorrelated with equities; typically sized at 5-10% of a portfolio rather than held as a primary growth asset.
 Axis Gold ETF,AXISGOLD.NS,ETF,"A gold ETF where each unit is backed by physical gold of high purity, letting investors hold gold electronically instead of jewellery or coins.",A classic portfolio diversifier and inflation/currency hedge that's uncorrelated with equities; typically sized at 5-10% of a portfolio rather than held as a primary growth asset.
 UTI Gold ETF,GOLDETF.NS,ETF,"A gold ETF where each unit is backed by physical gold of high purity, letting investors hold gold electronically instead of jewellery or coins.",A classic portfolio diversifier and inflation/currency hedge that's uncorrelated with equities; typically sized at 5-10% of a portfolio rather than held as a primary growth asset.
 Nippon India Silver ETF,SILVERBEES.NS,ETF,"A silver ETF backed by physical silver, giving investors exposure to silver prices without storage or purity concerns.","More volatile than gold with an added industrial-demand angle (solar, EVs, electronics); works as a small tactical or diversification sleeve rather than a core holding."
-ICICI Prudential Silver ETF,ICICISILVE.NS,ETF,"A silver ETF backed by physical silver, giving investors exposure to silver prices without storage or purity concerns.","More volatile than gold with an added industrial-demand angle (solar, EVs, electronics); works as a small tactical or diversification sleeve rather than a core holding."
-Mirae Asset Gold ETF,MGOLD.NS,ETF,"A gold ETF where each unit is backed by physical gold of high purity, letting investors hold gold electronically instead of jewellery or coins.",A classic portfolio diversifier and inflation/currency hedge that's uncorrelated with equities; typically sized at 5-10% of a portfolio rather than held as a primary growth asset.
 Mirae Asset NYSE FANG+ ETF,MAFANG.NS,ETF,"An international ETF tracking the NYSE FANG+ index of large-cap US tech and internet giants (Meta, Apple, Amazon, Google, etc.).","Gives Indian investors dollar-denominated exposure to US big-tech growth and rupee depreciation upside; concentrated in ~10 stocks, so it's a high-conviction satellite bet, not a diversified core holding."
-Mirae Asset S&P 500 Top 50 ETF,MIRAESP500.NS,ETF,"Tracks the top 50 companies of the US S&P 500 by market cap, offering exposure to America's largest listed businesses.",A simple way to diversify outside India into US large caps and the dollar; pairs well with domestic equity holdings to reduce single-country concentration risk.
 Nippon India ETF Hang Seng BeES,HNGSNGBEES.NS,ETF,Tracks the Hang Seng index of large Hong Kong and China-linked companies listed in Hong Kong.,"A China/Hong Kong growth and valuation-reset bet; historically volatile and sentiment-driven, best used as a small tactical allocation for investors wanting non-US international diversification."
-Edelweiss US Technology ETF,EDLWEISS.NS,ETF,An international ETF giving exposure to a basket of listed US technology companies.,"Adds US tech-sector diversification and dollar exposure to an India-heavy portfolio; concentrated in one sector and one geography, so size it as a satellite, not a core holding."
-Mirae Asset Nifty Total Market ETF,MIRAETM.NS,ETF,"Tracks the Nifty Total Market index, spanning large, mid and small caps to represent nearly the entire investable Indian equity market in one fund.",The broadest single-ticket way to own the Indian market across market-cap segments; a reasonable core holding for investors who don't want to separately manage large/mid/small-cap weights.
-ICICI Prudential Nasdaq 100 ETF,ICICINASDAQ.NS,ETF,"Tracks the Nasdaq 100 index of the 100 largest non-financial companies listed on the Nasdaq, dominated by US technology names.","A concentrated bet on US mega-cap tech growth and the dollar; historically high returns but with sharp drawdowns in tech corrections, so best sized as a satellite allocation."
-Edelweiss Bharat Bond ETF Apr 2025,EBBETF0425.NS,ETF,"A target-maturity bond ETF holding AAA-rated PSU bonds that mature in the year stated in the fund name, similar to holding a bond to maturity.","Offers predictable, relatively low-risk debt returns close to prevailing PSU bond yields at the time of investment; suits conservative investors wanting fixed-income exposure with a known holding period."
 Edelweiss Bharat Bond ETF Apr 2030,EBBETF0430.NS,ETF,"A target-maturity bond ETF holding AAA-rated PSU bonds that mature in the year stated in the fund name, similar to holding a bond to maturity.","Offers predictable, relatively low-risk debt returns close to prevailing PSU bond yields at the time of investment; suits conservative investors wanting fixed-income exposure with a known holding period."
 Edelweiss Bharat Bond ETF Apr 2031,EBBETF0431.NS,ETF,"A target-maturity bond ETF holding AAA-rated PSU bonds that mature in the year stated in the fund name, similar to holding a bond to maturity.","Offers predictable, relatively low-risk debt returns close to prevailing PSU bond yields at the time of investment; suits conservative investors wanting fixed-income exposure with a known holding period."
-Edelweiss Bharat Bond ETF Apr 2032,EBBETF0432.NS,ETF,"A target-maturity bond ETF holding AAA-rated PSU bonds that mature in the year stated in the fund name, similar to holding a bond to maturity.","Offers predictable, relatively low-risk debt returns close to prevailing PSU bond yields at the time of investment; suits conservative investors wanting fixed-income exposure with a known holding period."
 SBI ETF 10 Year Gilt,SETF10GILT.NS,ETF,A gilt ETF investing in Government of India securities with roughly a 10-year maturity profile.,"A near-zero credit-risk way to take duration exposure to interest-rate moves; gains when rates fall and loses when they rise, useful as a defensive fixed-income sleeve."
-Mirae Asset Nifty India Defence ETF,MIRAEDEF.NS,ETF,"Tracks the Nifty India Defence index, covering listed companies in defence manufacturing, shipbuilding and related aerospace services.","A thematic, policy-driven bet on India's defence indigenisation and rising defence capex; high-conviction and volatile, best treated as a small satellite theme rather than a core holding."
-Motilal Oswal Nifty India Defence,MODEF.NS,ETF,"Tracks the Nifty India Defence index, covering listed companies in defence manufacturing, shipbuilding and related aerospace services.","A thematic, policy-driven bet on India's defence indigenisation and rising defence capex; high-conviction and volatile, best treated as a small satellite theme rather than a core holding."
-HDFC Defence Fund ETF,HDFCDEF.NS,ETF,"Tracks the Nifty India Defence index, covering listed companies in defence manufacturing, shipbuilding and related aerospace services.","A thematic, policy-driven bet on India's defence indigenisation and rising defence capex; high-conviction and volatile, best treated as a small satellite theme rather than a core holding."
 Tata Investment Corporation,TATAINVEST.NS,Conglomerate,,
 Godrej Industries,GODREJIND.NS,Conglomerate,,
 Bombay Burmah Trading,BBTC.NS,Conglomerate,,
@@ -1007,33 +916,12 @@ Bhilwara Technical Textiles,BTTL.NS,Packaging,,"A steady, consumption-linked dem
 Shree Tirupati Balajee Agro Trading,BALAJEE.NS,Packaging,,"A steady, consumption-linked demand story (FMCG/pharma packaging) with margins tied to resin/polymer input costs."
 Positive Packaging,POSITIVE.NS,Packaging,,"A steady, consumption-linked demand story (FMCG/pharma packaging) with margins tied to resin/polymer input costs."
 Sundaram Multi Pap,SUNDARMULT.NS,Packaging,,"A steady, consumption-linked demand story (FMCG/pharma packaging) with margins tied to resin/polymer input costs."
-UTI Nifty Next 50 ETF,UTINEXT50.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
 Motilal Oswal Nasdaq 100 ETF,MON100.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
 Invesco India Nifty ETF,IVZINNIFTY.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
 Invesco India Gold ETF,IVZINGOLD.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
 Quantum Nifty 50 ETF,QNIFTY.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
 LIC MF Gold ETF,LICMFGOLD.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
-Tata Nifty 50 ETF,TATANIFTY.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
-DSP Nifty 50 ETF,DSPNIF50.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
-WhiteOak Capital Nifty Next 50 ETF,WONXT50.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
 Groww Nifty 50 ETF,GROWWNIFTY.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
-Bandhan Nifty 50 ETF,BANDHNNIFTY.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
 Baroda BNP Paribas Gold ETF,BBNPPGOLD.NS,ETF,"An exchange-traded fund offering low-cost, diversified exposure to its underlying index or asset.",A convenient single-ticket way to gain the underlying exposure without picking individual stocks; check the expense ratio and tracking error before investing.
-Nifty50 Value 20,^NIFTY50VALUE20,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty Alpha 50,^NIALPHA50,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty Low Volatility 50,^NIFLOWVOL50,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty High Beta 50,^NIFHIGHBETA,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty Quality 30,^NIFQUALITY30,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty100 Equal Weight,^NIF100EQW,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty50 Equal Weight,^NIF50EQW,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty Growth Sectors 15,^NIFGS15,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty Shariah 25,^NIFSHARIAH,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
 Nifty MNC,^CNXMNC,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
 Nifty Services Sector,^CNXSERVICE,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty100 Liquid 15,^NIF100LIQ15,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty Midcap Liquid 15,^NIFMIDLIQ15,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty India Manufacturing,^NIFMFG,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty India Corporate Group Index - Tata Group,^NIFTATA,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty50 USD,^NIFTY50USD,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty200 Momentum 30,^NIF200MOM30,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
-Nifty Midsmallcap 400,^NIFMIDSML400,Index,"A benchmark index used to track a specific segment, factor, or strategy within the Indian equity market.","Mainly used as a comparison benchmark for funds and strategies tracking this segment, rather than something retail investors invest in directly."
